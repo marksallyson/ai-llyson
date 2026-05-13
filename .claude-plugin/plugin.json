@@ -1,0 +1,9 @@
+{
+  "name": "ai-llyson",
+  "version": "0.1.0",
+  "description": "Allyson's personal assistant — brain dumps, coaching, Ibotta onboarding, and career tracking",
+  "author": {
+    "name": "Allyson Marks"
+  },
+  "keywords": ["personal", "coaching", "brain-dump", "career", "decision-science"]
+}
