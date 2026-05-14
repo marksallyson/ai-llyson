@@ -1,13 +1,15 @@
 {
   "name": "ai-llyson",
+  "description": "Allyson's personal Claude assistant plugin",
   "owner": {
-    "name": "marksallyson"
+    "name": "Allyson Marks",
+    "github": "marksallyson"
   },
   "plugins": [
     {
       "name": "ai-llyson",
-      "source": ".",
-      "description": "Allyson's personal AI assistant plugin"
+      "description": "Personal assistant: brain dumps, coaching, Ibotta onboarding, and career tracking",
+      "source": "./plugins/ai-llyson"
     }
   ]
 }
