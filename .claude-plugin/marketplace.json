@@ -1,0 +1,13 @@
+{
+  "name": "ai-llyson",
+  "owner": {
+    "name": "marksallyson"
+  },
+  "plugins": [
+    {
+      "name": "ai-llyson",
+      "source": ".",
+      "description": "Allyson's personal AI assistant plugin"
+    }
+  ]
+}
