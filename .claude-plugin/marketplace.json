@@ -9,12 +9,12 @@
     {
       "name": "ai-llyson",
       "description": "Personal assistant: brain dumps, coaching, Ibotta onboarding, and career tracking",
-      "path": "plugins/ai-llyson"
+      "source": "plugins/ai-llyson"
     },
     {
       "name": "the-experiment-lab",
       "description": "Expert advisor on consumer product experimentation — experiment design, statistical methods, and strategy for a Decision Scientist",
-      "path": "plugins/the-experiment-lab"
+      "source": "plugins/the-experiment-lab"
     }
   ]
 }
