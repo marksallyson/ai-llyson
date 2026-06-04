@@ -1,0 +1,40 @@
+---
+title: Netflix
+type: company
+tags: [causal-inference, variance-reduction, personalization, platform, long-term-effects, surrogate-metrics]
+source_url: https://netflixtechblog.com/experimentation-is-a-major-part-of-the-culture-at-netflix-472520312f74
+added: 2026-06-04
+---
+
+# Netflix
+
+## At a Glance
+Netflix's XP (eXperimentation Platform) handles experiments across recommendations, UI, content selection, and streaming quality. Their technical blog and papers are some of the most rigorous public outputs on causal inference at scale, with particular depth on variance reduction and long-term effect measurement.
+
+## Why They Matter
+Netflix's core problem — measuring whether a content recommendation change actually causes long-term retention — maps directly to Ibotta's challenge of measuring whether an offer experience change causes long-term redemption behavior. Their work on surrogate metrics (using short-term signals to predict long-term outcomes) and modular inference models (separating the statistical model from the experiment design) is directly actionable for any DS measuring delayed conversions.
+
+## Key Contributions
+- **XP platform**: supports simultaneous experiments with automated holdout management, exposure logging, and metric computation
+- **GLM-based variance reduction**: extends CUPED to generalized linear models (not just continuous outcomes); directly applicable to binary redemption outcomes
+- **Modular inference models**: decouple experiment assignment from statistical analysis, allowing different estimators (OLS, CUPED, IPTW) to be applied to the same logged data post-hoc
+- **Surrogate metrics**: use short-term observable signals (e.g., thumbs up, adds to list) to proxy for long-term retention in experiments that can't run long enough to observe the true outcome
+- **"Computational causal inference at Netflix"** (2021 blog): describes the full stack from logging to estimator selection
+- **Holdout experiments and long-run effects**: Netflix maintains permanent holdout cells to measure long-run platform effects — separate from individual feature tests
+
+## Takeaways for Practice
+1. **Implement GLM-based CUPED for binary outcomes like redemption.** Standard CUPED assumes a continuous outcome. Netflix's extension to GLMs is directly applicable when your primary metric is "did the user redeem?" rather than revenue. The variance reduction gains are often larger for binary outcomes.
+2. **Identify a surrogate metric for long-term retention.** If Ibotta needs to measure 90-day retention from a 2-week experiment, identify a 2-week behavioral signal (e.g., second redemption, category diversification) that predicts 90-day retention. Netflix's surrogate metric work tells you how to validate that proxy.
+3. **Separate assignment logs from analysis.** Log who was assigned, who was exposed, and who converted as three separate events. This gives you flexibility to run multiple estimators later without re-running the experiment.
+4. **Consider a permanent holdout cell for platform-level changes.** For significant Ibotta platform changes (app redesigns, algorithm changes), a never-treated holdout of 1-2% of users gives you a long-run counterfactual that individual feature tests can't provide.
+5. **The Netflix tech blog is worth following for statistical methodology.** Their posts are written by PhDs explaining real production problems — not vendor marketing.
+
+## Action Items / Things to Read
+- Netflix Tech Blog: https://netflixtechblog.com — search "experimentation" and "causal"
+- Ye et al. (2023) "Causal Reasoning and Large Language Models" — not directly relevant but shows the range
+- "Computational Causal Inference at Netflix" — Netflix Tech Blog, Dec 2021
+- Dimmery et al. (2019) "Shrinkage Estimators in Online Experiments" — Netflix + Facebook collaboration
+- "Experimentation is a major part of the culture at Netflix" — blog post overview of XP platform
+
+## Tags
+causal-inference, variance-reduction, personalization, platform, long-term-effects, surrogate-metrics, glm, holdout, binary-outcomes
