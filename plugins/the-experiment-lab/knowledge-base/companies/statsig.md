@@ -38,3 +38,29 @@ Statsig is the best current option for a team that wants a rigorous, warehouse-n
 
 ## Tags
 platform, warehouse-native, sequential-testing, bayesian, organizational-maturity, metric-design, feature-flags, cuped, always-valid-inference
+
+---
+
+## Recent: 2026-05-05 — Amplitude Takes Over Statsig Brand After OpenAI Acquisition
+
+**Sources:** [Amplitude announcement](https://amplitude.com/blog/amplitude-and-statsig-partnership) | [Convert.com analysis](https://www.convert.com/blog/a-b-testing/statsig-moves-to-amplitude/) | [OpenAI acquisition press release](https://openai.com/index/vijaye-raji-to-become-cto-of-applications-with-acquisition-of-statsig/)
+
+### What Happened
+Two major events unfolded in the span of eight months:
+
+1. **September 2025**: OpenAI acquired Statsig for ~$1.1 billion (all-stock). Vijaye Raji, Statsig's founder and CEO, became OpenAI's CTO of Applications. The Statsig engineering team joined OpenAI.
+
+2. **May 5, 2026**: Amplitude announced it is taking over the Statsig brand, platform, and customer base. OpenAI retained the engineering talent; Amplitude inherited the code, the warehouse-native product, and the customer relationships.
+
+### Implications for the Platform
+- The Statsig product continues under Amplitude's management. Existing warehouse-native functionality (Snowflake, BigQuery, Databricks integration), CUPED, sequential testing, and the metric layer are preserved.
+- Amplitude plans to integrate Statsig's experimentation capabilities into its broader product analytics suite.
+- Industry critics note the "race car without a driver" concern — Amplitude gets the codebase and customers, but the statistical and engineering expertise that made Statsig's blog and methodology unusually rigorous moved to OpenAI.
+
+### What This Means for Teams Evaluating Statsig
+- **Short term**: the platform continues. Existing customers are supported. No forced migration.
+- **Medium term**: the roadmap now reflects Amplitude's priorities, not Statsig's. It is unclear whether the depth of statistical innovation (e.g., novel variance reduction methods, always-valid inference improvements) will continue at the same pace.
+- **For Ibotta**: if Statsig was on the shortlist, re-evaluate it as "Amplitude-managed Statsig." Evaluate Amplitude's product analytics integration as a potential advantage (unified funnel analytics + experimentation), while noting the risk that deep statistical tooling may stagnate without the original team. Also evaluate Eppo-by-Datadog and GrowthBook as alternatives.
+
+### Parallel Event: Eppo Acquired by Datadog (May 2025)
+Eppo, Statsig's main warehouse-native competitor, was acquired by Datadog in May 2025 and relaunched as **Datadog Experiments** in April 2026. This means both top-tier warehouse-native platforms (Statsig and Eppo) are now subsidiaries of larger analytics vendors. GrowthBook (open-source) and Amplitude-managed Statsig are the remaining independent options at scale.

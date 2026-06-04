@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-06-04
+Last updated: 2026-06-04 (weekly update: 3 entries updated — doordash, statsig, google)
 
 ---
 
@@ -47,4 +47,4 @@ Last updated: 2026-06-04
 
 ## Tags in Use
 
-`variance-reduction` · `cuped` · `interference` · `two-sided-markets` · `network-effects` · `switchback` · `synthetic-control` · `quasi-experimental` · `organizational-maturity` · `democratization` · `sequential-testing` · `bayesian` · `interleaving` · `ranking` · `personalization` · `causal-inference` · `surrogate-metrics` · `metric-design` · `sample-size` · `peeking` · `warehouse-native` · `platform` · `long-term-effects` · `marketplace`
+`variance-reduction` · `cuped` · `interference` · `two-sided-markets` · `network-effects` · `switchback` · `synthetic-control` · `quasi-experimental` · `organizational-maturity` · `democratization` · `sequential-testing` · `bayesian` · `interleaving` · `ranking` · `personalization` · `causal-inference` · `surrogate-metrics` · `metric-design` · `sample-size` · `peeking` · `warehouse-native` · `platform` · `long-term-effects` · `marketplace` · `multi-armed-bandit` · `adaptive-experimentation` · `noise-floor` · `balanced-allocation` · `vendor-landscape`

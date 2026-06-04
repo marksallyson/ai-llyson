@@ -36,3 +36,30 @@ The "41 shades of blue" story is the canonical example of why HiPPO decisions lo
 
 ## Tags
 overlapping-experiments, platform, metric-design, organizational-maturity, causal-inference, layered-experiments
+
+---
+
+## Recent: 2026-05-18 — How Google Does It: Fleet-wide, Large-Scale A/B Experimentation
+
+**Source:** [Google Cloud Blog](https://cloud.google.com/blog/topics/systems/how-google-does-it-fleet-wide-large-scale-ab-experimentation) | Authors: Nilay Vaish, Xiaoyu Chen (Google Software Engineers) | Covered by [InfoQ](https://www.infoq.com/news/2026/06/google-fleet-ab-experimentation/), June 3, 2026
+
+### What's New
+Google published an unusually detailed look at how they run A/B experiments at the **machine/fleet level** — not product features or UI, but infrastructure changes like TCMalloc (memory allocator), compiler optimizations, and kernel scheduler modifications. While the context is systems engineering, the experimental design methodology is directly transferable.
+
+### Key Methodological Contributions
+
+**Four Pillars of Google's Fleet-Wide A/B Framework:**
+
+1. **Machine-level vs. application-level experimentation**: allocate treatment and control at the machine level, not the request level. All workloads on a machine participate in the experiment, capturing system-wide effects (e.g., hardware cache improvements) that application-level tests would miss entirely.
+
+2. **Balanced allocation**: use 1% of fleet for each of treatment and control. Machine types (hardware generations) must be proportionally represented in both groups — Google observed 0.2–0.3% metric skew from imbalanced machine type distributions across clusters. They use **linear programming** to periodically rebalance group composition while minimizing churn.
+
+3. **Binary hermeticity** (two-phase rollout): deploy the new binary to *all* machines in both experiment and control groups first; then activate the experimental behavior only on treatment machines in a second phase. This decouples binary deployment from behavioral activation and enables instant rollback by reverting to the previous binary — no machine-level rollback required.
+
+4. **Right metrics + noise floor estimation**: primary metric is "application productivity" (application-defined work per unit time, e.g., queries/second). Run regular **A/A experiments** (both groups identical) to characterize measurement variance from daily fluctuations. Only results that exceed the established noise floor are considered real effects — critical when measuring sub-1% improvements.
+
+### Why This Matters for Ibotta
+Most of the content is infrastructure-specific, but three ideas generalize cleanly:
+- **A/A experiments to calibrate your noise floor.** Before trusting any small effect, run an A/A test and measure how much your metrics vary due to measurement noise alone. This is especially valuable at Ibotta for offer-level metrics with high day-of-week seasonality (Tuesday cashback spikes, weekend browsing patterns).
+- **Balanced allocation via stratification.** The linear programming approach to keeping treatment/control balanced on confounders (machine type ≈ user segment) is the principled version of stratified randomization. Apply this when randomization units are users and user tenure/value tier creates imbalance.
+- **Two-phase activation for safe rollouts.** The binary hermeticity pattern — separate *deployment* from *activation* — maps to feature flag best practices. Never couple code deployment with experiment activation; always give yourself a clean rollback path.
