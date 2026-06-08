@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-06-04 (weekly update: 3 entries updated — doordash, statsig, google)
+Last updated: 2026-06-08 (weekly update: 1 new article added, 2 entries updated — linkedin, booking-com)
 
 ---
 
@@ -45,6 +45,16 @@ Last updated: 2026-06-04 (weekly update: 3 entries updated — doordash, statsig
 
 ---
 
+---
+
+## Articles
+
+| File | Title | One-Line Description |
+|------|-------|----------------------|
+| [abadie-value-of-evidence-2026.md](articles/abadie-value-of-evidence-2026.md) | Estimating the Value of Evidence-Based Decision Making | Abadie, Imbens et al. prove p < 0.05 rules leave 27–30% of value on the table; empirical Bayes decision rules recover it |
+
+---
+
 ## Tags in Use
 
-`variance-reduction` · `cuped` · `interference` · `two-sided-markets` · `network-effects` · `switchback` · `synthetic-control` · `quasi-experimental` · `organizational-maturity` · `democratization` · `sequential-testing` · `bayesian` · `interleaving` · `ranking` · `personalization` · `causal-inference` · `surrogate-metrics` · `metric-design` · `sample-size` · `peeking` · `warehouse-native` · `platform` · `long-term-effects` · `marketplace` · `multi-armed-bandit` · `adaptive-experimentation` · `noise-floor` · `balanced-allocation` · `vendor-landscape`
+`variance-reduction` · `cuped` · `interference` · `two-sided-markets` · `network-effects` · `switchback` · `synthetic-control` · `quasi-experimental` · `organizational-maturity` · `democratization` · `sequential-testing` · `bayesian` · `interleaving` · `ranking` · `personalization` · `causal-inference` · `surrogate-metrics` · `metric-design` · `sample-size` · `peeking` · `warehouse-native` · `platform` · `long-term-effects` · `marketplace` · `multi-armed-bandit` · `adaptive-experimentation` · `noise-floor` · `balanced-allocation` · `vendor-landscape` · `empirical-bayes` · `decision-theory` · `overlapping-experiments`

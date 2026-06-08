@@ -37,3 +37,19 @@ Booking.com is the canonical case study for "democratized experimentation at sca
 
 ## Tags
 organizational-maturity, democratization, platform, metric-design, guardrail-metrics, two-sided-markets, funnel, non-technical-access
+
+---
+
+## Recent: 2026-05-22 — Meta-experiments: Improving Experimentation Through Experimentation
+
+**Sources:** [Booking.com ML & DS Blog](https://booking.ai/meta-experiments-improving-experimentation-through-experimentation-6bdee314c512) · [arXiv:2406.16629](https://arxiv.org/abs/2406.16629) — Melanie Mueller (Senior PM - Experimentation, Booking.com)
+
+### What It Is
+A blog post and associated academic paper describing how Booking.com runs A/B tests on the experimentation *process itself* — what they call "meta-experiments." Instead of testing a product feature, a meta-experiment tests a change to how experiments are designed, powered, or managed. The concrete example: a meta-experiment testing a change to the power-calculation UX that helped product teams run more sufficiently powered experiments.
+
+The post also makes a "dogfooding" argument: when the experimentation platform team runs meta-experiments, they encounter firsthand the same friction their users face — choosing the right randomization unit, picking metrics, interpreting results under uncertainty. This reveals platform pain points that user support tickets don't surface.
+
+Booking.com's experimentation model is decentralized (product teams run their own experiments) with a centralized platform team maintaining methodology standards. Meta-experiments are how the platform team validates its own interventions — a clean application of the scientific method to organizational process.
+
+### Why It Matters for Ibotta
+If Ibotta experiments are frequently underpowered (common when offer-level traffic is thin), the right fix may not be "run experiments longer" but "test whether a better power calculator or design review process changes behavior." A meta-experiment on Ibotta's pre-experiment checklist could directly measure whether it reduces underpowered launches. This is also an argument for the experimentation platform team to eat their own cooking — if the team that defines experiment standards hasn't run an experiment on their own standards, they're operating on intuition.
