@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-06-04
+Last updated: 2026-06-09
 
 ---
 
@@ -14,7 +14,7 @@ Last updated: 2026-06-04
 | [netflix.md](companies/netflix.md) | Netflix | XP platform + causal inference at scale; known for modular inference models and personalization experiments |
 | [booking-com.md](companies/booking-com.md) | Booking.com | 25k+ experiments/year; Lukas Vermeer built the culture and democratized access to non-technical teams |
 | [airbnb.md](companies/airbnb.md) | Airbnb | Built experimentation culture from scratch; ML × experiment integration; Kohavi joined as VP |
-| [meta.md](companies/meta.md) | Meta | Massive-scale network effects research; surrogate metrics; interference in social graphs |
+| [meta.md](companies/meta.md) | Meta | Massive-scale network effects research; surrogate metrics; interference in social graphs · 📡 [Analytics at Meta (Medium)](https://medium.com/@AnalyticsAtMeta) |
 | [uber.md](companies/uber.md) | Uber | Marketplace interference; switchback testing; synthetic control; staged rollouts |
 | [lyft.md](companies/lyft.md) | Lyft | Two-sided market interference paper; long-term holdout experiments; quasi-experimental methods |
 | [doordash.md](companies/doordash.md) | DoorDash | Invented CUPAC (CUPED + ML); Dash-AB stats engine; interleaving for ranking experiments |

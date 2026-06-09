@@ -36,6 +36,21 @@ Meta's core experimentation challenges — interference through social graphs, s
 - Dimmery et al. (2019) "Shrinkage Estimators in Online Experiments" — Netflix + Meta collaboration
 - Meta Research Blog: research.facebook.com — search "experimentation" and "causal inference"
 - Kohavi & Deng (2022) "A/B Testing Intuition Busters" — includes Meta examples
+- **Analytics at Meta (Medium):** https://medium.com/@AnalyticsAtMeta — practitioner blog covering experiment methodology, data infrastructure, and analytics leadership
+
+## Tracked Sources
+- https://medium.com/@AnalyticsAtMeta — check weekly for new articles
+
+## Recent Articles (Analytics at Meta — Medium)
+
+### Nov 2025 — "Why We Shouldn't Condition on Posttreatment Variables in Experiments"
+Author: Anja Kilibarda. Covers a common but subtle experiment analysis mistake — conditioning on variables that are causally downstream of the treatment. Directly relevant to any experiment where you're tempted to filter your analysis population by post-assignment behavior (e.g., "only users who opened the app after being assigned"). **Ibotta-relevant:** applies directly to the triggered analysis discussion — filtering to "exposed" users is valid only when exposure is independent of treatment; this article explains what goes wrong when it isn't.
+
+### Oct 2025 — "Ladder of Evidence in Understanding Effectiveness of New Products — Part I"
+Author: Sarayu Sarangan. Framework for matching the right causal method (RCT, observational, quasi-experimental) to the question at hand, based on how much evidence you need and what's feasible. **Ibotta-relevant:** useful framing for when Ibotta can't run a clean A/B test (e.g., platform-wide changes, brand partner launches) and needs to choose between synthetic control, DiD, and observational methods.
+
+### May 2026 — "A Blueprint for Valuing Content When A/B Tests Are Not an Option"
+Authors: Asher Zafar and Anuj Kapoor. Meta's approach to causal inference for content valuation when randomization isn't possible — covers instrumental variables and natural experiments at scale. **Ibotta-relevant:** applicable to measuring the incremental value of offer content (brand creative, offer copy) when you can't randomize at the offer level cleanly.
 
 ## Tags
 causal-inference, cluster-randomization, interference, mlrate, network-effects, platform, social-graph, surrogate-metrics, two-sided-markets, variance-reduction
