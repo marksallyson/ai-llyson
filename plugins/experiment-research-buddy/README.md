@@ -52,4 +52,4 @@ The `knowledge-base/` directory contains curated entries organized by type:
 
 ## GitHub Repo
 
-https://github.com/marksallyson/ai-llyson (the-experiment-lab plugin lives in `plugins/the-experiment-lab/`)
+https://github.com/marksallyson/ai-llyson (experiment-research-buddy plugin lives in `plugins/experiment-research-buddy/`)

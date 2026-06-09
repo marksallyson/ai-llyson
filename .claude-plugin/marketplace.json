@@ -12,9 +12,9 @@
       "source": "./plugins/ai-llyson"
     },
     {
-      "name": "the-experiment-lab",
+      "name": "experiment-research-buddy",
       "description": "Expert advisor on consumer product experimentation — experiment design, statistical methods, and strategy for a Decision Scientist",
-      "source": "./plugins/the-experiment-lab"
+      "source": "./plugins/experiment-research-buddy"
     }
   ]
 }
