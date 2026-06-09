@@ -1,7 +1,7 @@
 ---
 title: DoorDash
 type: company
-tags: [variance-reduction, cuped, causal-inference, marketplace, interleaving, ranking, platform, two-sided-markets]
+tags: [causal-inference, cupac, cuped, interleaving, marketplace, ml-covariate, platform, ranking, two-sided-markets, variance-reduction]
 source_url: https://doordash.engineering/category/data-science/
 added: 2026-06-04
 ---
@@ -36,22 +36,4 @@ CUPAC is the highest-signal contribution from DoorDash for Ibotta's work. Ibotta
 - Interleaving methods: "Large-Scale Validation and Analysis of Interleaved Search Evaluation" (Chapelle et al., 2012) — background reading
 
 ## Tags
-variance-reduction, cupac, cuped, interleaving, ranking, platform, two-sided-markets, causal-inference, ml-covariate
-
----
-
-## Recent: 2025-12-17 — Accelerating Experimentation at DoorDash with a Multi-Armed Bandit Platform
-
-**Source:** [DoorDash Engineering Blog](https://careersatdoordash.com/blog/experimentation-at-doordash-with-a-multi-armed-bandit-platform/) | [InfoQ coverage](https://www.infoq.com/news/2026/01/multi-armed-bandits-doordash/), Jan 2026
-
-### What's New
-DoorDash published a detailed walkthrough of their Multi-Armed Bandit (MAB) platform, built on top of their Curie experimentation platform and Dash-AB statistics engine. The platform uses Thompson sampling as the core algorithm and handles the practical challenges of deploying adaptive experiments at scale.
-
-### Key Technical Points
-- **Thompson sampling** is their algorithm of choice — at each exposure event, draw from each variant's posterior Beta distribution and assign the user to the variant with the highest draw. As data accumulates, better variants get more traffic automatically.
-- **Sticky assignment**: once a user is assigned to a variant, they stay there for the duration of the experiment. Prevents inconsistent user experience and ensures valid comparison.
-- **Integrated with Curie**: MAB experiments are first-class citizens in the same platform as standard A/B tests; analysts configure them through the same UI without writing custom allocation logic.
-- **Planned extensions**: contextual bandits (using user features to personalize variant allocation) and Bayesian optimization for continuous parameters (e.g., discount amount rather than just discount vs. no discount).
-
-### Why This Matters for Ibotta
-This is directly applicable to offer/promotion testing. In a standard A/B test of three promotional mechanics (e.g., flat-dollar vs. percent-off vs. bonus cashback), Ibotta runs all three at equal split for four weeks regardless of early performance signals. A MAB approach would shift traffic toward the winning mechanic as the experiment runs, reducing the opportunity cost of underperforming variants. The Thompson sampling approach is particularly well-suited to binary outcomes (redemption yes/no) with low base rates — precisely the setting Ibotta operates in. The contextual bandit extension (personalize variant assignment based on user history) is the natural next step for offer-level experiments where user sensitivity to promotion type varies significantly.
+causal-inference, cupac, cuped, interleaving, marketplace, ml-covariate, platform, ranking, two-sided-markets, variance-reduction

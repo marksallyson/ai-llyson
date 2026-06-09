@@ -1,7 +1,7 @@
 ---
 title: Meta
 type: company
-tags: [network-effects, interference, surrogate-metrics, causal-inference, platform, two-sided-markets, variance-reduction]
+tags: [causal-inference, cluster-randomization, interference, mlrate, network-effects, platform, social-graph, surrogate-metrics, two-sided-markets, variance-reduction]
 source_url: https://research.facebook.com/publications/
 added: 2026-06-04
 ---
@@ -38,4 +38,4 @@ Meta's core experimentation challenges — interference through social graphs, s
 - Kohavi & Deng (2022) "A/B Testing Intuition Busters" — includes Meta examples
 
 ## Tags
-network-effects, interference, surrogate-metrics, causal-inference, variance-reduction, cluster-randomization, mlrate, social-graph
+causal-inference, cluster-randomization, interference, mlrate, network-effects, platform, social-graph, surrogate-metrics, two-sided-markets, variance-reduction

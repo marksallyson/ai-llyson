@@ -19,8 +19,15 @@ outcome you actually care about. Method:
 4. If R² is low (<0.5), the proxy is weak — either find a better one or accept that you're
    measuring something different from what you care about
 
-This is the "surrogate index" approach formalized by Athey et al. (2019):
-"Using Wasserstein Generative Adversarial Networks for the Design of Monte Carlo Simulations."
+This is the "surrogate index" / surrogate outcomes approach. Key references:
+- Athey, S., Chetty, R., Imbens, G., & Kang, H. (2016). "Estimating Treatment Effects Using
+  Multiple Surrogates: The Role of the Surrogate Score." NBER Working Paper 23345.
+  The surrogate score combines multiple short-term outcomes into a single index that serves as
+  a strong proxy for the long-run treatment effect, enabling faster and more precise estimation
+  without waiting for long-run outcomes to materialize.
+- Prentice, R.L. (1989). "Surrogate endpoints in clinical trials." Statistics in Medicine.
+  The foundational clinical trial paper establishing conditions under which a surrogate endpoint
+  can validly replace a primary endpoint.
 
 ## OEC patterns by consumer product type
 

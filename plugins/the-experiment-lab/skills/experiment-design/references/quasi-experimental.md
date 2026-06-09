@@ -62,7 +62,7 @@ a natural experiment that affected some users but not others.
 
 ## Synthetic Control
 
-See `experiment-design/references/` — covered in the geo holdout context there.
+**Geo holdout with synthetic control**: When you have fewer than ~20 markets, construct a synthetic control by weighting untreated markets to match the pre-treatment trend of the treated market(s). The weight vector is solved via constrained regression (minimizing pre-treatment RMSE). Validate by running placebo tests — apply the same method to untreated units and confirm effect estimates are near zero. This is the standard approach at Uber, Google, and Shopify for single-market or few-market interventions.
 
 ## Hierarchy of evidence
 

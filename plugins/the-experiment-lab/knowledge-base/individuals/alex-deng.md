@@ -1,7 +1,7 @@
 ---
 title: Alex Deng
 type: individual
-tags: [variance-reduction, cuped, sample-size, causal-inference, metric-design]
+tags: [causal-inference, cuped, metric-design, multiple-testing, outlier-treatment, regression-to-mean, sample-size, variance-reduction]
 source_url: https://exp-platform.com
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Deng's CUPED paper is one of the highest-ROI reads in the field: it describes a 
 - Deng's Google Scholar profile for full paper list
 
 ## Tags
-variance-reduction, cuped, sample-size, causal-inference, metric-design, outlier-treatment, multiple-testing, regression-to-mean
+causal-inference, cuped, metric-design, multiple-testing, outlier-treatment, regression-to-mean, sample-size, variance-reduction

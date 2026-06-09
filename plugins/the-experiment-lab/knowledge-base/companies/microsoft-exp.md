@@ -1,7 +1,7 @@
 ---
 title: Microsoft ExP Team
 type: company
-tags: [cuped, variance-reduction, organizational-maturity, sample-size, metric-design, platform, causal-inference]
+tags: [causal-inference, cuped, metric-design, oec, organizational-maturity, platform, sample-size, variance-reduction]
 source_url: https://exp-platform.com
 added: 2026-06-04
 ---
@@ -38,4 +38,4 @@ If you read one team's body of work, it's this one. Kohavi, Deng, Fabijan, and c
 - Fabijan et al. (2017) "The Evolution of Continuous Experimentation in Software Product Development" — growth model paper
 
 ## Tags
-cuped, variance-reduction, organizational-maturity, sample-size, metric-design, platform, causal-inference, oec
+causal-inference, cuped, metric-design, oec, organizational-maturity, platform, sample-size, variance-reduction

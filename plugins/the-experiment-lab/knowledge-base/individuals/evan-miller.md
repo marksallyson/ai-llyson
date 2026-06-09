@@ -1,7 +1,7 @@
 ---
 title: Evan Miller
 type: individual
-tags: [sample-size, peeking, sequential-testing, bayesian, metric-design]
+tags: [bayesian, false-positive, metric-design, peeking, sample-size, sequential-testing, type-i-error]
 source_url: https://www.evanmiller.org/
 added: 2026-06-04
 ---
@@ -34,4 +34,4 @@ Evan Miller is an independent writer and software developer who wrote "How Not T
 - evanmiller.org — all statistics posts; most are < 10 minutes each
 
 ## Tags
-sample-size, peeking, sequential-testing, bayesian, metric-design, false-positive, type-i-error
+bayesian, false-positive, metric-design, peeking, sample-size, sequential-testing, type-i-error

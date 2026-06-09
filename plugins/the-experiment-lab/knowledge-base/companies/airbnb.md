@@ -1,7 +1,7 @@
 ---
 title: Airbnb
 type: company
-tags: [organizational-maturity, two-sided-markets, interference, causal-inference, platform, marketplace]
+tags: [causal-inference, interference, marketplace, ml-integration, organizational-maturity, platform, sutva, switchback, two-sided-markets]
 source_url: https://medium.com/airbnb-engineering/experimentation-and-testing
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Airbnb's two-sided marketplace structure (hosts + guests) is the closest public 
 - Johari et al. (2015) "Peeking at A/B Tests: Why It Matters and What to Do About It" — Airbnb + Stanford collaboration
 
 ## Tags
-organizational-maturity, two-sided-markets, interference, causal-inference, marketplace, sutva, switchback, ml-integration
+causal-inference, interference, marketplace, ml-integration, organizational-maturity, platform, sutva, switchback, two-sided-markets

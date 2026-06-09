@@ -1,7 +1,7 @@
 ---
 title: Chetan Sharma
 type: individual
-tags: [sequential-testing, bayesian, warehouse-native, platform, causal-inference, organizational-maturity]
+tags: [always-valid-inference, bayesian, causal-inference, eppo, msprt, organizational-maturity, platform, sequential-testing, warehouse-native]
 source_url: https://www.geteppo.com/blog
 added: 2026-06-04
 ---
@@ -35,4 +35,4 @@ Sharma's background (Airbnb DS → built an experimentation platform) means he's
 - Johari et al. (2017) "Peeking at A/B Tests: Why It Matters and What to Do About It" — foundational paper; Sharma's posts expand on this
 
 ## Tags
-sequential-testing, bayesian, warehouse-native, platform, causal-inference, msprt, always-valid-inference, eppo
+always-valid-inference, bayesian, causal-inference, eppo, msprt, organizational-maturity, platform, sequential-testing, warehouse-native

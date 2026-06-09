@@ -22,10 +22,9 @@ Manage and surface knowledge from the experiment-lab knowledge base. This skill 
 3. **Reading list** — generate a focused reading list on a topic, scoped to what's most relevant to the user's current work
 4. **Summarize** — when the user pastes or links content, extract it into a formatted KB entry
 
-The KB lives at:
-```
-~/.claude/plugins/cache/ai-llyson/the-experiment-lab/0.1.0/knowledge-base/
-```
+The KB lives at `knowledge-base/` in this plugin's directory.
+When accessing files, use the plugin's install path from `installed_plugins.json`, or
+look for the files relative to where this SKILL.md is located (two levels up: `../../knowledge-base/`).
 
 Structure:
 - `_TEMPLATE.md` — template for new entries

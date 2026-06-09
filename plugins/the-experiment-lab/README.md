@@ -1,53 +1,55 @@
-# Experimentation Advisor
+# The Experiment Lab
 
-Expert advisor on consumer product experimentation — blending academic statistical rigor
-with modern tech company practices (Microsoft, Netflix, DoorDash, Booking.com, Duolingo, Uber, LinkedIn).
-
-Designed for a Decision Scientist working on consumer-facing product experiments.
+A Claude Code plugin for experiment design, statistical methods, and A/B testing knowledge — built for Decision Scientists at Ibotta.
 
 ## Skills
 
 ### experiment-design
-Advises on what test type to use and how to structure the experiment.
+Design an experiment from scratch: choose the right test type, handle interference, pick a randomization unit, identify validity threats.
 
-Covers: A/B, holdout, switchback, geo holdout, synthetic control, bandits,
-quasi-experimental methods, randomization unit selection, SUTVA/interference diagnosis,
-triggered analysis.
-
-Triggers: "how should I design this test", "what kind of experiment", "should I use a holdout",
-"network effects", "interference", "can I even A/B test this"
-
-### statistical-methods
-Covers the mechanics of how to analyze experiments rigorously.
-
-Covers: power analysis, CUPED/CUPAC variance reduction, sequential testing, SRM detection,
-multiple comparisons, delta method for ratio metrics, Bayesian vs. frequentist.
-
-Triggers: "how do I power this", "CUPED", "can I peek", "my p-value", "sample ratio mismatch",
-"multiple metrics", "Bayesian"
+**Trigger examples:** "How should I design this test?", "Should I use a holdout?", "Can I even run an A/B test for this?", "How do I handle network effects?", "Two-sided marketplace interference"
 
 ### experiment-strategy
-Advises on metric selection, result interpretation, and ship decisions.
+Choose the right metric (OEC), set guardrail metrics, interpret results, handle novelty effects, and make ship/no-ship decisions.
 
-Covers: OEC design, guardrail metrics, novelty/primacy effects, incrementality measurement,
-cannibalization, heterogeneous treatment effects, when not to test, shipping decisions.
+**Trigger examples:** "What metric should I use?", "Should we ship this?", "The test was significant but...", "Our metric moved but I'm not sure it's real", "Novelty effect", "Incrementality"
 
-Triggers: "what metric should I use", "should we ship", "results look weird",
-"novelty effect", "incrementality", "OEC", "guardrail", "the test was significant but"
+### statistical-methods
+Power analysis, CUPED, sequential testing, SRM detection, ratio metrics, Bayesian vs. frequentist — the mechanics of how to analyze an experiment.
 
-## Reference material
+**Trigger examples:** "How do I power this?", "What sample size do I need?", "Can I peek at results?", "My p-value is X, what does it mean?", "CUPED", "SRM", "Multiple comparisons"
 
-Each skill has detailed references loaded on demand:
+### ibotta-ab-process
+The complete Ibotta-specific experiment lifecycle: LaunchDarkly setup, event tracking and Jira workflow, Ibotta power tools (Looker calculator, ib_util, ds_util), data cleaning, and the Monday launch rule.
 
-| Skill | References |
-|---|---|
-| experiment-design | switchback.md, interference.md, quasi-experimental.md |
-| statistical-methods | cuped.md, srm.md, power-tables.md |
-| experiment-strategy | oec-design.md, novelty-effects.md, incrementality.md |
+**Trigger examples:** "How do we set up LaunchDarkly for this?", "What's the Jira event trigger process?", "How do I use ib_util?", "At Ibotta, how do we...", "DSP process", "get_ld_variants"
 
-## Roadmap
+### kb-curator
+Manage and surface knowledge from the knowledge base: look up what's in the KB on a topic, add a new entry, build a reading list, or summarize a paper into a KB entry.
 
-Future additions:
-- Ibotta-specific grounding (redemption OECs, IPN offer testing, consumer retention metrics)
-- Causal inference deep dive (causal forests, double ML)
-- Experiment governance (review process, documentation templates)
+**Trigger examples:** "What do we have on variance reduction?", "Add this paper to the KB", "Build me a reading list on sequential testing", "Who should I read for marketplace interference?"
+
+## Knowledge Base
+
+The `knowledge-base/` directory contains curated entries organized by type:
+
+- `companies/` — one file per company (17 entries: Airbnb, Booking.com, DoorDash, Duolingo, Etsy, Google, LinkedIn, Lyft, Meta, Microsoft, Netflix, Pinterest, Shopify, Spotify, Statsig, Twitter/X, Uber)
+- `individuals/` — one file per practitioner (10 entries: Ron Kohavi, Diane Tang, Ya Xu, Alex Deng, Aleksander Fabijan, Lukas Vermeer, Chetan Sharma, Evan Miller, Rommil Santiago, Martin Tingley)
+- `papers/` — foundational academic papers (CUPED, overlapping experiments, peeking/mSPRT, SRM, Trustworthy OCE book)
+- `articles/` — essential blog posts (How Not To Run an A/B Test, Surprising A/B Test Results, DoorDash 1000% capacity)
+- `_INDEX.md` — master index of all entries with tags
+- `_TEMPLATE.md` — template for new entries
+- `GLOSSARY.md` — definitions of all key terms (SUTVA, OEC, SRM, MDE, CUPED, etc.)
+
+## How to Add New KB Entries
+
+1. Use the **kb-curator** skill: "Add this paper to the KB" or "Summarize this URL for the KB"
+2. Or manually: copy `_TEMPLATE.md`, fill it out, save to the appropriate subdirectory
+3. Update `_INDEX.md` to add the entry to the correct table and update the Tags section
+4. Use existing tags from `_INDEX.md` where possible; add new tags only if genuinely needed
+
+**Filename convention:** slugified title, lowercase, hyphens, `.md`
+
+## GitHub Repo
+
+https://github.com/marksallyson/ai-llyson (the-experiment-lab plugin lives in `plugins/the-experiment-lab/`)

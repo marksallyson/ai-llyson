@@ -1,7 +1,7 @@
 ---
 title: Martin Tingley + Netflix Team
 type: individual
-tags: [causal-inference, variance-reduction, platform, long-term-effects, surrogate-metrics, glm]
+tags: [binary-outcomes, causal-inference, glm, long-term-effects, modular-inference, netflix, platform, surrogate-metrics, variance-reduction]
 source_url: https://netflixtechblog.com/
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Netflix's team publishes some of the most technically sophisticated practitioner
 - "Improving Online Experiment Capacity by 4X with Parallelization and Increased Sensitivity" — Netflix Tech Blog
 
 ## Tags
-causal-inference, variance-reduction, glm, platform, long-term-effects, surrogate-metrics, modular-inference, binary-outcomes, netflix
+binary-outcomes, causal-inference, glm, long-term-effects, modular-inference, netflix, platform, surrogate-metrics, variance-reduction

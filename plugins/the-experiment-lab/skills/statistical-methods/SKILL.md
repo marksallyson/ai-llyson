@@ -185,6 +185,8 @@ assumption-free.
 to stakeholders. Bayesian for exploratory tests, early-stage features, or when you want
 probability-of-superiority reporting.
 
+For Ibotta-specific power analysis tools and code patterns (Looker calculator, ib_util, ds_util), see the **ibotta-ab-process** skill (references/power-analysis-ibotta.md).
+
 ## References
 
 - `references/cuped.md` — CUPED derivation, CUPAC, code patterns

@@ -1,7 +1,7 @@
 ---
 title: Spotify
 type: company
-tags: [platform, organizational-maturity, sequential-testing, metric-design, personalization, long-term-effects]
+tags: [always-valid-inference, bayesian, long-term-effects, metric-design, organizational-maturity, personalization, platform, sequential-testing, warehouse-native]
 source_url: https://confidence.spotify.com
 added: 2026-06-04
 ---
@@ -37,4 +37,4 @@ Spotify's organizational contribution — the idea that "learning" from a null r
 - Deng et al. (2016) "Continuous Monitoring of A/B Tests without Pain: Optional Stopping in Bayesian Testing" — complementary approach
 
 ## Tags
-platform, organizational-maturity, sequential-testing, bayesian, metric-design, personalization, long-term-effects, always-valid-inference, warehouse-native
+always-valid-inference, bayesian, long-term-effects, metric-design, organizational-maturity, personalization, platform, sequential-testing, warehouse-native

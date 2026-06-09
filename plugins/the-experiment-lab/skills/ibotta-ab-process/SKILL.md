@@ -164,3 +164,9 @@ Use the pre-defined action standard. The full analysis doc should include:
 - Learnings and next steps
 
 Only one winner gets shipped. No mixing of variant behaviors.
+
+## References
+
+- `references/event-tracking-jira.md` — Ibotta event tracking and Jira Event Trigger workflow
+- `references/launchdarkly.md` — LaunchDarkly setup, gotchas, and `get_ld_variants` usage
+- `references/power-analysis-ibotta.md` — Power analysis tools at Ibotta (Looker calculator, ib_util, ds_util, Python/R patterns)

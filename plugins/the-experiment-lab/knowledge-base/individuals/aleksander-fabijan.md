@@ -1,7 +1,7 @@
 ---
 title: Aleksander Fabijan
 type: individual
-tags: [organizational-maturity, platform, democratization, metric-design]
+tags: [crawl-walk-run-fly, culture, democratization, maturity-model, metric-design, organizational-maturity, platform]
 source_url: https://www.aleksander-fabijan.com/
 added: 2026-06-04
 ---
@@ -38,4 +38,4 @@ Fabijan's unique contribution is on the organizational side of experimentation: 
 - Kohavi, Tang, Xu (2020) *Trustworthy Online Controlled Experiments* — Chapter on organizational maturity (co-authored with Fabijan's contributions)
 
 ## Tags
-organizational-maturity, platform, democratization, metric-design, crawl-walk-run-fly, culture, maturity-model
+crawl-walk-run-fly, culture, democratization, maturity-model, metric-design, organizational-maturity, platform

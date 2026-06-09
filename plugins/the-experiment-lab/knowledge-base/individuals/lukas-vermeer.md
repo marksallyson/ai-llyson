@@ -1,7 +1,7 @@
 ---
 title: Lukas Vermeer
 type: individual
-tags: [democratization, organizational-maturity, platform, metric-design, two-sided-markets]
+tags: [booking-com, culture, democratization, guardrail-metrics, metric-design, non-technical-access, organizational-maturity, platform, two-sided-markets]
 source_url: https://lukasvermeer.nl/
 added: 2026-06-04
 ---
@@ -37,4 +37,4 @@ Vermeer's unique value is that he built something at Booking.com that most compa
 - "In Controlled Experiments We Trust" — Lukas Vermeer talk (multiple versions; search for most recent)
 
 ## Tags
-democratization, organizational-maturity, platform, metric-design, guardrail-metrics, culture, non-technical-access, booking-com
+booking-com, culture, democratization, guardrail-metrics, metric-design, non-technical-access, organizational-maturity, platform, two-sided-markets

@@ -1,7 +1,7 @@
 ---
 title: Ya Xu
 type: individual
-tags: [causal-inference, network-effects, interference, variance-reduction, platform, two-sided-markets]
+tags: [causal-inference, cluster-randomization, interference, network-effects, platform, two-sided-markets, variance-reduction, xlnt]
 source_url: https://www.linkedin.com/in/ya-xu-stats/
 added: 2026-06-04
 ---
@@ -37,4 +37,4 @@ Xu's work sits at the intersection of rigorous statistics and production scale. 
 - Ya Xu's Stanford PhD dissertation — ProQuest
 
 ## Tags
-causal-inference, network-effects, interference, variance-reduction, platform, two-sided-markets, cluster-randomization, xlnt
+causal-inference, cluster-randomization, interference, network-effects, platform, two-sided-markets, variance-reduction, xlnt

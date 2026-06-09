@@ -1,7 +1,7 @@
 ---
 title: Etsy
 type: company
-tags: [democratization, organizational-maturity, two-sided-markets, metric-design, platform]
+tags: [continuous-deployment, democratization, feature-flags, metric-design, mid-size-ecommerce, organizational-maturity, platform, two-sided-markets]
 source_url: https://codeascraft.com/
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Etsy is the most relevant "scale analog" for Ibotta in this KB. They're a two-si
 - "Democratizing Online Controlled Experiments at Booking.com" (Vermeer et al.) — read alongside Etsy posts for comparison at different scales
 
 ## Tags
-democratization, organizational-maturity, two-sided-markets, metric-design, platform, feature-flags, continuous-deployment, mid-size-ecommerce
+continuous-deployment, democratization, feature-flags, metric-design, mid-size-ecommerce, organizational-maturity, platform, two-sided-markets

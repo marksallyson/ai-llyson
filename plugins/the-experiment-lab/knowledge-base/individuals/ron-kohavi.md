@@ -1,7 +1,7 @@
 ---
 title: Ron Kohavi
 type: individual
-tags: [organizational-maturity, metric-design, sample-size, causal-inference, two-sided-markets, platform, variance-reduction]
+tags: [book, causal-inference, metric-design, oec, organizational-maturity, platform, sample-size, srm, surprising-findings, two-sided-markets, variance-reduction]
 source_url: https://exp-platform.com
 added: 2026-06-04
 ---
@@ -39,4 +39,4 @@ Kohavi's work is foundational — not "foundational" as in "historically interes
 - "A/B Testing Intuition Busters" — Kohavi & Deng (2022) — search arXiv
 
 ## Tags
-organizational-maturity, metric-design, sample-size, causal-inference, two-sided-markets, oec, srm, surprising-findings, book
+book, causal-inference, metric-design, oec, organizational-maturity, platform, sample-size, srm, surprising-findings, two-sided-markets, variance-reduction

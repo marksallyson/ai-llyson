@@ -145,6 +145,8 @@ Frame in terms of absolute business impact (revenue, users affected).
 
 ## Incrementality — the hardest question
 
+For Ibotta-specific incrementality measurement setup, see the **ibotta-ab-process** skill.
+
 **The incrementality question**: would this behavior have happened without the intervention?
 
 This is Ibotta's core question for offer experiments: did the offer drive a purchase

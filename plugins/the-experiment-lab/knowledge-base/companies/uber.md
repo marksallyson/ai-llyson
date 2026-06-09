@@ -1,7 +1,7 @@
 ---
 title: Uber
 type: company
-tags: [marketplace, interference, switchback, synthetic-control, two-sided-markets, causal-inference, quasi-experimental]
+tags: [causal-inference, interference, marketplace, quasi-experimental, staged-rollout, sutva, switchback, synthetic-control, two-sided-markets]
 source_url: https://www.uber.com/en-US/blog/engineering/
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Uber is the leading public reference for marketplace interference methods — sp
 - Bojinov et al. (2020) "Causal Inference from Observational Data in Online Platforms" — relevant for Uber and Ibotta settings
 
 ## Tags
-marketplace, interference, switchback, synthetic-control, two-sided-markets, causal-inference, quasi-experimental, sutva, staged-rollout
+causal-inference, interference, marketplace, quasi-experimental, staged-rollout, sutva, switchback, synthetic-control, two-sided-markets

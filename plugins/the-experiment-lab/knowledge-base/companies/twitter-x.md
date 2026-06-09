@@ -1,7 +1,7 @@
 ---
 title: Twitter/X
 type: company
-tags: [platform, mobile, organizational-maturity, metric-design, network-effects]
+tags: [client-side-assignment, metric-design, mobile, mobile-ab, network-effects, notifications, organizational-maturity, platform]
 source_url: https://blog.twitter.com/engineering/en_us/topics/insights
 added: 2026-06-04
 ---
@@ -34,4 +34,4 @@ Twitter's 2015 technical overview is valuable primarily as a historical referenc
 - "How Twitter Handles 3,000 A/B Tests a Year" — conference talk summary (search KDD/RecSys proceedings)
 
 ## Tags
-platform, mobile, organizational-maturity, metric-design, network-effects, mobile-ab, client-side-assignment, notifications
+client-side-assignment, metric-design, mobile, mobile-ab, network-effects, notifications, organizational-maturity, platform

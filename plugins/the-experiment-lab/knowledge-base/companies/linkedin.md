@@ -1,7 +1,7 @@
 ---
 title: LinkedIn
 type: company
-tags: [interference, network-effects, causal-inference, platform, variance-reduction, two-sided-markets]
+tags: [causal-inference, cluster-randomization, exposure-logging, interference, network-effects, platform, two-sided-markets, variance-reduction]
 source_url: https://engineering.linkedin.com/blog/topic/experimentation
 added: 2026-06-04
 ---
@@ -36,24 +36,4 @@ LinkedIn's network is fundamentally a two-sided marketplace (members + companies
 - Ya Xu's Stanford PhD dissertation (available via ProQuest)
 
 ## Tags
-interference, network-effects, causal-inference, platform, variance-reduction, two-sided-markets, cluster-randomization, exposure-logging
-
----
-
-## Recent: 2026-04-17 — Multi-Experiment Analysis (MEA): Corrected Effect Estimates Under Overlapping Experiments
-
-**Source:** [arXiv:2604.16671](https://arxiv.org/abs/2604.16671) — Reza Hosseini, LinkedIn Corporation
-
-### What It Is
-A new methodology from LinkedIn for estimating treatment effects accurately when multiple experiments share the same user traffic. The core problem: when Experiment A and Experiment B run concurrently on overlapping populations, naive per-experiment estimates are contaminated by the other experiment's effects — producing numbers that don't correspond to any actionable real-world launch scenario.
-
-Multi-Experiment Analysis (MEA) produces three types of estimates without requiring experiment coordination, traffic splitting, or factorial pre-design:
-
-1. **Corrected individual effects**: each experiment's treatment effect, adjusted for all other overlapping experiments running simultaneously
-2. **Combined launch effects**: expected effect of launching any desired combination of variants across experiments (e.g., "what happens if we ship Experiment A's treatment alongside Experiment B's control?")
-3. **Conditional effects**: the effect of one experiment's variant *given* specific states of all other experiments — useful for understanding interactions before committing to a launch
-
-MEA works on naturally occurring overlaps and is validated in production at LinkedIn scale with real-world lessons on system design and adoption.
-
-### Why It Matters for Ibotta
-At any org running 10+ concurrent experiments on the same user base, overlapping traffic is unavoidable. If Ibotta simultaneously experiments on offer visibility, notification timing, and checkout UX, all three experiments share users and contaminate each other's estimates. The standard fix — serializing experiments — kills velocity. MEA offers a statistical correction that lets experiments run in parallel while recovering unbiased estimates. The paper is unusually practical: it covers production deployment lessons alongside the methodology.
+causal-inference, cluster-randomization, exposure-logging, interference, network-effects, platform, two-sided-markets, variance-reduction

@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-06-08 (weekly update: 1 new article added, 2 entries updated — linkedin, booking-com)
+Last updated: 2026-06-04
 
 ---
 
@@ -45,16 +45,28 @@ Last updated: 2026-06-08 (weekly update: 1 new article added, 2 entries updated 
 
 ---
 
+## Papers
+
+| File | Title | One-Line Description |
+|------|-------|----------------------|
+| [trustworthy-online-controlled-experiments.md](papers/trustworthy-online-controlled-experiments.md) | Trustworthy Online Controlled Experiments (Kohavi, Tang, Xu 2020) | The definitive practitioner textbook; covers OEC, SRM, pitfalls, organizational maturity |
+| [cuped-paper.md](papers/cuped-paper.md) | Improving Sensitivity Using Pre-Experiment Data — CUPED (Deng et al., KDD 2013) | Invented CUPED; the canonical variance reduction technique now used industry-wide |
+| [overlapping-experiments.md](papers/overlapping-experiments.md) | Overlapping Experiment Infrastructure (Tang et al., KDD 2010) | Google's layered experiment system; foundational for concurrent experiment design |
+| [peeking-problem.md](papers/peeking-problem.md) | Peeking Problem / mSPRT (Johari et al.) | Formalizes the peeking problem and introduces always-valid inference via mSPRT |
+| [srm-paper.md](papers/srm-paper.md) | SRM — Sample Ratio Mismatch detection and diagnostics | Systematic treatment of SRM as a validity check; diagnostic checklist |
+
 ---
 
 ## Articles
 
 | File | Title | One-Line Description |
 |------|-------|----------------------|
-| [abadie-value-of-evidence-2026.md](articles/abadie-value-of-evidence-2026.md) | Estimating the Value of Evidence-Based Decision Making | Abadie, Imbens et al. prove p < 0.05 rules leave 27–30% of value on the table; empirical Bayes decision rules recover it |
+| [how-not-to-run-an-ab-test.md](articles/how-not-to-run-an-ab-test.md) | How Not To Run an A/B Test (Evan Miller) | Canonical peeking problem post; explains what peeking does to Type I error |
+| [surprising-ab-test-results.md](articles/surprising-ab-test-results.md) | Surprising A/B Test Results (Kohavi et al.) | Catalog of experiments that contradicted expert intuition; why mandatory pre-registration matters |
+| [doordash-experiment-capacity.md](articles/doordash-experiment-capacity.md) | DoorDash Experiment Capacity (DoorDash Engineering) | How CUPAC increased DoorDash's effective experiment capacity via ML-based variance reduction |
 
 ---
 
 ## Tags in Use
 
-`variance-reduction` · `cuped` · `interference` · `two-sided-markets` · `network-effects` · `switchback` · `synthetic-control` · `quasi-experimental` · `organizational-maturity` · `democratization` · `sequential-testing` · `bayesian` · `interleaving` · `ranking` · `personalization` · `causal-inference` · `surrogate-metrics` · `metric-design` · `sample-size` · `peeking` · `warehouse-native` · `platform` · `long-term-effects` · `marketplace` · `multi-armed-bandit` · `adaptive-experimentation` · `noise-floor` · `balanced-allocation` · `vendor-landscape` · `empirical-bayes` · `decision-theory` · `overlapping-experiments`
+`always-valid-inference` · `attribution-window` · `bayesian` · `behavioral-economics` · `binary-outcomes` · `book` · `booking-com` · `brand-level` · `career` · `causal-inference` · `client-side-assignment` · `cluster-randomization` · `community` · `concurrent-experiments` · `continuous-deployment` · `crawl-walk-run-fly` · `culture` · `cupac` · `cuped` · `delayed-conversion` · `democratization` · `difference-in-differences` · `engagement` · `eppo` · `exposure-logging` · `false-positive` · `feature-flags` · `funnel` · `glm` · `guardrail-metrics` · `holdout` · `infrastructure` · `interference` · `interleaving` · `interrupted-time-series` · `layered-experiments` · `layers` · `long-term-effects` · `loss-aversion` · `marketplace` · `maturity-model` · `metric-design` · `mid-size-ecommerce` · `ml-covariate` · `ml-integration` · `mlrate` · `mobile` · `mobile-ab` · `modular-inference` · `msprt` · `multiple-testing` · `netflix` · `network-effects` · `non-technical-access` · `notifications` · `oec` · `organizational-maturity` · `outlier-treatment` · `overlapping-experiments` · `peeking` · `personalization` · `platform` · `practitioner-interviews` · `quasi-experimental` · `ranking` · `rapid-iteration` · `regression-to-mean` · `right-censoring` · `sample-size` · `sequential-testing` · `social-graph` · `srm` · `staged-rollout` · `stakeholder-communication` · `streak-mechanics` · `surprising-findings` · `surrogate-metrics` · `sutva` · `switchback` · `synthetic-control` · `two-sided-markets` · `type-i-error` · `user-lifecycle` · `variance-reduction` · `warehouse-native` · `xlnt`

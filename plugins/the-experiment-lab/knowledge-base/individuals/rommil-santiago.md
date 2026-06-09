@@ -1,7 +1,7 @@
 ---
 title: Rommil Santiago
 type: individual
-tags: [organizational-maturity, democratization, community, practitioner-interviews]
+tags: [career, community, culture, democratization, organizational-maturity, practitioner-interviews, stakeholder-communication]
 source_url: https://experimentnation.com/
 added: 2026-06-04
 ---
@@ -34,4 +34,4 @@ Santiago's contribution is community and practitioner-level knowledge synthesis.
 - Experiment Nation annual conference talks (archived on YouTube)
 
 ## Tags
-organizational-maturity, democratization, community, practitioner-interviews, stakeholder-communication, culture, career
+career, community, culture, democratization, organizational-maturity, practitioner-interviews, stakeholder-communication

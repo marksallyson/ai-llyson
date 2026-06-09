@@ -1,7 +1,7 @@
 ---
 title: Duolingo
 type: company
-tags: [organizational-maturity, metric-design, engagement, long-term-effects, rapid-iteration]
+tags: [behavioral-economics, engagement, long-term-effects, loss-aversion, metric-design, notifications, organizational-maturity, rapid-iteration, streak-mechanics]
 source_url: https://blog.duolingo.com/
 added: 2026-06-04
 ---
@@ -36,4 +36,4 @@ Duolingo's product context — a free consumer app with streak-based engagement 
 - Thaler & Sunstein (2008) *Nudge* — conceptual foundation for behavioral design experiments
 
 ## Tags
-organizational-maturity, metric-design, engagement, long-term-effects, rapid-iteration, behavioral-economics, notifications, loss-aversion, streak-mechanics
+behavioral-economics, engagement, long-term-effects, loss-aversion, metric-design, notifications, organizational-maturity, rapid-iteration, streak-mechanics

@@ -35,7 +35,7 @@ Only after diagnosing these should a design be recommended.
 ```
 Is there interference between units?
 ├── No → Standard A/B (user- or session-level)
-│         └── Is sample size sufficient? → Power analysis before committing
+│         └── Is sample size sufficient? → Power analysis before committing (use the **statistical-methods** skill for power calculations and sample size)
 └── Yes → What kind of interference?
           ├── Network / social → Cluster randomization or graph-cluster design
           ├── Marketplace (supply/demand spillover) → Switchback or geo holdout
@@ -119,3 +119,8 @@ higher power for the exposed subgroup. Document both.
 - `references/switchback.md` — switchback design deep dive
 - `references/quasi-experimental.md` — when and how to use observational methods
 - `references/interference.md` — network effects and SUTVA violations in detail
+
+## Related Skills
+
+- For power analysis and sample size calculations, see the **statistical-methods** skill.
+- For Ibotta-specific experiment setup (LaunchDarkly, event tracking, Jira workflow), see the **ibotta-ab-process** skill.

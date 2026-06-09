@@ -1,7 +1,7 @@
 ---
 title: Shopify
 type: company
-tags: [synthetic-control, quasi-experimental, two-sided-markets, causal-inference, marketplace]
+tags: [brand-level, causal-inference, difference-in-differences, interrupted-time-series, marketplace, quasi-experimental, synthetic-control, two-sided-markets]
 source_url: https://shopify.engineering/
 added: 2026-06-04
 ---
@@ -35,4 +35,4 @@ Shopify's problem maps directly to Ibotta's brand/retailer experimentation chall
 - "Difference-in-Differences with Multiple Time Periods" — Callaway & Sant'Anna (2021) — modern DiD for staggered adoption
 
 ## Tags
-synthetic-control, quasi-experimental, two-sided-markets, causal-inference, marketplace, interrupted-time-series, difference-in-differences, brand-level
+brand-level, causal-inference, difference-in-differences, interrupted-time-series, marketplace, quasi-experimental, synthetic-control, two-sided-markets

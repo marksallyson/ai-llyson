@@ -1,7 +1,7 @@
 ---
 title: Pinterest
 type: company
-tags: [interleaving, ranking, metric-design, delayed-conversion, causal-inference, personalization]
+tags: [attribution-window, causal-inference, delayed-conversion, interleaving, metric-design, personalization, ranking, right-censoring, user-lifecycle]
 source_url: https://medium.com/pinterest-engineering
 added: 2026-06-04
 ---
@@ -35,4 +35,4 @@ Delayed conversion is Ibotta's problem too. A user may see an offer, save it men
 - Pinterest's talk at RecSys or KDD on recommendation evaluation (search "Pinterest interleaving" on YouTube)
 
 ## Tags
-interleaving, ranking, metric-design, delayed-conversion, causal-inference, personalization, attribution-window, right-censoring, user-lifecycle
+attribution-window, causal-inference, delayed-conversion, interleaving, metric-design, personalization, ranking, right-censoring, user-lifecycle

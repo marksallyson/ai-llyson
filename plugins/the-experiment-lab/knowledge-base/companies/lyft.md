@@ -1,7 +1,7 @@
 ---
 title: Lyft
 type: company
-tags: [two-sided-markets, interference, long-term-effects, quasi-experimental, causal-inference, marketplace]
+tags: [causal-inference, difference-in-differences, holdout, interference, long-term-effects, marketplace, quasi-experimental, two-sided-markets]
 source_url: https://eng.lyft.com/tagged/experimentation
 added: 2026-06-04
 ---
@@ -35,4 +35,4 @@ Lyft's published papers address a problem Ibotta faces acutely: how do you measu
 - "The Challenges of Online Controlled Experiments in Two-Sided Marketplace Platforms" — search on Google Scholar
 
 ## Tags
-two-sided-markets, interference, long-term-effects, quasi-experimental, causal-inference, marketplace, difference-in-differences, holdout
+causal-inference, difference-in-differences, holdout, interference, long-term-effects, marketplace, quasi-experimental, two-sided-markets

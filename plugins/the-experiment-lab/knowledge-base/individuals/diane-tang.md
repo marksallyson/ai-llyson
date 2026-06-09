@@ -1,7 +1,7 @@
 ---
 title: Diane Tang
 type: individual
-tags: [overlapping-experiments, platform, causal-inference, organizational-maturity]
+tags: [causal-inference, concurrent-experiments, infrastructure, layers, organizational-maturity, overlapping-experiments, platform]
 source_url: https://research.google/people/DianeGTang/
 added: 2026-06-04
 ---
@@ -32,4 +32,4 @@ Tang's 2010 KDD paper solved a problem that every team running more than a handf
 - Google Research profile: research.google/people/DianeGTang — for paper list
 
 ## Tags
-overlapping-experiments, platform, causal-inference, organizational-maturity, layers, concurrent-experiments, infrastructure
+causal-inference, concurrent-experiments, infrastructure, layers, organizational-maturity, overlapping-experiments, platform

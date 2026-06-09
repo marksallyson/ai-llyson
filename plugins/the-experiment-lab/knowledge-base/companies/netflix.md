@@ -1,7 +1,7 @@
 ---
 title: Netflix
 type: company
-tags: [causal-inference, variance-reduction, personalization, platform, long-term-effects, surrogate-metrics]
+tags: [binary-outcomes, causal-inference, glm, holdout, long-term-effects, personalization, platform, surrogate-metrics, variance-reduction]
 source_url: https://netflixtechblog.com/experimentation-is-a-major-part-of-the-culture-at-netflix-472520312f74
 added: 2026-06-04
 ---
@@ -37,4 +37,4 @@ Netflix's core problem — measuring whether a content recommendation change act
 - "Experimentation is a major part of the culture at Netflix" — blog post overview of XP platform
 
 ## Tags
-causal-inference, variance-reduction, personalization, platform, long-term-effects, surrogate-metrics, glm, holdout, binary-outcomes
+binary-outcomes, causal-inference, glm, holdout, long-term-effects, personalization, platform, surrogate-metrics, variance-reduction

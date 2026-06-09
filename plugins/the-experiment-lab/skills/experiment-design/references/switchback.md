@@ -74,4 +74,4 @@ confounding while β identifies the treatment effect.
 - Bojinov & Shephard (2019) — "Time Series Experiments and Causal Estimands" — formal
   framework for temporal interference and switchback validity
 - Viviano & Bradic (2023) — optimal period length selection
-- Hu et al. (2022, DoorDash) — cluster robust SE for switchback analysis
+- DoorDash Engineering (2019) — cluster robust SE for switchback analysis (see DoorDash blog: "Analyzing Switchback Experiments by Cluster Robust Standard Error to Prevent False Positive Results")
