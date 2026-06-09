@@ -170,3 +170,4 @@ Only one winner gets shipped. No mixing of variant behaviors.
 - `references/event-tracking-jira.md` — Ibotta event tracking and Jira Event Trigger workflow
 - `references/launchdarkly.md` — LaunchDarkly setup, gotchas, and `get_ld_variants` usage
 - `references/power-analysis-ibotta.md` — Power analysis tools at Ibotta (Looker calculator, ib_util, ds_util, Python/R patterns)
+- `references/past-experiments.md` — Full inventory of 34 past D2C A/B test readouts (2022–2026) with Drive links; use to avoid re-testing and to calibrate baseline rates for power analysis
