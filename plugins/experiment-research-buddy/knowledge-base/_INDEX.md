@@ -65,6 +65,7 @@ Last updated: 2026-06-09
 | [surprising-ab-test-results.md](articles/surprising-ab-test-results.md) | Surprising A/B Test Results (Kohavi et al.) | Catalog of experiments that contradicted expert intuition; why mandatory pre-registration matters |
 | [doordash-experiment-capacity.md](articles/doordash-experiment-capacity.md) | DoorDash Experiment Capacity (DoorDash Engineering) | How CUPAC increased DoorDash's effective experiment capacity via ML-based variance reduction |
 | [goodui.md](articles/goodui.md) | GoodUI | 650+ crowdsourced A/B test patterns from major companies — useful for hypothesis generation, not statistical evidence; no sample sizes or significance data |
+| [abtest-design.md](articles/abtest-design.md) | abtest.design | 50 mobile/SaaS A/B test case studies (Duolingo, Uber, Pinterest) — wins-only, no statistical rigor, many implausibly large effect sizes; use only for paywall/onboarding hypothesis generation |
 
 ---
 
