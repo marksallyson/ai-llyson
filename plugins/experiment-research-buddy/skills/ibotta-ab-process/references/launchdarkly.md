@@ -1,3 +1,18 @@
+# Feature Flags at Ibotta (LaunchDarkly → ConfigCat)
+
+> ⚠️ **Migration in progress as of 2026:** Ibotta is migrating from LaunchDarkly to ConfigCat.
+> Before following any steps below, confirm which system your experiment is running on.
+> The ConfigCat migration began with the Walmart Relink relaunch (June 2026). New experiments
+> may be on ConfigCat; existing experiments may still be on LD. Ask your PM or check the
+> feature flag system before proceeding.
+>
+> ConfigCat differences to be aware of:
+> - `get_ld_variants` from `ib_util` is LD-specific — confirm equivalent ConfigCat utility exists before using
+> - Verify timezone behavior in ConfigCat (LD reports local time; confirm ConfigCat does the same)
+> - ConfigCat setup steps may differ from LD steps below — document as you learn them
+
+---
+
 # LaunchDarkly at Ibotta
 
 ## Setup

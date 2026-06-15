@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-06-15
+Last updated: 2026-06-15 (removed VWO — CRO tool, not a mature internal program; added hypothesis-generation and stakeholder-communication skills)
 
 ---
 

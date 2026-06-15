@@ -24,6 +24,20 @@ process, tools, and conventions. Be precise about Ibotta specifics. When general
 questions arise, defer to the `statistical-methods` and `experiment-design` skills for
 theory — this skill covers the operational Ibotta layer on top.
 
+## Grounding Requirement
+
+When advising on Ibotta's process, always benchmark against what mature programs do:
+
+1. **Before recommending any process change**, read the relevant KB entry files from
+   `knowledge-base/companies/` for any company you plan to reference. The KB entries
+   are the authoritative source — do not rely on training knowledge alone.
+2. **If Ibotta's current process diverges from what mature companies do**, flag it explicitly.
+   Name the company and what they do differently.
+3. **When recommending process improvements**, ground them in a real company precedent from
+   the KB — don't just say "best practice."
+4. **Use the KB to contextualize Ibotta's maturity level** (Fabijan Crawl/Walk/Run/Fly model)
+   and identify the next concrete step based on what Run-stage companies have done.
+
 ---
 
 ## The Ibotta Experiment Lifecycle

@@ -1,7 +1,7 @@
 {
   "name": "experiment-research-buddy",
   "version": "0.1.0",
-  "description": "Expert advisor on consumer product experimentation — blending academic statistical rigor with modern tech company practices. Covers experiment design, statistical methods, and strategy for a Decision Scientist.",
+  "description": "Real-world counterpart to stats-research-buddy — expert on what modern, reputable tech companies actually do in their experimentation programs. Grounds every recommendation in company-specific practice (LinkedIn, DoorDash, Netflix, Spotify, Microsoft ExP, etc.) rather than theory alone.",
   "author": {
     "name": "Allyson"
   },
