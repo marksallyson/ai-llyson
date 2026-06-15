@@ -1,7 +1,7 @@
 # ai-llyson 🧠✨
 
-**My personal Claude Code plugin playground. Two plugins, very specific use cases, not accepting feedback at this time (jk, I always welcome ideas and pushback).
-**---
+My personal Claude Code plugin playground. Not accepting feedback at this time (jk, I always welcome ideas and pushback).
+
 
 ## Plugins
 
