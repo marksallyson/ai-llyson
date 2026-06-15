@@ -7,9 +7,9 @@
   },
   "plugins": [
     {
-      "name": "ai-llyson",
+      "name": "ai-llyson-assistant",
       "description": "Personal assistant: brain dumps, coaching, Ibotta onboarding, and career tracking",
-      "source": "./plugins/ai-llyson"
+      "source": "./plugins/ai-llyson-assistant"
     },
     {
       "name": "experiment-research-buddy",
