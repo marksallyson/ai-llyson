@@ -1,4 +1,4 @@
-# The Experiment Lab
+# experiment-research-buddy
 
 A Claude Code plugin for experiment design, statistical methods, and A/B testing knowledge — built for Decision Scientists at Ibotta.
 
@@ -33,7 +33,3 @@ The `knowledge-base/` directory contains curated entries organized by type:
 4. Use existing tags from `_INDEX.md` where possible; add new tags only if genuinely needed
 
 **Filename convention:** slugified title, lowercase, hyphens, `.md`
-
-## GitHub Repo
-
-https://github.com/marksallyson/ai-llyson (experiment-research-buddy plugin lives in `plugins/experiment-research-buddy/`)
