@@ -1,35 +1,77 @@
 # experiment-research-buddy
 
-A Claude Code plugin for experiment design, statistical methods, and A/B testing knowledge — built for Decision Scientists at Ibotta.
+A Claude Code plugin for Decision Scientists at Ibotta — built to think like a senior experimentation advisor who has worked inside the best programs in the industry.
+
+## The Premise
+
+Companies like Booking.com, Duolingo, Airbnb, DoorDash, LinkedIn, Netflix, and Microsoft ExP are years — sometimes decades — ahead of most experimentation programs. They've already hit the walls, made the mistakes, built the infrastructure, and figured out what actually works at scale. That accumulated knowledge exists in their engineering blogs, conference talks, papers, and public postmortems — but it's scattered and hard to synthesize.
+
+This plugin is that synthesis. It functions as an advisor who has studied deeply what these companies built, why they built it, what went wrong first, and what they'd do differently. When you ask it a question, it doesn't give you textbook answers — it tells you what Booking.com actually did when they hit this problem, what DoorDash learned when they tried to scale experiment capacity, how LinkedIn handled the peeking problem when PMs wouldn't stop looking at dashboards.
+
+The goal: skip the mistakes these companies already made. Apply what they learned — on the problems, at the scale, and with the constraints Ibotta actually has.
+
+## How to Use It
+
+This plugin works best as a **counterpart to Emma's `stats-research-buddy`**. Emma's plugin is an expert on the academic literature — what the research says is correct. This plugin grounds that in practice — what reputable companies actually shipped and why.
+
+Use them together: the academic rigor tells you what's theoretically sound; this plugin tells you whether mature programs actually adopted it and what happened when they did.
 
 ## Skills
 
-| Skill | How to trigger |
-|-------|---------------|
-| **experiment-design** | "How should I design this test?" or "Can I even run an A/B test for this?" |
-| **experiment-strategy** | "What metric should I use?" or "Should we ship this?" |
-| **statistical-methods** | "How do I power this?" or "Can I peek at results?" or "CUPED/SRM/multiple comparisons" |
-| **ibotta-ab-process** | "How do we set up LaunchDarkly?" or "At Ibotta, how do we..." |
-| **kb-curator** | "What do we have on X?" or "Add this paper to the KB" |
-| **weekly-digest** | Runs automatically on a schedule |
+### experiment-design
+Design an experiment from scratch, grounded in how mature programs handle the same design challenge. Covers test type selection, interference, randomization unit, and validity threats — always anchored in a real company example.
+
+**Trigger examples:** "How should I design this test?", "Should I use a holdout?", "How do I handle network effects?", "Can I even run an A/B test for this?"
+
+### experiment-strategy
+Choose the right metric, set guardrails, interpret results, and make ship/no-ship decisions — the way LinkedIn or Netflix would approach it, not just from first principles.
+
+**Trigger examples:** "What metric should I use?", "Should we ship this?", "The test was significant but...", "Novelty effect", "Incrementality"
+
+### statistical-methods
+Power analysis, CUPED, sequential testing, SRM detection, ratio metrics, Bayesian vs. frequentist — with company-specific context for which method each mature program actually uses and why.
+
+**Trigger examples:** "How do I power this?", "Can I peek at results?", "CUPED", "SRM", "Multiple comparisons", "mSPRT"
+
+### ibotta-ab-process
+The complete Ibotta-specific experiment lifecycle: LaunchDarkly/ConfigCat setup, event tracking and Jira workflow, Ibotta power tools (`ib_util`, `ds_util`, Looker calculator), data cleaning, and the Monday launch rule. Benchmarks Ibotta's process against mature programs and flags gaps.
+
+**Trigger examples:** "How do we set up LaunchDarkly for this?", "What's the Jira event trigger process?", "At Ibotta, how do we...", "get_ld_variants"
+
+### hypothesis-generation
+Generate experiment ideas for a specific product surface, grounded in what real companies tested on analogous surfaces. Cross-references Ibotta's 34-experiment history to avoid re-testing, and prioritizes by expected impact vs. cost to run.
+
+**Trigger examples:** "What should we test on the home screen?", "Give me hypotheses for the offer card", "We've never tested X — is it worth it?", "What would DoorDash test here?"
+
+### stakeholder-communication
+Translate experiment results, proposals, and methodology into language that lands with PMs, brand managers, and leadership. Includes ready-to-use scripts for the hard conversations.
+
+**Trigger examples:** "My PM wants to stop the test early", "How do I explain a null result?", "Help me write the readout", "How do I push back on this?", "Make this accessible for leadership"
+
+### kb-curator
+Manage and surface knowledge from the knowledge base: look up what's in the KB on a topic, add a new entry, build a reading list, or summarize a paper or article into a KB entry.
+
+**Trigger examples:** "What do we have on variance reduction?", "Add this paper to the KB", "Build me a reading list on sequential testing", "Who should I read for marketplace interference?"
 
 ## Knowledge Base
 
-The `knowledge-base/` directory contains curated entries organized by type:
+The `knowledge-base/` directory is the source of truth this plugin draws from. Every skill reads from it before answering — not from generic training knowledge.
 
-- `companies/` — one file per company (17 entries: Airbnb, Booking.com, DoorDash, Duolingo, Etsy, Google, LinkedIn, Lyft, Meta, Microsoft, Netflix, Pinterest, Shopify, Spotify, Statsig, Twitter/X, Uber)
-- `individuals/` — one file per practitioner (10 entries: Ron Kohavi, Diane Tang, Ya Xu, Alex Deng, Aleksander Fabijan, Lukas Vermeer, Chetan Sharma, Evan Miller, Rommil Santiago, Martin Tingley)
-- `papers/` — foundational academic papers (CUPED, overlapping experiments, peeking/mSPRT, SRM, Trustworthy OCE book)
-- `articles/` — essential blog posts (How Not To Run an A/B Test, Surprising A/B Test Results, DoorDash 1000% capacity)
-- `_INDEX.md` — master index of all entries with tags
+- `companies/` — 17 entries covering the most rigorous experimentation programs in the industry: Airbnb, Booking.com, DoorDash, Duolingo, Etsy, Google, LinkedIn, Lyft, Meta, Microsoft ExP, Netflix, Pinterest, Shopify, Spotify, Statsig, Twitter/X, Uber
+- `individuals/` — 10 entries on the practitioners who built these programs: Ron Kohavi, Diane Tang, Ya Xu, Alex Deng, Aleksander Fabijan, Lukas Vermeer, Chetan Sharma, Evan Miller, Rommil Santiago, Martin Tingley
+- `papers/` — 7 foundational papers (CUPED, overlapping experiments, peeking/mSPRT, SRM, Trustworthy OCE, empirical Bayes)
+- `articles/` — 8 essential practitioner articles with credibility assessments
+- `_INDEX.md` — master index with tags for fast lookup
 - `_TEMPLATE.md` — template for new entries
-- `GLOSSARY.md` — definitions of all key terms (SUTVA, OEC, SRM, MDE, CUPED, etc.)
+- `GLOSSARY.md` — definitions of all key terms
 
-## How to Add New KB Entries
+## Adding to the Knowledge Base
 
-1. Use the **kb-curator** skill: "Add this paper to the KB" or "Summarize this URL for the KB"
-2. Or manually: copy `_TEMPLATE.md`, fill it out, save to the appropriate subdirectory
-3. Update `_INDEX.md` to add the entry to the correct table and update the Tags section
-4. Use existing tags from `_INDEX.md` where possible; add new tags only if genuinely needed
+1. Use **kb-curator**: "Add this paper to the KB" or "Summarize this URL for the KB"
+2. Or manually: copy `_TEMPLATE.md`, fill it out, save to the right subdirectory, update `_INDEX.md`
 
 **Filename convention:** slugified title, lowercase, hyphens, `.md`
+
+## GitHub
+
+https://github.com/marksallyson/ai-llyson (plugin lives in `plugins/experiment-research-buddy/`)
