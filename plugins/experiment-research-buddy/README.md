@@ -4,30 +4,14 @@ A Claude Code plugin for experiment design, statistical methods, and A/B testing
 
 ## Skills
 
-### experiment-design
-Design an experiment from scratch: choose the right test type, handle interference, pick a randomization unit, identify validity threats.
-
-**Trigger examples:** "How should I design this test?", "Should I use a holdout?", "Can I even run an A/B test for this?", "How do I handle network effects?", "Two-sided marketplace interference"
-
-### experiment-strategy
-Choose the right metric (OEC), set guardrail metrics, interpret results, handle novelty effects, and make ship/no-ship decisions.
-
-**Trigger examples:** "What metric should I use?", "Should we ship this?", "The test was significant but...", "Our metric moved but I'm not sure it's real", "Novelty effect", "Incrementality"
-
-### statistical-methods
-Power analysis, CUPED, sequential testing, SRM detection, ratio metrics, Bayesian vs. frequentist — the mechanics of how to analyze an experiment.
-
-**Trigger examples:** "How do I power this?", "What sample size do I need?", "Can I peek at results?", "My p-value is X, what does it mean?", "CUPED", "SRM", "Multiple comparisons"
-
-### ibotta-ab-process
-The complete Ibotta-specific experiment lifecycle: LaunchDarkly setup, event tracking and Jira workflow, Ibotta power tools (Looker calculator, ib_util, ds_util), data cleaning, and the Monday launch rule.
-
-**Trigger examples:** "How do we set up LaunchDarkly for this?", "What's the Jira event trigger process?", "How do I use ib_util?", "At Ibotta, how do we...", "DSP process", "get_ld_variants"
-
-### kb-curator
-Manage and surface knowledge from the knowledge base: look up what's in the KB on a topic, add a new entry, build a reading list, or summarize a paper into a KB entry.
-
-**Trigger examples:** "What do we have on variance reduction?", "Add this paper to the KB", "Build me a reading list on sequential testing", "Who should I read for marketplace interference?"
+| Skill | How to trigger |
+|-------|---------------|
+| **experiment-design** | "How should I design this test?" or "Can I even run an A/B test for this?" |
+| **experiment-strategy** | "What metric should I use?" or "Should we ship this?" |
+| **statistical-methods** | "How do I power this?" or "Can I peek at results?" or "CUPED/SRM/multiple comparisons" |
+| **ibotta-ab-process** | "How do we set up LaunchDarkly?" or "At Ibotta, how do we..." |
+| **kb-curator** | "What do we have on X?" or "Add this paper to the KB" |
+| **weekly-digest** | Runs automatically on a schedule |
 
 ## Knowledge Base
 
