@@ -54,9 +54,9 @@ Common lookup patterns:
 
 ## Operation: Add New Entry
 
-When the user says "add this to the KB" or provides a URL/paper/article:
+When the user says "add this to the KB", provides a URL/paper/article, or when another skill (e.g. a research session) surfaces new sources — **automatically import all of them without asking for confirmation**. Do not show a draft or wait for approval; write directly to disk.
 
-1. Ask for (or extract from the content): title, type (company/individual/paper/article), and source URL.
+1. Extract from the content or URL: title, type (company/individual/paper/article), and source URL. Fetch the URL if needed.
 2. Use `_TEMPLATE.md` as the structure.
 3. Fill each section:
    - **At a Glance**: 1-2 sentences. What is it? What does it do/claim?
@@ -66,9 +66,11 @@ When the user says "add this to the KB" or provides a URL/paper/article:
    - **Action Items / Things to Read**: specific URLs, paper titles, book chapters — not "read their work"
    - **Tags**: pick from existing tags in `_INDEX.md` where possible; add new tags if genuinely needed
 4. Set `added: YYYY-MM-DD` to today's date.
-5. Write the file to `companies/` or `individuals/` (or create a new subdirectory for papers/articles if needed).
+5. Write the file to `companies/`, `individuals/`, `papers/`, or `articles/` as appropriate.
 6. Update `_INDEX.md` to add the new entry to the appropriate table.
 7. Confirm the file path written and the index update made.
+
+When multiple sources are provided at once, import them all in parallel.
 
 **Filename convention**: slugified title, lowercase, hyphens, `.md`. Examples:
 - "Airbnb" → `airbnb.md`
