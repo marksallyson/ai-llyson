@@ -38,3 +38,18 @@ Statsig is the best current option for a team that wants a rigorous, warehouse-n
 
 ## Tags
 always-valid-inference, bayesian, cuped, feature-flags, metric-design, organizational-maturity, platform, sequential-testing, warehouse-native
+
+---
+
+## Recent: 2026-06-11 — Full Support for Statsig Experimentation & Analytics in Microsoft Fabric
+
+**Source:** Statsig Blog, June 11, 2026 · https://www.statsig.com/blog/microsoft-fabric-experimentation-analytics  
+Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-US/blog/27219/
+
+**What's new:** Statsig's experimentation and analytics tools are now fully generally available as a native workload inside Microsoft Fabric (previously in preview since late 2025). Teams can run A/B tests and compute experiment metrics directly against data in OneLake — Microsoft Fabric's unified data lake — without any ETL or data movement. The integration exposes Statsig's full stats engine: CUPED variance reduction, sequential testing, multi-armed bandits, stratified sampling, holdouts, and differential impact detection, all running on Fabric Data Warehouse or Lakehouse.
+
+**Why it matters:** This is the closest thing to a turnkey warehouse-native experimentation platform for shops already on the Microsoft data stack (Azure Synapse, Fabric, Power BI). The no-data-movement architecture means experiment data never leaves your governed environment — critical for teams with strict data residency or brand-partner contractual constraints. It also lowers the barrier for teams that have been "planning to build warehouse-native experimentation" but haven't gotten there.
+
+**Ibotta relevance:** If Ibotta's stack includes any Microsoft Fabric or Azure components, this is worth evaluating immediately. Even if Ibotta is primarily on Databricks, the Statsig/Fabric integration signals that warehouse-native is now table stakes for experimentation platforms — and worth asking whether the current Ibotta experimentation setup achieves the same properties (no data egress, compute on governed data, centralized metric definitions).
+
+**Tags added:** microsoft-fabric, warehouse-native, platform-update, onelake

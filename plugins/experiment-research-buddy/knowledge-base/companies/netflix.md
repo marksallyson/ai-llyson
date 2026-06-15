@@ -38,3 +38,17 @@ Netflix's core problem — measuring whether a content recommendation change act
 
 ## Tags
 binary-outcomes, causal-inference, glm, holdout, long-term-effects, personalization, platform, surrogate-metrics, variance-reduction
+
+---
+
+## Recent: 2026-06-15 — A Human-Augmenting Agentic Workflow for Causal Inference
+
+**Source:** Netflix Technology Blog, June 2026 · https://netflixtechblog.medium.com/a-human-augmenting-agentic-workflow-for-causal-inference-4623f0a9c5af
+
+**What they built:** Netflix developed and open-sourced `oci-agent`, an agentic workflow for performing observational causal inference (OCI) under unconfoundedness. The agent automates the repetitive, error-prone parts of OCI — checking and rechecking covariate balance, running sensitivity analyses, and tracking multiple analysis iterations — while explicitly delegating judgment calls (framing the causal question, scrutinizing assumptions, evaluating results) to human analysts.
+
+**Why it's novel:** The "human-augmenting" framing is deliberate: rather than a black-box agent that produces a causal estimate, oci-agent publishes transparent artifacts at each step — plans, covariate balance plots, specification files, runnable notebooks — so humans can inspect, re-execute, and override. Netflix evaluated the agent on the 2016 Atlantic Causal Inference Conference (ACIC) competition datasets and showed it systematically outperforms one-shot LLM iterations under numerous data-generating processes while matching hand-tuned benchmark analyses. The agent is built on top of Netflix's pre-existing OCI toolkit, so it's designed for practitioners already familiar with propensity score methods and doubly-robust estimators.
+
+**Ibotta relevance:** Observational causal inference is exactly what Ibotta needs when an A/B test is infeasible — measuring the incremental lift of an offer type on a brand's customer segment where randomization isn't possible. The oci-agent pattern (structured templates, covariate balance checks, sensitivity analysis as a checklist, not an afterthought) is directly adoptable as a workflow standard for Ibotta's quasi-experimental analyses in Databricks.
+
+**Tags added:** agentic-ai, observational-causal-inference, open-source, oci, propensity-score

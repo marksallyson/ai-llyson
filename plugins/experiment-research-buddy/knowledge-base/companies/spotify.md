@@ -38,3 +38,18 @@ Spotify's organizational contribution — the idea that "learning" from a null r
 
 ## Tags
 always-valid-inference, bayesian, long-term-effects, metric-design, organizational-maturity, personalization, platform, sequential-testing, warehouse-native
+
+---
+
+## Recent: 2026-05-18 — Better Experiments with LLM Evals — A Funnel, Not a Fork
+
+**Source:** Spotify Engineering Blog, May 18, 2026 · https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork  
+**Authors:** Matilda Ankargren, Mårten Schultzberg
+
+**What they argue:** LLM-based evaluations (automated judges that score relevance, coherence, tone, and intent alignment at scale) should sit *upstream* of A/B tests, not replace them. The right relationship is a funnel: use LLM evals to validate that a change does what you intended before you commit to an A/B test; use the A/B test to validate that the change drives business outcomes. Spotify reports that only ~12% of their A/B tests result in a shipped positive feature, while ~64% produce valid learning (a regression caught, a hypothesis ruled out). LLM evals can raise the quality bar on what enters the test queue.
+
+**Why it's interesting:** Most teams treat evals and experiments as alternatives — "we'll use evals for LLM features, experiments for everything else." Spotify's framing correctly identifies the flaw: evals can tell you if the model does what you intended; only an experiment can tell you if what you intended actually moves the metric. The 12% ship rate stat is a useful benchmark — if Ibotta's ship rate is significantly higher, either the team is running underpowered tests, or the experiment bar is too low.
+
+**Ibotta relevance:** Ibotta increasingly tests AI-generated offer copy, personalized messaging, and recommendation algorithms. LLM evals as a pre-experiment filter — scoring copy quality or offer relevance before committing a variant to a multi-week A/B test — could significantly improve test queue quality and reduce wasted experiment capacity.
+
+**Tags added:** llm-evals, ai-products, experiment-quality, pre-experiment-screening
