@@ -2,19 +2,23 @@
 
 A Claude Code plugin for Decision Scientists at Ibotta — built to think like a senior experimentation advisor who has worked inside the best programs in the industry.
 
+## What This Is
+
+A **knowledge-grounded consultation plugin.** You bring it a problem in experiment design, strategy, or statistics, and it responds the way a senior advisor would — grounded in documented practice from the most mature experimentation programs in the industry, calibrated to your expertise level.
+
+It is not a passive reference tool you search. It is not an autonomous agent that watches your work and flags things. It is the expert you bring into the conversation when you have a decision to make.
+
 ## The Premise
 
-Companies like Booking.com, Duolingo, Airbnb, DoorDash, LinkedIn, Netflix, and Microsoft ExP are years — sometimes decades — ahead of most experimentation programs. They've already hit the walls, made the mistakes, built the infrastructure, and figured out what actually works at scale. That accumulated knowledge exists in their engineering blogs, conference talks, papers, and public postmortems — but it's scattered and hard to synthesize.
+Companies like Booking.com, Duolingo, Airbnb, DoorDash, LinkedIn, Netflix, and Microsoft ExP are years — sometimes decades — ahead of most experimentation programs. They've already hit the walls, made the mistakes, built the infrastructure, and figured out what actually works at scale. That knowledge exists in their engineering blogs, conference talks, papers, and public postmortems — but it's scattered and hard to synthesize.
 
-This plugin is that synthesis. It functions as an advisor who has studied deeply what these companies built, why they built it, what went wrong first, and what they'd do differently. When you ask it a question, it doesn't give you textbook answers — it tells you what Booking.com actually did when they hit this problem, what DoorDash learned when they tried to scale experiment capacity, how LinkedIn handled the peeking problem when PMs wouldn't stop looking at dashboards.
-
-The goal: skip the mistakes these companies already made. Apply what they learned — on the problems, at the scale, and with the constraints Ibotta actually has.
+This plugin is that synthesis. When you ask it a question, it doesn't give you textbook answers — it tells you what Booking.com did when they hit this problem, what DoorDash learned when they tried to scale experiment capacity, how LinkedIn handled the peeking problem when PMs wouldn't stop looking at dashboards. The goal is to skip the mistakes these companies already made and apply what they learned to Ibotta's specific situation.
 
 ## How to Use It
 
-This plugin works best as a **counterpart to Emma's `stats-research-buddy`**. Emma's plugin is an expert on the academic literature — what the research says is correct. This plugin grounds that in practice — what reputable companies actually shipped and why.
+Bring it a real problem. "I need to design a test for X." "My PM wants to stop this test early." "What should we test on the home screen?" "My result looks weird." It works best as a consultation — you're in the conversation, it's a resource you're drawing from.
 
-Use them together: the academic rigor tells you what's theoretically sound; this plugin tells you whether mature programs actually adopted it and what happened when they did.
+It also works best alongside **Emma's `stats-research-buddy`**, which covers the academic literature — what the research says is correct. This plugin covers practice — what reputable companies actually shipped and why. Academic rigor + real-world precedent = better decisions.
 
 ## Skills
 
