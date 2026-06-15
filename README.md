@@ -1,32 +1,21 @@
-# ai-llyson 🧠✨
+# ai-llyson 🧠
 
-My personal Claude Code plugin playground. Not accepting feedback at this time (jk, I always welcome ideas and pushback).
-
-
-## Plugins
-
-### 🧍 ai-llyson
-My corporata therapist
-
-| Skill | What it does |
-|---|---|
-| `brain-dump` | Turns chaos into clarity (results may vary) |
-| `career-path` | For when you need a coach but your actual coach is busy |
-| `decision-log` | Because past-you made some choices |
-| `weekly-review` | Forces reflection, like journaling but less cringe |
-| `my-coach` | Accountability, gently |
-| `ibotta-rosetta-stone` | Company jargon decoder ring |
-| `skill-optimizer` | Find the gaps, fill the gaps |
+My personal Claude Code plugin playground. Two plugins, very specific use cases.
 
 ---
 
-### 🧪 experiment-research-buddy
-An A/B testing nerd packed into a plugin. Other companies are already experts in experimentation, I want to learn from the problems they've already solved.
-
-Skills: experiment design · statistical methods · Ibotta A/B process · experiment strategy · weekly digest · kb-curator
-
-Knowledge base includes writeups from Airbnb, Netflix, DoorDash, Meta, Spotify, Google, Booking.com, and too many more.
+## 🧍 ai-llyson-assistant
+My therapist and career coach, basically. A plugin that knows who I am so I don't have to re-explain my whole deal every session. Covers weekly reviews, career check-ins, brain dumps, decision logging, and decoding company jargon.
 
 ---
 
-*Built for Claude Code. Use at your own risk. PRs not expected.*
+## 🧪 experiment-research-buddy
+The hard problems in A/B testing have already been solved — they just live scattered across blog posts and papers from Netflix, Booking.com, LinkedIn, etc. This is my attempt to collect all of that in one place so I can actually find it when I need it. Also sends me a weekly digest.
+
+**Skills:** experiment design · statistical methods · Ibotta A/B process · experiment strategy · kb-curator · weekly digest
+
+**Knowledge base:** 17 companies · 10 practitioners · foundational papers + articles
+
+---
+
+*Built for [Claude Code](https://claude.ai/code). Work in progress, always.*
