@@ -37,3 +37,18 @@ CUPAC is the highest-signal contribution from DoorDash for Ibotta's work. Ibotta
 
 ## Tags
 causal-inference, cupac, cuped, interleaving, marketplace, ml-covariate, platform, ranking, two-sided-markets, variance-reduction
+
+---
+
+## Recent: 2026-06-22 — DoorDash's 3-Sided Experimentation Problem
+
+**Source:** GrowthBook Blog, ~May 2026 · https://www.growthbook.io/blog/doordash-runs-12-000-experiments-per-year-across-3-sided-marketplace  
+**Speaker:** Ilya Izrailevsky, Senior Engineering Manager, DoorDash Experimentation Platform (previously Amazon, Robinhood, Uber, Intuit, PayPal)
+
+**What they describe:** A practitioner interview covering how DoorDash scales 12,000 experiments/year at 300M feature flag evaluations/second across a three-sided marketplace. The core challenge: every experiment must protect three distinct constituencies simultaneously — consumers (order quality, satisfaction, retention), Dashers (earnings, utilization, fairness), and merchants (unit economics, long-term business growth). DoorDash uses separate success metrics and guardrail metrics for each side, which means a feature that wins on consumer satisfaction might fail the Dasher earnings guardrail and never ship.
+
+**Why it matters:** This is the clearest public description of how a multi-sided marketplace structures experiment decision criteria to avoid harming any side of the platform. The three-bucket metric taxonomy (consumer / dasher / merchant) is directly transferable to Ibotta's structure (consumer / brand partner / retailer).
+
+**Ibotta relevance:** Ibotta is structurally a 3-sided marketplace: consumers who redeem offers, brands that fund promotions, and retailers that host offers in-store/online. An Ibotta experiment that improves consumer redemption rate might simultaneously degrade brand partner ROI (if consumers switch to cheaper alternatives) or retailer traffic patterns. DoorDash's per-constituency guardrail framework is the right architecture for Ibotta to adopt when testing offer-level changes.
+
+**Tags added:** three-sided-marketplace, guardrail-metrics, democratization, platform-scale
