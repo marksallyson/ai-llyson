@@ -2,15 +2,16 @@
 
 > This file is the living memory of Allyson's working style, preferences, strengths, and career direction.
 > All skills in this plugin read from and write to this file. Update it whenever you learn something new.
+>
+> **Privacy rule**: This file is on a public GitHub repo. Never store company-specific information, internal org details, tooling names, team structures, project names, or anything that could identify internal business operations. If Allyson shares something company-specific during a session, either reframe it generically (e.g. "her current company" instead of the company name) or ask her to rephrase before storing. When in doubt, leave it out.
 
 ---
 
 ## About Allyson
 
-- **Current role**: Decision Scientist at Ibotta
-- **Previous role**: Data Analyst at AirDNA
-- **Email**: allyson.marks@ibotta.com
-- **Status**: ~2 months in at Ibotta (as of June 2026)
+- **Current role**: Decision Scientist at a consumer tech / promotions company
+- **Previous role**: Data Analyst at a travel data company
+- **Status**: ~2 months into a new role (as of June 2026)
 
 ---
 
@@ -30,7 +31,7 @@
 - **On AI**: Not panicking, but paying attention. Correctly identified that rote reporting is at risk, not insight/experimentation work. Building toward the right things.
 
 ### What "good work" looks like to her
-Coming up with a novel way to analyze something, or uncovering a big insight the business hadn't known before. Example: at AirDNA, she dug into the full conversion lifecycle and discovered some users took over a year to convert — vs. the "business accepted" 1-30 day definition. She questions the frame, finds the truer picture underneath, and changes how the business understands something.
+Coming up with a novel way to analyze something, or uncovering a big insight the business hadn't known before. Example: at a previous company, she dug into the full conversion lifecycle and discovered some users took over a year to convert — vs. the "business accepted" 1-30 day definition. She questions the frame, finds the truer picture underneath, and changes how the business understands something.
 
 She wants to be the person who finds insights nobody asked for but that change decisions in a big way. Not a dashboard monkey. Not reactive.
 
@@ -39,7 +40,7 @@ She wants to be the person who finds insights nobody asked for but that change d
 - [ ] Build enough company context to become a go-to source (the insight work she loves requires knowing the business well)
 - [ ] Build Python/PySpark fluency (near-term gap)
 - [ ] Ship a first predictive/modeling project (survival analysis is a natural starting point)
-- [ ] Understand how day-to-day product optimization works at Ibotta scale
+- [ ] Understand how day-to-day product optimization works at scale
 - [ ] Build cross-functional relationships with stakeholders
 
 ---
@@ -76,7 +77,7 @@ She wants to be the person who finds insights nobody asked for but that change d
 
 **Overall skills: 7/10** — Has the soft skills, analytical instincts, product sense, and experimentation knowledge. Missing the analytics engineering piece but strong everywhere else.
 
-**Tooling/onboarding/context: 4/10** — Can find her way around and knows who to ask, but not confident in Ibotta's tools or processes yet. This is a ramp-up problem with a natural expiration date, not a capability problem.
+**Tooling/onboarding/context: 4/10** — Can find her way around and knows who to ask, but not yet confident in her current company's tools or processes. This is a ramp-up problem with a natural expiration date, not a capability problem.
 
 **Key insight**: The 7/4 split means she's not struggling with capability — she's struggling with context. These are different problems. The 4 will rise naturally with time and exposure.
 
@@ -95,13 +96,13 @@ She wants to be the person who finds insights nobody asked for but that change d
 ### In Progress / Near-term gaps
 - Python / PySpark — new to it; needs basics before modeling work is possible
 - Analytics engineering (dbt, pipelines) — functional level needed, not specialist
-- Ibotta-specific tools, processes, context
+- Current company tools, processes, and domain context
 
 ### Wants to build
 - Predictive modeling (running models, using inputs to predict outcomes)
-- Survival analysis (natural fit — her AirDNA conversion window work was already survival analysis thinking)
+- Survival analysis (natural fit — her past conversion window work was already survival analysis thinking)
 - Regression / classification basics
-- Experimentation / causal inference (big at Ibotta, strong fit)
+- Experimentation / causal inference
 
 ---
 
@@ -133,7 +134,7 @@ She wants to be the person who finds insights nobody asked for but that change d
 
 ## Manager Relationship
 
-- Manager has been on parental leave for most of her first 2 months
+- Manager has been largely unavailable for most of her first 2 months (timing/circumstances)
 - Early signals are positive — seems supportive and growth-oriented
 - Relationship still early; hasn't had much time to establish yet
 
@@ -143,7 +144,7 @@ She wants to be the person who finds insights nobody asked for but that change d
 
 **Decision Science vs Data Science:**
 - *Data Science* = broad umbrella: modeling, statistics, prediction, ML
-- *Decision Science* (Ibotta's title) = flavor of DS focused on using data to drive decisions — experimentation, causal inference, A/B testing, behavioral analysis
+- *Decision Science* (her current title) = flavor of DS focused on using data to drive decisions — experimentation, causal inference, A/B testing, behavioral analysis
 - The modeling she wants (survival analysis, prediction) is in scope for Decision Scientist — it's the next level of this job, not a different job
 
 **Is DS dying?** No — fragmenting. Her lane (insight, experimentation, decision influence) is hard to automate. Building toward the right things.
@@ -155,16 +156,16 @@ She wants to be the person who finds insights nobody asked for but that change d
 - Her best work requires knowing the business deeply — the "go-to source" identity she misses isn't ego, it's the prerequisite for the insight work she loves. The frustration she feels right now is partly just: she doesn't have enough context yet to do her best work. That's temporary.
 - ESTJ + Type 1 means she'll be hard on herself during ramp-up. "I hate this work" often means "I hate being bad at this yet."
 - She works best with clear stakes and momentum. Vague, low-pressure tasks are where she stalls.
-- The collaboration shift (from energized by people → prefers solo) may be burnout recovery from toxic last company, not permanent. Worth revisiting in 6–12 months.
+- The collaboration shift (from energized by people → prefers solo) may be burnout recovery from a toxic previous workplace, not permanent. Worth revisiting in 6–12 months.
 
 ---
 
 ## Coaching Notes
 
 ### Session — June 2026 (Career coaching deep dive)
-- Raised: AE struggles, career path anxiety, AI concerns
+- Raised: analytics engineering struggles, career path anxiety, AI concerns
 - Key insight: 7/4 confidence split — capable but lacking context. Context has a natural expiration date.
-- Missing "go-to source" identity from AirDNA — identified this as prerequisite for her best insight work, not just ego
+- Missing "go-to source" identity from previous role — identified this as prerequisite for her best insight work, not just ego
 - Procrastination pattern on low-deadline work flagged
 - "Push through when stuck" pattern flagged — knows stepping away works but defaults to pushing
 - Wants to run models and experiments in 2-3 years. Building toward the right things.
