@@ -53,30 +53,42 @@ This week in experimentation — [N] things worth your attention.
 📌 HIGHLIGHT OF THE WEEK
 [Company or Person] — [Title of post/paper]
 
-[2-3 sentences: what they found or built, why it's interesting or
-envelope-pushing, what makes it worth reading over everything else
-this week. Be specific — name the technique, the result, the surprise.]
+**In plain English:** [1-2 sentences explaining what this is about as if talking
+to a smart colleague who isn't a statistician. No jargon without explanation.
+If a statistical concept is central, give it a one-sentence analogy or real-world
+comparison. Example: "Think of it like checking your GPS after every turn instead
+of only at your destination — you catch wrong turns earlier."]
 
-⚡ Ibotta-relevant: [One sentence connecting this to offer testing,
-incentive design, two-sided marketplace dynamics, or Allyson's current
-work as a Decision Scientist at a promotions/cashback platform.]
+**What they found:** [1-2 sentences on the specific result or method. Be concrete —
+name the technique, the number, the surprise. Don't say "they found interesting results"
+— say what the result actually was.]
+
+**So what?** [1 sentence: why does this matter in practice? What would change about
+how you run or interpret a test if you applied this?]
+
+⚡ Ibotta angle: [One sentence connecting this to offer testing, CPG tests,
+Walmart linking, incentive design, or Allyson's current work. Only include if
+the connection is genuine — skip if it's a stretch.]
 → Full entry: knowledge-base/[subdir]/[filename].md
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔬 ALSO NOTABLE
 [For each additional new/updated entry this week — max 3 bullets:]
-• [Company/Person] — [Title]: [One punchy sentence on what's interesting.]
-  ⚡ Ibotta-relevant: [One sentence, only if genuinely applicable — skip if not]
+• [Company/Person] — [Title]
+  Plain English: [One sentence — what is this about, no jargon.]
+  Interesting because: [One sentence — the specific finding or implication.]
+  ⚡ Ibotta angle: [One sentence, only if genuinely applicable — skip if not.]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 💡 HOT TAKE OF THE WEEK
 [One spicy, opinionated observation based on this week's reading.
-Could be a contrarian view, a surprising finding, a pattern across
-multiple sources, or something worth bringing up in a DS team meeting.
-Write it in first person as if you're the one with the hot take.
-2-4 sentences. Be specific, not vague.]
+Write it as if you're explaining it to Allyson over coffee — plain language,
+no assumed knowledge, but treat her as smart. If the hot take involves a
+statistical concept, use an analogy to make it land. Could be a contrarian view,
+a surprising finding, a pattern across sources, or something worth raising in a
+DS team meeting. 3-5 sentences. Be specific, not vague.]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -89,24 +101,43 @@ Experiment Lab v0.1.0 · kb-curator ran [Day Month Date] at 8am Denver
 
 ### Composing guidelines
 
+**Plain English rule:** Every entry in the digest must be readable by someone who
+understands experimentation conceptually but doesn't live in statistics papers.
+If you use a term like "variance reduction," "empirical Bayes," "censored data," or
+"winner's curse," explain it in the same breath with an analogy or one-sentence
+definition. Don't assume the reader will google it.
+
+Good analogy pattern: "[Technical thing] is like [everyday thing] — [why the
+comparison works in one clause]."
+Examples:
+- "Variance reduction (CUPED) is like noise-canceling headphones for your data —
+  it filters out the background variation so the signal from your test comes through cleaner."
+- "The winner's curse is like a job interview where only overconfident candidates
+  apply — the ones who make it through look better on paper than they'll perform in practice."
+- "Censored data just means some users haven't had enough time to churn yet — like
+  grading a test before everyone's finished."
+
 **Highlight of the Week:** Pick the single most interesting or envelope-pushing item.
 Prioritize: novel methodology > surprising finding > useful tool > process improvement.
 If there's a clear Ibotta-relevant item, that gets priority for the highlight spot.
 
-**Also Notable:** Max 3 bullets. Skip Ibotta-relevant callout if it's a stretch.
+**Also Notable:** Max 3 bullets. Skip Ibotta angle if it's a stretch.
 Don't force it — only flag genuine connections.
 
 **Hot Take:** This is the most important section for making the digest worth reading.
-Don't summarize — opine. Examples of good hot takes:
+Don't summarize — opine. Use plain language. Make it sound like a real opinion, not
+a hedge. Examples of good hot takes:
 - "Everyone's building CUPAC but almost no one has enough pre-experiment data for
-  the ML model to beat standard CUPED. Worth checking your sample sizes before investing."
-- "DoorDash's interleaving work is a reminder that A/B testing ranking algorithms is
-  almost always the wrong call — and yet it's the default at most companies."
-- "The Booking.com meta-experiments paper quietly buries the idea that you can learn
-  anything meaningful from experiments under 2 weeks. Most Ibotta offer tests are shorter."
+  the ML model to beat standard CUPED. It's like buying a sports car when you haven't
+  learned to drive stick yet — master the basics first."
+- "The Booking.com research quietly buries the idea that you can learn anything
+  meaningful from a two-week experiment. Most Ibotta offer tests are shorter than that.
+  We might be making decisions from data that's more noise than signal."
+- "Microsoft found that concurrent tests interfere with each other only 1 in 50,000
+  times. Yet most teams — including ours — treat overlap like it's a fire hazard.
+  We're paying a real cost in slower iteration for a risk that barely exists."
 
-**KB summary:** Just filenames + type. No descriptions needed here — that's what the
-entries themselves are for.
+**KB summary:** Just filenames + type. No descriptions needed here.
 
 ---
 
