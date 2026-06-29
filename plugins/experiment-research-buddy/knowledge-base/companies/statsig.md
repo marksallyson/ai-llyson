@@ -53,3 +53,17 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** If Ibotta's stack includes any Microsoft Fabric or Azure components, this is worth evaluating immediately. Even if Ibotta is primarily on Databricks, the Statsig/Fabric integration signals that warehouse-native is now table stakes for experimentation platforms — and worth asking whether the current Ibotta experimentation setup achieves the same properties (no data egress, compute on governed data, centralized metric definitions).
 
 **Tags added:** microsoft-fabric, warehouse-native, platform-update, onelake
+
+---
+
+## Recent: 2026-06-17 — Introducing Experimental Meta-Analysis and the Knowledge Base
+
+**Source:** Statsig Blog, June 17, 2026 · https://www.statsig.com/blog/experimental-meta-analysis-and-knowledge-base
+
+**What's new:** Statsig shipped two new platform capabilities: (1) **Experimental meta-analysis** — aggregated views across your full corpus of experiments, filterable by team and product area, surfacing patterns about which metrics move together, which user segments respond to changes, and how effect sizes cluster by experiment type; (2) **Experiment Knowledge Base** — a free-text search layer over all past experiments so teams can find relevant prior work when designing new tests. Both features live under a new "Insights" tab.
+
+**Why it matters:** The meta-analysis capability operationalizes something most teams aspire to but rarely execute: learning *across* experiments, not just *from* individual experiments. The classic problem is that each experiment answers a point question — "did this feature work?" — but the corpus of experiments collectively holds far more signal about users and product levers than any individual result. Meta-analysis is how you extract it. The knowledge base addresses the equally common problem of running redundant experiments or missing that a related test was already done by another team.
+
+**Ibotta relevance:** At scale, Ibotta runs experiments across offer categories, user segments, and retailer contexts. A meta-analysis view across those experiments would surface patterns like "BOGO offers consistently underperform cash-back offers in the grocery category" or "weekend sessions show 2× the lift from notification experiments" — insights that are invisible when experiments are analyzed in isolation. Worth evaluating even if Ibotta isn't fully on Statsig, as the underlying methodology is adoptable in any data warehouse.
+
+**Tags added:** experimental-meta-analysis, knowledge-base, cross-experiment-learning, insights
