@@ -81,10 +81,7 @@ Last updated: 2026-06-29 (added 1 paper: AI-Assisted Variance Reduction KDD 2026
 | [etsy-collective-impact-experiments.md](articles/etsy-collective-impact-experiments.md) | Understanding the Collective Impact of Experiments (Etsy, 2025) | Global holdout held out of all experiments for a quarter; sum of wins ≠ true collective product impact |
 | [etsy-winners-curse-mitigation.md](articles/etsy-winners-curse-mitigation.md) | Mitigating the Winner's Curse in Online Experiments (Etsy, 2022) | Bayesian shrinkage with empirical prior fitted on historical lifts; adaptive discounting per experiment precision |
 | [statsig-kaplan-meier-ab-retention.md](articles/statsig-kaplan-meier-ab-retention.md) | Kaplan-Meier: Visualizing A/B Test Retention (Statsig, 2025) | Survival analysis for retention experiments; handles censored data; 20–30% sensitivity gain over point-in-time retention metrics |
-<<<<<<< HEAD
-=======
 | [abadie-value-of-evidence-2026.md](articles/abadie-value-of-evidence-2026.md) | Estimating the Value of Evidence-Based Decision Making (Abadie, Agarwal, Imbens et al., 2026) | p < 0.05 rules leave 27–30% of attainable value on the table; empirical Bayes decision rules recover most of it — validated on 4,800+ Upworthy A/B tests |
->>>>>>> 0c95587 (KB weekly update: add AI-Assisted Variance Reduction paper (KDD 2026), Statsig meta-analysis post, index 2 previously unindexed files)
 
 ---
 
