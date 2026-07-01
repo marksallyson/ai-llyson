@@ -1,6 +1,6 @@
 # ai-llyson 🧠
 
-My personal Claude Code plugin playground. 
+My personal skills/plugin playground. 
 
 ---
 
