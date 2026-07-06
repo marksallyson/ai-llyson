@@ -52,3 +52,23 @@ binary-outcomes, causal-inference, glm, holdout, long-term-effects, personalizat
 **Ibotta relevance:** Observational causal inference is exactly what Ibotta needs when an A/B test is infeasible — measuring the incremental lift of an offer type on a brand's customer segment where randomization isn't possible. The oci-agent pattern (structured templates, covariate balance checks, sensitivity analysis as a checklist, not an afterthought) is directly adoptable as a workflow standard for Ibotta's quasi-experimental analyses in Databricks.
 
 **Tags added:** agentic-ai, observational-causal-inference, open-source, oci, propensity-score
+
+---
+
+## Recent: 2025-11-13 — Heterogeneous Treatment Effects at Netflix
+
+**Source:** Netflix Technology Blog, November 13, 2025 · https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833
+
+**What they cover:** Netflix published five case studies documenting how heterogeneous treatment effect (HTE) analysis shapes all phases of product experimentation — not just post-hoc segmentation, but as a core analytical workflow from discovery through policy. The article covers three distinct use cases:
+
+1. **Discovery** — detecting unexpected causal effects on subpopulations. The clearest example: app updates that show a neutral or positive average effect may be degrading experience for specific device types. HTE analysis at the device-type level catches these regressions before they become customer complaints. Netflix describes using FDR-controlling procedures to avoid false discoveries when testing many subgroups simultaneously.
+
+2. **Hypothesis Generation** — using observational causal inference (OCI) to rapidly explore HTE patterns before committing to an RCT. Netflix's OCI platform enables rapid segmentation exploration: you can ask "which user segments show the largest predicted response to this lever?" using historical data, then target your experiment design around those hypotheses.
+
+3. **Policy Learning and Personalization** — using learned HTEs to design personalized experiences. If users in segment A respond positively to variant X while users in segment B respond positively to variant Y, running a single A/B test and launching the winner for everyone leaves value on the table. Policy learning formalizes this: it produces a decision rule for which variant to show each user, estimated from the experiment data, with formal regret bounds.
+
+**Why it matters:** Most teams treat HTE analysis as an afterthought — something to do after the top-line result is significant. Netflix's framing is different: HTE analysis is *designed into* the experiment workflow, with pre-specified subgroup hypotheses, FDR control, and explicit links to downstream personalization policy. The key practical contribution is showing that policy learning from experiments is operationally achievable at scale, not just theoretically possible.
+
+**Ibotta relevance:** Three direct applications: (1) **Offer targeting** — detect which user segments respond most strongly to specific offer types (BOGO vs. percentage-off, grocery vs. electronics, high-engagement vs. reactivation users); (2) **Discovery guardrails** — when rolling out platform changes, check whether neutral average effects are masking negative effects on high-value users (brand partners notice); (3) **Graduated rollout** — use HTE estimates from a pilot experiment to design a targeted launch policy rather than a uniform rollout.
+
+**Tags added:** heterogeneous-treatment-effects, hte, personalization, targeting, false-discovery-rate, policy-learning, subgroup-analysis

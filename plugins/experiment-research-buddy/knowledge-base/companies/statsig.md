@@ -67,3 +67,18 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** At scale, Ibotta runs experiments across offer categories, user segments, and retailer contexts. A meta-analysis view across those experiments would surface patterns like "BOGO offers consistently underperform cash-back offers in the grocery category" or "weekend sessions show 2× the lift from notification experiments" — insights that are invisible when experiments are analyzed in isolation. Worth evaluating even if Ibotta isn't fully on Statsig, as the underlying methodology is adoptable in any data warehouse.
 
 **Tags added:** experimental-meta-analysis, knowledge-base, cross-experiment-learning, insights
+
+---
+
+## Recent: 2026-07-02 — Statsig + Amplitude: The Drop on Phase 1
+
+**Source:** Statsig Blog, July 2, 2026 · https://www.statsig.com/blog/statsig-amplitude-phase-1  
+**Context posts:** "Statsig is joining OpenAI" · https://www.statsig.com/blog/openai-acquisition | Amplitude blog · https://amplitude.com/blog/amplitude-and-statsig-partnership
+
+**What happened (full arc):** In September 2025, OpenAI acquired Statsig for approximately $1.1 billion. Vijaye Raji (Statsig founder and CEO) moved to OpenAI as CTO of Applications, leading product engineering for ChatGPT and Codex. The Statsig engineering team went with him. Then, on May 5, 2026, Amplitude struck a partnership to take over the Statsig brand, customer base, and platform — maintaining the warehouse-native experimentation product under Amplitude's stewardship and adding Statsig's customers (~$16M incremental ARR) to Amplitude's portfolio. The July 2 blog post marks the beginning of **Phase 1** of the integration: connecting the two products at the data layer. Amplitude events and cohorts now work inside Statsig; Statsig experiment outcomes now surface inside Amplitude. By end of Q3 2026, customers of both products will be able to use them together without choosing one. Phase 2 will pursue deeper interoperability — a single unified workflow for product engineers shipping, testing, and proving fixes.
+
+**Why it matters:** The original engineering team that built Statsig's reputation — rapid iteration, warehouse-native architecture, rigorous stats engine — is now at OpenAI building different things. Amplitude manages the platform with a product-analytics-first strategic agenda rather than Statsig's experimentation-first one. The warehouse-native architecture is preserved for now, but the product roadmap is Amplitude's to set. Phase 1 is plumbing — data connectors. The more interesting question is whether the combined Amplitude + Statsig product becomes the best end-to-end "instrument, analyze, experiment" platform, or whether the two codebases drift under competing priorities. VWO, Eppo (now Datadog), and GrowthBook all noted this as a competitive opening, especially for customers who chose Statsig for its engineering-led culture.
+
+**Ibotta relevance:** Ibotta should update its experimentation platform evaluation with this changed landscape. The question is no longer "Statsig vs. Eppo vs. GrowthBook" but "Amplitude + Statsig (integrated) vs. standalone experimentation platforms vs. build in-house on Databricks." The warehouse-native data story is intact. The question is whether Amplitude's roadmap will deepen the stats engine or drift toward analytics product features. Worth checking the Phase 2 roadmap details when they're announced in Q3 2026.
+
+**Tags added:** platform-acquisition, amplitude, openai, warehouse-native, platform-update, platform-consolidation
