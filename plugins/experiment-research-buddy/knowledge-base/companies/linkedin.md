@@ -58,3 +58,22 @@ MEA requires no factorial pre-design, no traffic restrictions, and no mutual exc
 **Ibotta relevance:** Ibotta likely runs simultaneous experiments on offer algorithm, notification cadence, UI layout, and onboarding — all affecting the same users. MEA would let Ibotta: (1) estimate the true lift of an offer recommendation change corrected for whatever else is running; (2) calculate "if we launch the new notification cadence *and* the new offer layout, what's the expected combined effect?"; (3) answer "what's the offer algorithm's effect assuming the current notification experiment is permanent?" — the real question before a launch decision.
 
 **Tags added:** overlapping-experiments, concurrent-experiments, multi-experiment, joint-estimation, causal-inference
+
+---
+
+## Recent: 2026-07-13 — Choosing Online Experiment Designs under Interference: A Robust Decision Framework
+
+**Source:** arXiv 2605.25290, May 24, 2026 (LinkedIn authors) · https://arxiv.org/abs/2605.25290  
+**Authors:** Prashant Shekhar and Caroline Howard (LinkedIn)
+
+**What they propose:** LinkedIn researchers published a framework for *choosing* which experiment design to use when you don't know in advance which interference mechanism will dominate. The problem they address: teams in ads, recommendations, and member-experience systems often plan experiments before they know whether the dominant spillover is through budgets, through graph connections, through temporal carryover, or through some combination. Each interference mechanism calls for a different design — but you typically commit to a design before you know which one is right.
+
+The paper formalizes this as a **robust design selection problem over an ambiguity set**: rather than optimizing for a single assumed interference model, you minimize *worst-case planning risk* over a range of plausible interference mechanisms. Six implementable designs are compared: standard RCT, cluster randomization, ego-cluster randomization, switchback (time-based), geo-holdout, and fractional factorial. Each design is scored on a composite risk that weighs exposure bias, assignment-unit variance, minimum detectable effect, contamination or carryover, operational cost, and estimand mismatch.
+
+**Key result:** No single design dominates across all interference mechanisms — which is why a decision framework is needed. For ads and recommendation systems (where budget and inventory interference is common), ego-cluster designs often win. For temporal systems with carryover (like notification cadence or feed ranking), switchback designs are more robust. The framework outputs a ranked set of designs given any prior over the interference ambiguity set.
+
+**Why it matters:** This is the most practically useful treatment of the "which design should I use?" question for teams running experiments with any form of network or marketplace interference. Most practitioners treat this as an art — they pick cluster randomization "because we have network effects" without formally comparing it to alternatives. This paper gives you a decision procedure.
+
+**Ibotta relevance:** Ibotta has at least two interference mechanisms in play: (1) **household spillover** — when one household member links their loyalty card (e.g., Walmart), the discount applies to household-level behavior that a user-level randomization can't isolate; (2) **temporal carryover** — a user exposed to a high-value offer this week may have elevated purchase intent next week regardless of treatment assignment. The robust design selection framework gives Ibotta a structured way to pick the right experiment design for each offer category rather than defaulting to user-level randomization for everything.
+
+**Tags added:** interference, cluster-randomization, switchback, ego-cluster, robust-design, marketplace, two-sided-markets

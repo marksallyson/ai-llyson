@@ -82,3 +82,18 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** Ibotta should update its experimentation platform evaluation with this changed landscape. The question is no longer "Statsig vs. Eppo vs. GrowthBook" but "Amplitude + Statsig (integrated) vs. standalone experimentation platforms vs. build in-house on Databricks." The warehouse-native data story is intact. The question is whether Amplitude's roadmap will deepen the stats engine or drift toward analytics product features. Worth checking the Phase 2 roadmap details when they're announced in Q3 2026.
 
 **Tags added:** platform-acquisition, amplitude, openai, warehouse-native, platform-update, platform-consolidation
+
+---
+
+## Recent: 2026-07-13 — Meta Analysis July Release: Metric Correlation Across Experiments
+
+**Source:** Statsig Product Updates, July 2026 · https://www.statsig.com/updates/update/metric-correlation  
+**Related perspective piece:** https://www.statsig.com/perspectives/meta-analysis-experiments-patterns
+
+**What's new:** Statsig shipped the second view in their experimental meta-analysis suite — a **metric correlation chart**. The view plots two metrics on the same chart, with each data point representing one experiment's treatment effect on both metrics simultaneously. You can visually scan whether the metrics tend to move together or independently across your full experiment corpus, remove outliers, filter by team or product area, and download the underlying dataset for further analysis.
+
+**Why it matters:** This directly attacks one of the most persistent problems in experimentation: choosing a short-term proxy metric that actually predicts your long-term primary metric. The classic problem is that conversion (the metric you care about) is hard to move statistically — it takes a lot of traffic and time. If you could find a faster-moving metric that correlates tightly with conversion across your historical experiments, you could run faster tests and still learn what you care about. Statsig's metric correlation chart makes this analysis visual and accessible to non-statisticians. The key distinction from a simple correlation analysis: each data point is an *experiment's treatment effect* on both metrics, not raw user-level correlation — so it controls for confounders by construction.
+
+**Ibotta relevance:** Ibotta's primary metric for offer experiments is likely redemption rate — a conversion event that requires the user to complete a purchase, which is rare and slow. Faster proxy candidates might include: offer saves/favorites, app session time, category browse events, or push notification open rate. Running a metric correlation analysis across historical offer tests would tell you which of these proxies actually moves when redemption moves — giving Ibotta a faster-measurable signal for future experiments without sacrificing connection to the outcome that matters.
+
+**Tags added:** metric-design, proxy-metrics, experimental-meta-analysis, cross-experiment-learning
