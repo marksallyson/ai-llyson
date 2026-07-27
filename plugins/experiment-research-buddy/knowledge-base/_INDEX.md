@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-07-20 (added 1 paper: MID Estimator — algorithm comparison KDD 2026; updated Booking.com with 2026 Experimentation Conference recap — micro-conversions, 34→14 day runtime reduction)
+Last updated: 2026-07-27 (updated Shopify with SimGym — simulated A/B testing via AI agents, 77% directional accuracy vs real traffic; updated Meta with Analytics at Meta AI Analytics Agent — 77% weekly DS/DE adoption, Recipes/Ingredients architecture)
 
 ---
 

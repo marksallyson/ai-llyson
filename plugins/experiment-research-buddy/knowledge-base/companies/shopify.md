@@ -36,3 +36,27 @@ Shopify's problem maps directly to Ibotta's brand/retailer experimentation chall
 
 ## Tags
 brand-level, causal-inference, difference-in-differences, interrupted-time-series, marketplace, quasi-experimental, synthetic-control, two-sided-markets
+
+---
+
+## Recent: 2026-02-27 — 2,000 Robots Walk Into a Shop: Simulated A/B Testing (SimGym)
+
+**Source:** Shopify Engineering Blog, February 27, 2026 · https://shopify.engineering/simgym  
+**Paper:** arXiv:2605.19219 — "SimGym: A Framework for A/B Test Simulation in E-Commerce with Traffic-Grounded VLM Agents"  
+**Availability:** AI Research Preview for eligible Shopify merchants since March 2026 (no waitlist)
+
+**What they built:** SimGym is a Shopify + NVIDIA collaboration that sends up to 2,000 concurrent AI agents (using vision-language models) through a merchant's storefront to simulate an A/B test — comparing two theme variants or layout changes — and produce a directional result in minutes rather than weeks. Each agent has a persona, a budget, and a shopping intent. It runs in a cloud browser (Browserbase, up to 2,000 concurrent Chromium sessions), sees the page, decides what to do, clicks, scrolls, and adds to cart. A twin does the same on the alternate variant. The infrastructure scales via Blackwell GPUs to 400,000 shopping sessions per day.
+
+**Accuracy:** On 50 real storefront changes where Shopify had both SimGym results and actual live A/B test results, SimGym achieved 77% directional alignment with observed add-to-cart shifts in real buyer traffic. Best practice recommendation: use SimGym to narrow the candidate set, then validate the highest-impact changes with a live controlled A/B test.
+
+**Why it's interesting:** This is the most concrete public demonstration of "synthetic A/B testing via AI simulation" in production. The key claim is that for merchants who lack the traffic to power a traditional A/B test (most Shopify merchants), SimGym gives a directional signal fast enough to be actionable. The persona generation pipeline derives buyer archetypes from each store's own production clickstream — making agents store-specific, not generic. The 77% directional accuracy is honest: they're not claiming equivalence to a real experiment, just a useful filter.
+
+**Key limitations:**
+- Results can deviate from real shopper behavior on stores with unusual catalog structures or highly specialized products
+- 77% directional alignment means 23% of the time the simulation points the wrong way — meaningful risk for high-stakes decisions
+- Does not capture price sensitivity, word-of-mouth effects, or sequential purchase behavior across sessions
+- Currently limited to theme/UI changes; cannot test pricing, promotion mechanics, or algorithmic ranking changes
+
+**Ibotta relevance:** Ibotta's offer detail pages, notification copy, and app UI often have limited traffic when scoped to a specific brand partner's cohort or a narrow category. SimGym's pattern — AI agents simulating user responses before a live test — is directly applicable: pre-validate offer presentation variants or in-app UI changes against simulated user cohorts, then run a live test only on the 1-2 finalists. The persona-from-clickstream approach is particularly relevant: Ibotta's rich behavioral data (category affinities, redemption history, session patterns) could ground a set of user archetypes that simulate realistic offer engagement decisions.
+
+**Tags added:** agentic-ai, simulation, synthetic-testing, low-traffic, ui-testing, ai-shoppers, off-policy-evaluation

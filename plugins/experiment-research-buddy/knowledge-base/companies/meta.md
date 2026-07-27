@@ -54,3 +54,24 @@ Authors: Asher Zafar and Anuj Kapoor. Meta's approach to causal inference for co
 
 ## Tags
 causal-inference, cluster-randomization, interference, mlrate, network-effects, platform, social-graph, surrogate-metrics, two-sided-markets, variance-reduction
+
+---
+
+## Recent: 2026-03-30 — Inside Meta's Home-Grown AI Analytics Agent
+
+**Source:** Analytics at Meta (Medium), March 30, 2026 · https://medium.com/@AnalyticsAtMeta/inside-metas-home-grown-ai-analytics-agent-4ea6779acfb3
+
+**What they built:** Meta's internal AI analytics agent, built on the observation that 88% of DS queries on any given day touch only tables that were queried in the preceding 90 days. That predictability is the unlock: an agent seeded with the right context — the right data model, the right domain knowledge, the right guardrails — can execute the routine slice-and-dice and trend analysis that constitutes a large fraction of a data scientist's daily workload, leaving humans for interpretation, design decisions, and judgment calls.
+
+**Architecture highlights:**
+- **Recipes vs. Ingredients separation:** Ingredients are structured knowledge assets (semantic models, wiki pages, metric definitions) that teams link to a Cookbook. Recipes are the task templates — "compute WAU by country, segment by new vs. returning, flag week-over-week drops > 10%." This separation means the agent can be retargeted to a new domain by updating Ingredients without rewriting Recipes.
+- **Custom Validations:** Natural-language validation rules run by a separate AI before surfacing results — e.g., "WAU should be < 8 billion" or "Always filter by is_test=false to exclude test accounts." Prevents a class of subtle errors common in automated SQL generation.
+- **Tool Controls:** Configuration limits which data sources and query types the agent can access — prevents it from wandering into unrelated schemas or expensive full-table scans.
+
+**Usage as of March 2026:** 77% of Meta's Data Scientists and Data Engineers use the Analytics Agent on a weekly basis. Non-data roles (product managers, engineers, marketers) account for roughly 5× as many queries as data roles — the agent democratizes access to data for the organization, not just the data team.
+
+**Why it's interesting:** The "is_test=false" validation guardrail is a useful design pattern in itself: it operationalizes the "don't mix your test traffic into production analyses" rule at the infrastructure layer rather than relying on analyst vigilance. The 77% adoption rate among DSs suggests this isn't a novelty — it's a genuine productivity multiplier in production. The democratization effect (5× more non-DS than DS queries) is also notable: an agent that can answer "how are redemptions trending?" for a product manager without involving a DS is a real org-efficiency story.
+
+**Ibotta relevance:** Ibotta's DS team fields recurring reporting requests — weekly offer performance, brand partner dashboards, category-level redemption trends. An Analytics Agent pattern built on Databricks SQL, seeded with Ibotta's metric definitions (redemption rate, offer save rate, incremental lift from historical experiments), and guardrailed with "is_test_user=false" filters could handle the majority of ad-hoc data requests, freeing DS capacity for experiment design and causal analysis. The Recipes/Ingredients pattern scales: each brand partner or product area could have its own Ingredient set without rewriting the core agent.
+
+**Tags added:** agentic-ai, analytics-automation, democratization, ai-agents, data-infrastructure
