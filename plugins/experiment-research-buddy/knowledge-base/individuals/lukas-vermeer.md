@@ -38,3 +38,21 @@ Vermeer's unique value is that he built something at Booking.com that most compa
 
 ## Tags
 booking-com, culture, democratization, guardrail-metrics, metric-design, non-technical-access, organizational-maturity, platform, two-sided-markets
+
+---
+
+## Recent: 2026-07 — "Jesters, Not Kings": On the Practitioner's Role in Experimentation Culture
+
+**Source:** Mel JI Mueller, "A Recap of the 2026 Experimentation Conference at Booking.com," Booking.com ML & DS Blog (Medium), July 2026 · https://medium.com/booking-com-data-science/a-recap-of-the-2026-experimentation-conference-at-booking-com-f43d48698fcd  
+**Conference:** Booking.com 3rd Annual Experimentation Conference, May 18, 2026, Amsterdam  
+**Panel participants:** Jev Gamper (Vinted) and Melanie Kyrklund (Specsavers)
+
+**Core argument:** Vermeer argued data practitioners should think of themselves as *jesters*, not kings. The jester's institutional role — historically — was to speak truth to power without losing their head, using story, humor, and well-chosen timing as the vehicle. The contrast: a king makes decisions and expects compliance; a jester shapes decisions through craft and moment. Applied to data practitioners: your job is not to make the call, but to make the right call inevitable for those who do.
+
+**Why this framing is precise, not just catchy:** "Influence without authority" is the usual phrase for this dynamic, but it's vague — it describes the constraint without giving practitioners a method. The jester analogy adds method: you speak truths that others are incentivized to avoid, you choose the *right moment* to say them, and you use narrative and specificity (not abstract statistics) to get them to land. The jester also knows the limits of the role: they don't try to replace the king. Practitioners who try to become decision-makers ("kings") often lose the credibility that made them effective in the first place.
+
+**What practitioners often get wrong:** They present data as if the data speaks for itself. It doesn't. It needs framing, timing, and narrative. A p-value of 0.03 does not automatically change a meeting room's conclusion — a well-told story about what that p-value means for a decision the room is already wrestling with might.
+
+**Ibotta relevance:** For a DS team trying to move offer experiment conclusions into actual product and pricing decisions made by brand managers or category leads, this reframing is practically useful. The jester's toolkit — a surprising finding framed as a question, a concrete case study anchored in something the decision-maker cares about, an inconvenient truth delivered with enough goodwill that it sticks — is exactly how to change decisions without triggering defensive reactions. The culture challenge at Ibotta isn't usually statistical; it's this.
+
+**Tags added:** culture, stakeholder-communication, organizational-maturity
