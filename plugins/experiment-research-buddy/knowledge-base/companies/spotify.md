@@ -53,3 +53,20 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Ibotta relevance:** Ibotta increasingly tests AI-generated offer copy, personalized messaging, and recommendation algorithms. LLM evals as a pre-experiment filter — scoring copy quality or offer relevance before committing a variant to a multi-week A/B test — could significantly improve test queue quality and reduce wasted experiment capacity.
 
 **Tags added:** llm-evals, ai-products, experiment-quality, pre-experiment-screening
+
+---
+
+## Recent: 2026-08-13 — Bayesian Inference Procedures for A/B Testing: An Overview
+
+**Source:** arXiv:2608.12949, August 13, 2026 · https://arxiv.org/abs/2608.12949  
+**Authors:** Mårten Schultzberg and Mattias Frånberg (Spotify Confidence team)
+
+**What they argue:** "Bayesian A/B testing" is not a single method — it's a family of configurations with fundamentally different statistical guarantees. The paper organizes these into a three-tier hierarchy: Tier 1 (posterior coherence, no error control), Tier 2 (Bayes factor stopping, bounded false positive rate), and Tier 3 (empirical Bayes with FDR control). The critical finding: many commercial experimentation platforms default to Tier 1, which provides no protection against repeated peeking — despite being marketed as a Bayesian alternative to frequentist testing.
+
+**Why it's notable:** The authors prove that Bayes factor stopping (Tier 2) is near-optimal for virtually any reasonable cost function used in A/B testing — including those proposed in the academic literature. This is the first paper to provide a systematic overview and clear vocabulary for the Bayesian A/B testing landscape, giving DS teams the framework to ask vendors the right questions.
+
+**Ibotta relevance:** If Ibotta evaluates warehouse-native experimentation platforms (Confidence, Eppo/Datadog Experiments, or others), this paper is required reading before making a choice. Ask specifically: which tier does your Bayesian implementation operate at? A Tier 1 platform with daily result checks still inflates your false positive rate.
+
+**Full entry:** `papers/bayesian-ab-testing-overview-spotify-2026.md`
+
+**Tags added:** bayesian, false-positive, tier-framework, platform-evaluation

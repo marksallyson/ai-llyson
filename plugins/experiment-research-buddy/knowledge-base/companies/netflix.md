@@ -72,3 +72,20 @@ binary-outcomes, causal-inference, glm, holdout, long-term-effects, personalizat
 **Ibotta relevance:** Three direct applications: (1) **Offer targeting** — detect which user segments respond most strongly to specific offer types (BOGO vs. percentage-off, grocery vs. electronics, high-engagement vs. reactivation users); (2) **Discovery guardrails** — when rolling out platform changes, check whether neutral average effects are masking negative effects on high-value users (brand partners notice); (3) **Graduated rollout** — use HTE estimates from a pilot experiment to design a targeted launch policy rather than a uniform rollout.
 
 **Tags added:** heterogeneous-treatment-effects, hte, personalization, targeting, false-discovery-rate, policy-learning, subgroup-analysis
+
+---
+
+## Recent: 2026-08-11 — Evaluating for the Long Term: Learnings from Industry
+
+**Source:** arXiv:2608.08043, August 2026 · https://arxiv.org/abs/2608.08043  
+**Netflix contributors:** Winston Chou, Simon Ejdemyr, Martin Tingley, Wenjing Zheng (among 26 co-authors from 15 platforms)
+
+**What they found:** A daylong workshop with 26 experts from 15 platforms (including Netflix, Meta, Airbnb, Google, Booking.com, Statsig, Uber, Lyft) produced consensus propositions on the long-term evaluation problem: how do you make short-term experiment decisions that align with long-term outcomes? Key findings: sign reversals from short-run to long-run effects are rare; the "autosurrogate" (same metric measured earlier) is often hard to beat with more complex approaches; experimentally-learned surrogates are preferable to observationally-learned ones; novelty effects and sign reversals concentrate in content quality, hyper-monetization, and pricing domains.
+
+**Why it matters:** This is the closest thing the field has to an industry-wide consensus on the long-term effects problem. Netflix's contribution is grounded in their own portfolio of long-run holdout experiments, giving their propositions more empirical weight than most individual company papers.
+
+**Ibotta relevance:** Direct application to Ibotta's offer testing: for standard promotional offer changes, short-term lift is likely to persist (sign reversals are rare). But for cashback percentage changes or reward structure changes, run longer tests — hyper-monetization is explicitly flagged as a domain where short-term/long-term divergence is more common.
+
+**Full entry:** `papers/evaluating-long-term-industry-workshop-2026.md`
+
+**Tags added:** long-term-effects, surrogate-metrics, industry-consensus, novelty-effects
