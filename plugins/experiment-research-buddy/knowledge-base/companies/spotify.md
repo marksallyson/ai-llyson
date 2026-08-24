@@ -70,3 +70,20 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Full entry:** `papers/bayesian-ab-testing-overview-spotify-2026.md`
 
 **Tags added:** bayesian, false-positive, tier-framework, platform-evaluation
+
+---
+
+## Recent: 2026-08-24 — A Closed-Form Sample Size Correction for Always-Valid Inference
+
+**Source:** arXiv:2606.18366, June 2026 · https://arxiv.org/abs/2606.18366  
+**Author:** Mårten Schultzberg (Spotify Confidence team)
+
+**What they built:** Sequential A/B tests that allow mid-experiment peeking are typically oversized because platforms use a conservative "last-point" heuristic — they plan as if you'll only look at the end, then add an ad hoc buffer. Schultzberg derives a closed-form correction factor k*(α, β, t₀) that precisely accounts for optional stopping, requiring no simulation and running instantly at scale.
+
+**Why it's notable:** The correction is validated across three boundary families (mSPRT, GAVI, Brownian motion) and tested on 713 real metrics from Spotify's production platform, saving a median 9.5% of sample budget. The 8–20% savings range means teams using sequential testing are currently committing more traffic than they need to. This is the most practical sequential-testing contribution since the original mSPRT paper.
+
+**Ibotta relevance:** If Ibotta runs sequential tests on offer redemption experiments, applying k* reduces how many users must be exposed to an unproven variant before reaching a decision — directly lowering the cost of offer-level A/B testing on small brands with limited traffic allocation.
+
+**Full entry:** `papers/sequential-sample-size-correction-spotify-2026.md`
+
+**Tags added:** sequential-testing, sample-size, always-valid-inference
