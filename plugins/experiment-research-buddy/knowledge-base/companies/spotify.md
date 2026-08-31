@@ -87,3 +87,18 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Full entry:** `papers/sequential-sample-size-correction-spotify-2026.md`
 
 **Tags added:** sequential-testing, sample-size, always-valid-inference
+
+---
+
+## Recent: 2026-08-17 — When Can LLMs Replace Humans in A/B Tests?
+
+**Source:** Spotify Engineering Blog, August 2026 · https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests  
+**Authors:** Sebastian Ankargren, Joel Persson, Mårten Schultzberg (Spotify)
+
+**What they argue:** Teams increasingly want to replace human participants in A/B tests with LLM-simulated responses — running experiments on LLM outputs rather than real users, to get faster and cheaper signal. Spotify's researchers formalize when this is and isn't valid, building directly on the surrogacy framework in arXiv:2606.17165 (already in KB). The core claim: using LLM outcomes as a proxy for human outcomes in an A/B test is *identification by assumption, not by design* — you can make it valid, but only if you explicitly test and satisfy the surrogacy conditions.
+
+**Why it's notable:** This is Spotify's engineering team translating a dense statistical paper into practitioner guidance. They argue that "calibrated LLM outcomes" — where the LLM's predictions are post-hoc adjusted to match the marginal distribution of human outcomes — recover the human average treatment effect under surrogacy and comparability conditions weaker than full distributional equivalence. The engineering contribution is the practical workflow: test surrogacy on a historical validation set before using LLM outcomes to evaluate new features. Without that validation step, the A/B test on LLM outputs is not a valid substitute for a human experiment.
+
+**Ibotta relevance:** Ibotta likely evaluates LLM-generated offer copy, personalized messaging, or AI-assisted recommendation features. Using an LLM to simulate user responses to a new offer design — before incurring the traffic cost of a real test — is attractive. This post explains exactly what statistical check must be run on historical data before that simulation is trustworthy. Combine with `s-rct-agent-simulation-2026.md` (Amazon/COLM 2026) and `llm-ab-testing-surrogacy-2026.md` (the foundational paper) for a complete view.
+
+**Tags added:** llm-evals, surrogate-metrics, agentic-experimentation, experiment-quality
