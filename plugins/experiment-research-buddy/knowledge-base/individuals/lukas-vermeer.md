@@ -56,3 +56,20 @@ booking-com, culture, democratization, guardrail-metrics, metric-design, non-tec
 **Ibotta relevance:** For a DS team trying to move offer experiment conclusions into actual product and pricing decisions made by brand managers or category leads, this reframing is practically useful. The jester's toolkit — a surprising finding framed as a question, a concrete case study anchored in something the decision-maker cares about, an inconvenient truth delivered with enough goodwill that it sticks — is exactly how to change decisions without triggering defensive reactions. The culture challenge at Ibotta isn't usually statistical; it's this.
 
 **Tags added:** culture, stakeholder-communication, organizational-maturity
+
+---
+
+## Recent: 2026-09-07 — Trustworthy A/B Patterns and the Winner's Curse: Lessons from Eight Large-Scale Replications (KDD 2026)
+
+**Source:** Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2, August 2026 · https://doi.org/10.1145/3770855.3818498  
+**Authors:** Ron Kohavi, Jakub Linowski, Lukas Vermeer, Andrey Andreev, Majed Dodin, Joachim Furuseth
+
+**Vermeer's role:** Vermeer co-founded the Trustworthy A/B Patterns community project alongside Kohavi and Linowski, and co-authored this KDD paper summarizing eight high-powered replications of popular UX patterns. This project is an ongoing community effort: organizations with sufficient traffic can contribute replications, and the growing corpus enables meta-analytic conclusions about what actually works at scale.
+
+**Core finding:** At 80% power with 2.4M median users per experiment, only 2 of 8 popular UX patterns showed significant effects in the expected direction. One showed the opposite effect. The implication: most "proven" design patterns in conversion optimization are built on underpowered evidence and fail to replicate at scale.
+
+**Why this matters for Vermeer's broader work:** This paper is the empirical grounding for the cultural argument Vermeer has made for years — that democratizing experimentation requires raising the quality bar, not just lowering the access barrier. Making it easy to run an underpowered test isn't democratization; it's noise production. The replication project creates the community accountability mechanism.
+
+**Ibotta relevance:** The Trustworthy A/B Patterns project infrastructure (trustworthyabpatterns.com) is a resource worth sharing with Ibotta's brand partners who run their own experiments and cite "industry proven" patterns. Pointing partners to this project reframes what "proven" should mean — and raises the conversation above what's essentially glorified CRO folklore.
+
+**Tags added:** winner's-curse, replication, statistical-power, community, underpowered-tests

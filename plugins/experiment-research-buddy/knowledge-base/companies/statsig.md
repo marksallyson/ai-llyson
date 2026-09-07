@@ -97,3 +97,24 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** Ibotta's primary metric for offer experiments is likely redemption rate — a conversion event that requires the user to complete a purchase, which is rare and slow. Faster proxy candidates might include: offer saves/favorites, app session time, category browse events, or push notification open rate. Running a metric correlation analysis across historical offer tests would tell you which of these proxies actually moves when redemption moves — giving Ibotta a faster-measurable signal for future experiments without sacrificing connection to the outcome that matters.
 
 **Tags added:** metric-design, proxy-metrics, experimental-meta-analysis, cross-experiment-learning
+
+---
+
+## Recent: 2026-08-19 — Running Faster Tests, Part 2: Modifying Metrics
+
+**Source:** Statsig Blog, August 19, 2026 · https://www.statsig.com/blog/running-faster-tests-part-2  
+**Series:** Part 2 of 4 — "Running Faster Tests" (Part 1: Adjusting Constraints, July 2026; Parts 3–4 forthcoming)
+
+**What this covers:** When your sample size calculator says an experiment will take 12 weeks, most teams give up and skip the experiment. Part 2 of this series argues there's a second lever before you accept that: *changing how you measure the outcome*, not just relaxing your power or MDE. Three concrete transformations:
+
+1. **Winsorize or cap heavy-tailed metrics.** Revenue-per-user distributions have extreme outliers that inflate variance. Capping the top 0.1–1% of values (by winsorizing) reduces variance substantially, lowering required sample size, with minimal bias if the cap is set above most genuine treatment effects. Standard CUPED applies on top of the capped metric.
+
+2. **Switch to binary from continuous.** A binary version of a metric (did the user redeem at all? vs. what was their total redemption value?) has lower variance in many situations. The information loss is real but the power gain can outweigh it when the continuous distribution is highly skewed.
+
+3. **Use a shorter measurement window with a proxy metric.** If your primary metric requires 30-day observation (e.g., monthly redemptions), find the 7-day version that correlates with it in historical data. Run the experiment shorter. This only works if you've validated the proxy first — use the Statsig metric correlation chart (see July 2026 Recent section above) to confirm the relationship.
+
+**Why it matters:** Teams treat sample size as a fixed constraint — "we need 500k users for 80% power" — when it's actually a function of the metric design. Changing the metric (carefully) can halve the required traffic. The caveat is that metric transformation has to be pre-specified and validated; you can't transform the metric after seeing the data.
+
+**Ibotta relevance:** Ibotta's offer redemption rate is a classic heavy-tailed conversion metric (most users don't redeem; a few redeem many times; one $500 Walmart receipt inflates user-level totals). Winsorizing at the 99th percentile — and validating that the capped metric is still a valid proxy for what you care about — could meaningfully reduce experiment runtime for offer-level tests. This is a low-cost technique to try before asking for more traffic or longer experiments.
+
+**Tags added:** variance-reduction, metric-design, sample-size, heavy-tailed, proxy-metrics
