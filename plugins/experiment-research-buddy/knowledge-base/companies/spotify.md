@@ -102,3 +102,18 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Ibotta relevance:** Ibotta likely evaluates LLM-generated offer copy, personalized messaging, or AI-assisted recommendation features. Using an LLM to simulate user responses to a new offer design — before incurring the traffic cost of a real test — is attractive. This post explains exactly what statistical check must be run on historical data before that simulation is trustworthy. Combine with `s-rct-agent-simulation-2026.md` (Amazon/COLM 2026) and `llm-ab-testing-surrogacy-2026.md` (the foundational paper) for a complete view.
 
 **Tags added:** llm-evals, surrogate-metrics, agentic-experimentation, experiment-quality
+
+---
+
+## Recent: 2026-09-08 — Why Spotify Is Not Using Bayesian A/B Testing
+
+**Source:** Spotify Engineering Blog, September 8, 2026 · https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing  
+**Authors:** Mattias Frånberg (Senior Data Scientist) and Mårten Schultzberg (Senior Manager, Staff Data Scientist)
+
+**What they argue:** This is the practitioner-facing companion to their August 2026 arXiv paper (already in KB). Bayesian A/B testing is a family of configurations, not a single method — each with different stopping rules, priors, likelihoods, and statistical guarantees. Many popular claims about Bayes solving frequentist problems (peeking, multiple metrics, winner's curse) only hold under specific, demanding configurations that commercial platforms rarely offer by default. Under flat priors, Bayesian and frequentist inference are often numerically identical. A flat-prior posterior-probability threshold — the default in most commercial platforms — reproduces the same false positive rate as frequentist peeking. Spotify's conclusion: supporting a second inference framework adds organizational complexity and interpretation risk without a proportional benefit over their existing well-tuned frequentist setup.
+
+**Why it's notable:** Spotify is the most credible voice for Bayesian methods in industry experimentation (they co-authored the formal taxonomy paper and built the Confidence platform around it) — which makes their decision not to adopt Bayesian testing especially pointed. This isn't a frequentist researcher dismissing Bayes; it's a team that deeply understands Bayesian inference saying the organizational cost exceeds the benefit for most practitioners. The key diagnostic question this post gives you: "Which tier does your platform's Bayesian implementation operate at?" Tier 1 (posterior probability only, no peeking protection) is useless; Tier 2 (Bayes factor stopping) is near-optimal but rare in the wild. Most platforms ship Tier 1 and don't say so.
+
+**Ibotta relevance:** When Ibotta evaluates experimentation platforms — Amplitude+Statsig, GrowthBook, or others that advertise Bayesian testing — this post is the right framework for asking the pointed question. Bayesian by default does not mean safe-to-peek. Ask specifically: does the platform's Bayesian mode provide Type I error control when you look at results mid-experiment, or does it reproduce the peeking false positive inflation under a Bayesian label?
+
+**Tags added:** bayesian, false-positive, platform-evaluation, tier-framework, frequentist-vs-bayesian

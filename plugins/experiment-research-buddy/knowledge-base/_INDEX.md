@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-09-07 (added trustworthy-ab-patterns-winners-curse-kdd2026.md — Kohavi, Vermeer et al. KDD 2026 paper: 8 high-powered replications of popular UX patterns; only 2/8 significant in expected direction; exaggeration factors quantified at 20%/50%/80% power; updated ron-kohavi.md and lukas-vermeer.md with Recent sections; updated statsig.md with Recent section for Running Faster Tests Part 2 — metric transformation to reduce experiment runtime)
+Last updated: 2026-09-14 (updated spotify.md with Recent section for "Why Spotify Is Not Using Bayesian A/B Testing" — September 8, 2026 post by Frånberg & Schultzberg: practitioner companion to their arXiv overview paper; Bayesian ≠ peeking-safe; most commercial platforms ship Tier 1 without disclosing it; Spotify's decision not to adopt Bayesian testing despite being the field's strongest Bayesian advocates)
 
 ---
 
