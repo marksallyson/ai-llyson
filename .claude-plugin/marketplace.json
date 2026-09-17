@@ -15,6 +15,11 @@
       "name": "experiment-research-buddy",
       "description": "Expert advisor on consumer product experimentation — experiment design, statistical methods, and strategy for a Decision Scientist",
       "source": "./plugins/experiment-research-buddy"
+    },
+    {
+      "name": "meeting-prep",
+      "description": "Concise meeting briefs from calendar, transcripts, Slack, Gmail, and Jira — with memory that builds itself from recorded meetings",
+      "source": "./plugins/meeting-prep"
     }
   ]
 }

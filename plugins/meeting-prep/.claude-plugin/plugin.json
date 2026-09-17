@@ -1,0 +1,9 @@
+{
+  "name": "meeting-prep",
+  "version": "0.1.0",
+  "description": "Prep Allyson for upcoming meetings — concise digests built from calendar, past transcripts, Slack, Gmail, and Jira, with memory that builds itself from recorded meetings",
+  "author": {
+    "name": "Allyson Marks"
+  },
+  "keywords": ["meetings", "prep", "calendar", "personal", "briefing"]
+}
