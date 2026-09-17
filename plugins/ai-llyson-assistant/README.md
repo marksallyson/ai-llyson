@@ -17,6 +17,22 @@ Every session automatically loads your profile so Claude knows your context, wor
 | **skill-optimizer** | "Help me work smarter on X" or "Optimize my workflow" |
 | **weekly-review** | "Weekly review" or "Let's do a Friday check-in" |
 | **decision-log** | "Log this decision" or "Help me decide between X and Y" |
+| **visualize-concept** | "Show me what a p-value looks like" or "I don't get CUPED" |
+| **visual-glossary** | "What concepts have we covered?" or "What should I learn next?" |
+
+## Visual stats
+
+`visualize-concept` turns math and stats concepts into pictures instead of formulas. It
+always leads with a drawing, then attaches the Greek letters to it as labels — so notation
+becomes a name for something you've already seen rather than something to decode.
+
+The picture for each concept is fixed in `skills/visualize-concept/references/visual-grammar.md`,
+so the same idea always renders the same way. That consistency is the point: a new clever
+metaphor every session undoes the last one. When you work through a concept it gets logged
+in `glossary/VISUAL-GLOSSARY.md`, which also tracks *what kind* of explanation lands for you.
+
+Visuals render inline by default. Say "save that" and you get a self-contained HTML file in
+`~/Claude/visual-stats/` that still works offline in two years.
 
 ## Your profile
 
