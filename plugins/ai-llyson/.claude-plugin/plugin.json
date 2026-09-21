@@ -1,0 +1,21 @@
+{
+  "name": "ai-llyson",
+  "version": "0.3.0",
+  "description": "Allyson's personal assistant \u2014 brain dumps, coaching, Ibotta onboarding, career tracking, confident-communication review, and visual explanations of math and stats concepts",
+  "author": {
+    "name": "Allyson Marks"
+  },
+  "keywords": [
+    "personal",
+    "coaching",
+    "brain-dump",
+    "career",
+    "decision-science",
+    "visualization",
+    "statistics",
+    "visual-learning",
+    "communication",
+    "confidence",
+    "writing"
+  ]
+}

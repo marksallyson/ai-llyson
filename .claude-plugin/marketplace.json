@@ -7,18 +7,18 @@
   },
   "plugins": [
     {
-      "name": "ai-llyson-assistant",
+      "name": "ai-llyson",
       "description": "Personal assistant: brain dumps, coaching, Ibotta onboarding, and career tracking",
-      "source": "./plugins/ai-llyson-assistant"
+      "source": "./plugins/ai-llyson"
     },
     {
       "name": "experiment-research-buddy",
-      "description": "Expert advisor on consumer product experimentation — experiment design, statistical methods, and strategy for a Decision Scientist",
+      "description": "Expert advisor on consumer product experimentation \u2014 experiment design, statistical methods, and strategy for a Decision Scientist",
       "source": "./plugins/experiment-research-buddy"
     },
     {
       "name": "meeting-prep",
-      "description": "Concise meeting briefs from calendar, transcripts, Slack, Gmail, and Jira — with memory that builds itself from recorded meetings",
+      "description": "Concise meeting briefs from calendar, transcripts, Slack, Gmail, and Jira \u2014 with memory that builds itself from recorded meetings",
       "source": "./plugins/meeting-prep"
     }
   ]
