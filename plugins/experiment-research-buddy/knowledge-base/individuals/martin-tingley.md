@@ -37,3 +37,18 @@ Netflix's team publishes some of the most technically sophisticated practitioner
 
 ## Tags
 binary-outcomes, causal-inference, glm, long-term-effects, modular-inference, netflix, platform, surrogate-metrics, variance-reduction
+
+---
+
+## Recent: 2026-08-11 — Evaluating for the Long Term: Learnings from Industry
+
+**Source:** arXiv:2608.08043, August 2026 · https://arxiv.org/abs/2608.08043  
+**Co-authors:** 25 additional co-authors from Netflix, Meta, Airbnb, Google, Booking.com, Statsig, Uber, Lyft, Pinterest, UC Berkeley, MIT CSAIL, and others
+
+**What they found:** Tingley co-authored this cross-industry workshop paper synthesizing consensus knowledge on the long-term evaluation problem. His role is one of the Netflix practitioners anchoring the empirical propositions to Netflix's actual long-run holdout experiment portfolio. Key findings: sign reversals rare; autosurrogate often hard to beat; experimentally-learned surrogates > observationally-learned; novelty effects concentrate in content quality, pricing, and hyper-monetization domains.
+
+**Why it matters for Ibotta:** Tingley's presence on this paper signals that Netflix's internal conclusions on long-term effects align with the broader industry consensus. For Ibotta, the most actionable finding is that standard offer feature experiments (UI changes, copy tests, offer sequencing) are unlikely to produce sign reversals, but pricing and reward structure changes warrant longer tests.
+
+**Full entry:** `papers/evaluating-long-term-industry-workshop-2026.md`
+
+**Tags added:** long-term-effects, industry-consensus, surrogate-metrics, novelty-effects

@@ -38,3 +38,38 @@ Vermeer's unique value is that he built something at Booking.com that most compa
 
 ## Tags
 booking-com, culture, democratization, guardrail-metrics, metric-design, non-technical-access, organizational-maturity, platform, two-sided-markets
+
+---
+
+## Recent: 2026-07 — "Jesters, Not Kings": On the Practitioner's Role in Experimentation Culture
+
+**Source:** Mel JI Mueller, "A Recap of the 2026 Experimentation Conference at Booking.com," Booking.com ML & DS Blog (Medium), July 2026 · https://medium.com/booking-com-data-science/a-recap-of-the-2026-experimentation-conference-at-booking-com-f43d48698fcd  
+**Conference:** Booking.com 3rd Annual Experimentation Conference, May 18, 2026, Amsterdam  
+**Panel participants:** Jev Gamper (Vinted) and Melanie Kyrklund (Specsavers)
+
+**Core argument:** Vermeer argued data practitioners should think of themselves as *jesters*, not kings. The jester's institutional role — historically — was to speak truth to power without losing their head, using story, humor, and well-chosen timing as the vehicle. The contrast: a king makes decisions and expects compliance; a jester shapes decisions through craft and moment. Applied to data practitioners: your job is not to make the call, but to make the right call inevitable for those who do.
+
+**Why this framing is precise, not just catchy:** "Influence without authority" is the usual phrase for this dynamic, but it's vague — it describes the constraint without giving practitioners a method. The jester analogy adds method: you speak truths that others are incentivized to avoid, you choose the *right moment* to say them, and you use narrative and specificity (not abstract statistics) to get them to land. The jester also knows the limits of the role: they don't try to replace the king. Practitioners who try to become decision-makers ("kings") often lose the credibility that made them effective in the first place.
+
+**What practitioners often get wrong:** They present data as if the data speaks for itself. It doesn't. It needs framing, timing, and narrative. A p-value of 0.03 does not automatically change a meeting room's conclusion — a well-told story about what that p-value means for a decision the room is already wrestling with might.
+
+**Ibotta relevance:** For a DS team trying to move offer experiment conclusions into actual product and pricing decisions made by brand managers or category leads, this reframing is practically useful. The jester's toolkit — a surprising finding framed as a question, a concrete case study anchored in something the decision-maker cares about, an inconvenient truth delivered with enough goodwill that it sticks — is exactly how to change decisions without triggering defensive reactions. The culture challenge at Ibotta isn't usually statistical; it's this.
+
+**Tags added:** culture, stakeholder-communication, organizational-maturity
+
+---
+
+## Recent: 2026-09-07 — Trustworthy A/B Patterns and the Winner's Curse: Lessons from Eight Large-Scale Replications (KDD 2026)
+
+**Source:** Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2, August 2026 · https://doi.org/10.1145/3770855.3818498  
+**Authors:** Ron Kohavi, Jakub Linowski, Lukas Vermeer, Andrey Andreev, Majed Dodin, Joachim Furuseth
+
+**Vermeer's role:** Vermeer co-founded the Trustworthy A/B Patterns community project alongside Kohavi and Linowski, and co-authored this KDD paper summarizing eight high-powered replications of popular UX patterns. This project is an ongoing community effort: organizations with sufficient traffic can contribute replications, and the growing corpus enables meta-analytic conclusions about what actually works at scale.
+
+**Core finding:** At 80% power with 2.4M median users per experiment, only 2 of 8 popular UX patterns showed significant effects in the expected direction. One showed the opposite effect. The implication: most "proven" design patterns in conversion optimization are built on underpowered evidence and fail to replicate at scale.
+
+**Why this matters for Vermeer's broader work:** This paper is the empirical grounding for the cultural argument Vermeer has made for years — that democratizing experimentation requires raising the quality bar, not just lowering the access barrier. Making it easy to run an underpowered test isn't democratization; it's noise production. The replication project creates the community accountability mechanism.
+
+**Ibotta relevance:** The Trustworthy A/B Patterns project infrastructure (trustworthyabpatterns.com) is a resource worth sharing with Ibotta's brand partners who run their own experiments and cite "industry proven" patterns. Pointing partners to this project reframes what "proven" should mean — and raises the conversation above what's essentially glorified CRO folklore.
+
+**Tags added:** winner's-curse, replication, statistical-power, community, underpowered-tests

@@ -67,3 +67,54 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** At scale, Ibotta runs experiments across offer categories, user segments, and retailer contexts. A meta-analysis view across those experiments would surface patterns like "BOGO offers consistently underperform cash-back offers in the grocery category" or "weekend sessions show 2× the lift from notification experiments" — insights that are invisible when experiments are analyzed in isolation. Worth evaluating even if Ibotta isn't fully on Statsig, as the underlying methodology is adoptable in any data warehouse.
 
 **Tags added:** experimental-meta-analysis, knowledge-base, cross-experiment-learning, insights
+
+---
+
+## Recent: 2026-07-02 — Statsig + Amplitude: The Drop on Phase 1
+
+**Source:** Statsig Blog, July 2, 2026 · https://www.statsig.com/blog/statsig-amplitude-phase-1  
+**Context posts:** "Statsig is joining OpenAI" · https://www.statsig.com/blog/openai-acquisition | Amplitude blog · https://amplitude.com/blog/amplitude-and-statsig-partnership
+
+**What happened (full arc):** In September 2025, OpenAI acquired Statsig for approximately $1.1 billion. Vijaye Raji (Statsig founder and CEO) moved to OpenAI as CTO of Applications, leading product engineering for ChatGPT and Codex. The Statsig engineering team went with him. Then, on May 5, 2026, Amplitude struck a partnership to take over the Statsig brand, customer base, and platform — maintaining the warehouse-native experimentation product under Amplitude's stewardship and adding Statsig's customers (~$16M incremental ARR) to Amplitude's portfolio. The July 2 blog post marks the beginning of **Phase 1** of the integration: connecting the two products at the data layer. Amplitude events and cohorts now work inside Statsig; Statsig experiment outcomes now surface inside Amplitude. By end of Q3 2026, customers of both products will be able to use them together without choosing one. Phase 2 will pursue deeper interoperability — a single unified workflow for product engineers shipping, testing, and proving fixes.
+
+**Why it matters:** The original engineering team that built Statsig's reputation — rapid iteration, warehouse-native architecture, rigorous stats engine — is now at OpenAI building different things. Amplitude manages the platform with a product-analytics-first strategic agenda rather than Statsig's experimentation-first one. The warehouse-native architecture is preserved for now, but the product roadmap is Amplitude's to set. Phase 1 is plumbing — data connectors. The more interesting question is whether the combined Amplitude + Statsig product becomes the best end-to-end "instrument, analyze, experiment" platform, or whether the two codebases drift under competing priorities. VWO, Eppo (now Datadog), and GrowthBook all noted this as a competitive opening, especially for customers who chose Statsig for its engineering-led culture.
+
+**Ibotta relevance:** Ibotta should update its experimentation platform evaluation with this changed landscape. The question is no longer "Statsig vs. Eppo vs. GrowthBook" but "Amplitude + Statsig (integrated) vs. standalone experimentation platforms vs. build in-house on Databricks." The warehouse-native data story is intact. The question is whether Amplitude's roadmap will deepen the stats engine or drift toward analytics product features. Worth checking the Phase 2 roadmap details when they're announced in Q3 2026.
+
+**Tags added:** platform-acquisition, amplitude, openai, warehouse-native, platform-update, platform-consolidation
+
+---
+
+## Recent: 2026-07-13 — Meta Analysis July Release: Metric Correlation Across Experiments
+
+**Source:** Statsig Product Updates, July 2026 · https://www.statsig.com/updates/update/metric-correlation  
+**Related perspective piece:** https://www.statsig.com/perspectives/meta-analysis-experiments-patterns
+
+**What's new:** Statsig shipped the second view in their experimental meta-analysis suite — a **metric correlation chart**. The view plots two metrics on the same chart, with each data point representing one experiment's treatment effect on both metrics simultaneously. You can visually scan whether the metrics tend to move together or independently across your full experiment corpus, remove outliers, filter by team or product area, and download the underlying dataset for further analysis.
+
+**Why it matters:** This directly attacks one of the most persistent problems in experimentation: choosing a short-term proxy metric that actually predicts your long-term primary metric. The classic problem is that conversion (the metric you care about) is hard to move statistically — it takes a lot of traffic and time. If you could find a faster-moving metric that correlates tightly with conversion across your historical experiments, you could run faster tests and still learn what you care about. Statsig's metric correlation chart makes this analysis visual and accessible to non-statisticians. The key distinction from a simple correlation analysis: each data point is an *experiment's treatment effect* on both metrics, not raw user-level correlation — so it controls for confounders by construction.
+
+**Ibotta relevance:** Ibotta's primary metric for offer experiments is likely redemption rate — a conversion event that requires the user to complete a purchase, which is rare and slow. Faster proxy candidates might include: offer saves/favorites, app session time, category browse events, or push notification open rate. Running a metric correlation analysis across historical offer tests would tell you which of these proxies actually moves when redemption moves — giving Ibotta a faster-measurable signal for future experiments without sacrificing connection to the outcome that matters.
+
+**Tags added:** metric-design, proxy-metrics, experimental-meta-analysis, cross-experiment-learning
+
+---
+
+## Recent: 2026-08-19 — Running Faster Tests, Part 2: Modifying Metrics
+
+**Source:** Statsig Blog, August 19, 2026 · https://www.statsig.com/blog/running-faster-tests-part-2  
+**Series:** Part 2 of 4 — "Running Faster Tests" (Part 1: Adjusting Constraints, July 2026; Parts 3–4 forthcoming)
+
+**What this covers:** When your sample size calculator says an experiment will take 12 weeks, most teams give up and skip the experiment. Part 2 of this series argues there's a second lever before you accept that: *changing how you measure the outcome*, not just relaxing your power or MDE. Three concrete transformations:
+
+1. **Winsorize or cap heavy-tailed metrics.** Revenue-per-user distributions have extreme outliers that inflate variance. Capping the top 0.1–1% of values (by winsorizing) reduces variance substantially, lowering required sample size, with minimal bias if the cap is set above most genuine treatment effects. Standard CUPED applies on top of the capped metric.
+
+2. **Switch to binary from continuous.** A binary version of a metric (did the user redeem at all? vs. what was their total redemption value?) has lower variance in many situations. The information loss is real but the power gain can outweigh it when the continuous distribution is highly skewed.
+
+3. **Use a shorter measurement window with a proxy metric.** If your primary metric requires 30-day observation (e.g., monthly redemptions), find the 7-day version that correlates with it in historical data. Run the experiment shorter. This only works if you've validated the proxy first — use the Statsig metric correlation chart (see July 2026 Recent section above) to confirm the relationship.
+
+**Why it matters:** Teams treat sample size as a fixed constraint — "we need 500k users for 80% power" — when it's actually a function of the metric design. Changing the metric (carefully) can halve the required traffic. The caveat is that metric transformation has to be pre-specified and validated; you can't transform the metric after seeing the data.
+
+**Ibotta relevance:** Ibotta's offer redemption rate is a classic heavy-tailed conversion metric (most users don't redeem; a few redeem many times; one $500 Walmart receipt inflates user-level totals). Winsorizing at the 99th percentile — and validating that the capped metric is still a valid proxy for what you care about — could meaningfully reduce experiment runtime for offer-level tests. This is a low-cost technique to try before asking for more traffic or longer experiments.
+
+**Tags added:** variance-reduction, metric-design, sample-size, heavy-tailed, proxy-metrics

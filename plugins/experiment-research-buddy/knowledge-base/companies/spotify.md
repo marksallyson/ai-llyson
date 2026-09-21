@@ -53,3 +53,67 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Ibotta relevance:** Ibotta increasingly tests AI-generated offer copy, personalized messaging, and recommendation algorithms. LLM evals as a pre-experiment filter — scoring copy quality or offer relevance before committing a variant to a multi-week A/B test — could significantly improve test queue quality and reduce wasted experiment capacity.
 
 **Tags added:** llm-evals, ai-products, experiment-quality, pre-experiment-screening
+
+---
+
+## Recent: 2026-08-13 — Bayesian Inference Procedures for A/B Testing: An Overview
+
+**Source:** arXiv:2608.12949, August 13, 2026 · https://arxiv.org/abs/2608.12949  
+**Authors:** Mårten Schultzberg and Mattias Frånberg (Spotify Confidence team)
+
+**What they argue:** "Bayesian A/B testing" is not a single method — it's a family of configurations with fundamentally different statistical guarantees. The paper organizes these into a three-tier hierarchy: Tier 1 (posterior coherence, no error control), Tier 2 (Bayes factor stopping, bounded false positive rate), and Tier 3 (empirical Bayes with FDR control). The critical finding: many commercial experimentation platforms default to Tier 1, which provides no protection against repeated peeking — despite being marketed as a Bayesian alternative to frequentist testing.
+
+**Why it's notable:** The authors prove that Bayes factor stopping (Tier 2) is near-optimal for virtually any reasonable cost function used in A/B testing — including those proposed in the academic literature. This is the first paper to provide a systematic overview and clear vocabulary for the Bayesian A/B testing landscape, giving DS teams the framework to ask vendors the right questions.
+
+**Ibotta relevance:** If Ibotta evaluates warehouse-native experimentation platforms (Confidence, Eppo/Datadog Experiments, or others), this paper is required reading before making a choice. Ask specifically: which tier does your Bayesian implementation operate at? A Tier 1 platform with daily result checks still inflates your false positive rate.
+
+**Full entry:** `papers/bayesian-ab-testing-overview-spotify-2026.md`
+
+**Tags added:** bayesian, false-positive, tier-framework, platform-evaluation
+
+---
+
+## Recent: 2026-08-24 — A Closed-Form Sample Size Correction for Always-Valid Inference
+
+**Source:** arXiv:2606.18366, June 2026 · https://arxiv.org/abs/2606.18366  
+**Author:** Mårten Schultzberg (Spotify Confidence team)
+
+**What they built:** Sequential A/B tests that allow mid-experiment peeking are typically oversized because platforms use a conservative "last-point" heuristic — they plan as if you'll only look at the end, then add an ad hoc buffer. Schultzberg derives a closed-form correction factor k*(α, β, t₀) that precisely accounts for optional stopping, requiring no simulation and running instantly at scale.
+
+**Why it's notable:** The correction is validated across three boundary families (mSPRT, GAVI, Brownian motion) and tested on 713 real metrics from Spotify's production platform, saving a median 9.5% of sample budget. The 8–20% savings range means teams using sequential testing are currently committing more traffic than they need to. This is the most practical sequential-testing contribution since the original mSPRT paper.
+
+**Ibotta relevance:** If Ibotta runs sequential tests on offer redemption experiments, applying k* reduces how many users must be exposed to an unproven variant before reaching a decision — directly lowering the cost of offer-level A/B testing on small brands with limited traffic allocation.
+
+**Full entry:** `papers/sequential-sample-size-correction-spotify-2026.md`
+
+**Tags added:** sequential-testing, sample-size, always-valid-inference
+
+---
+
+## Recent: 2026-08-17 — When Can LLMs Replace Humans in A/B Tests?
+
+**Source:** Spotify Engineering Blog, August 2026 · https://engineering.atspotify.com/2026/8/when-can-llms-replace-humans-in-a-b-tests  
+**Authors:** Sebastian Ankargren, Joel Persson, Mårten Schultzberg (Spotify)
+
+**What they argue:** Teams increasingly want to replace human participants in A/B tests with LLM-simulated responses — running experiments on LLM outputs rather than real users, to get faster and cheaper signal. Spotify's researchers formalize when this is and isn't valid, building directly on the surrogacy framework in arXiv:2606.17165 (already in KB). The core claim: using LLM outcomes as a proxy for human outcomes in an A/B test is *identification by assumption, not by design* — you can make it valid, but only if you explicitly test and satisfy the surrogacy conditions.
+
+**Why it's notable:** This is Spotify's engineering team translating a dense statistical paper into practitioner guidance. They argue that "calibrated LLM outcomes" — where the LLM's predictions are post-hoc adjusted to match the marginal distribution of human outcomes — recover the human average treatment effect under surrogacy and comparability conditions weaker than full distributional equivalence. The engineering contribution is the practical workflow: test surrogacy on a historical validation set before using LLM outcomes to evaluate new features. Without that validation step, the A/B test on LLM outputs is not a valid substitute for a human experiment.
+
+**Ibotta relevance:** Ibotta likely evaluates LLM-generated offer copy, personalized messaging, or AI-assisted recommendation features. Using an LLM to simulate user responses to a new offer design — before incurring the traffic cost of a real test — is attractive. This post explains exactly what statistical check must be run on historical data before that simulation is trustworthy. Combine with `s-rct-agent-simulation-2026.md` (Amazon/COLM 2026) and `llm-ab-testing-surrogacy-2026.md` (the foundational paper) for a complete view.
+
+**Tags added:** llm-evals, surrogate-metrics, agentic-experimentation, experiment-quality
+
+---
+
+## Recent: 2026-09-08 — Why Spotify Is Not Using Bayesian A/B Testing
+
+**Source:** Spotify Engineering Blog, September 8, 2026 · https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing  
+**Authors:** Mattias Frånberg (Senior Data Scientist) and Mårten Schultzberg (Senior Manager, Staff Data Scientist)
+
+**What they argue:** This is the practitioner-facing companion to their August 2026 arXiv paper (already in KB). Bayesian A/B testing is a family of configurations, not a single method — each with different stopping rules, priors, likelihoods, and statistical guarantees. Many popular claims about Bayes solving frequentist problems (peeking, multiple metrics, winner's curse) only hold under specific, demanding configurations that commercial platforms rarely offer by default. Under flat priors, Bayesian and frequentist inference are often numerically identical. A flat-prior posterior-probability threshold — the default in most commercial platforms — reproduces the same false positive rate as frequentist peeking. Spotify's conclusion: supporting a second inference framework adds organizational complexity and interpretation risk without a proportional benefit over their existing well-tuned frequentist setup.
+
+**Why it's notable:** Spotify is the most credible voice for Bayesian methods in industry experimentation (they co-authored the formal taxonomy paper and built the Confidence platform around it) — which makes their decision not to adopt Bayesian testing especially pointed. This isn't a frequentist researcher dismissing Bayes; it's a team that deeply understands Bayesian inference saying the organizational cost exceeds the benefit for most practitioners. The key diagnostic question this post gives you: "Which tier does your platform's Bayesian implementation operate at?" Tier 1 (posterior probability only, no peeking protection) is useless; Tier 2 (Bayes factor stopping) is near-optimal but rare in the wild. Most platforms ship Tier 1 and don't say so.
+
+**Ibotta relevance:** When Ibotta evaluates experimentation platforms — Amplitude+Statsig, GrowthBook, or others that advertise Bayesian testing — this post is the right framework for asking the pointed question. Bayesian by default does not mean safe-to-peek. Ask specifically: does the platform's Bayesian mode provide Type I error control when you look at results mid-experiment, or does it reproduce the peeking false positive inflation under a Bayesian label?
+
+**Tags added:** bayesian, false-positive, platform-evaluation, tier-framework, frequentist-vs-bayesian

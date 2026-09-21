@@ -37,3 +37,24 @@ Airbnb's two-sided marketplace structure (hosts + guests) is the closest public 
 
 ## Tags
 causal-inference, interference, marketplace, ml-integration, organizational-maturity, platform, sutva, switchback, two-sided-markets
+
+---
+
+## Recent: 2025-08 — Harnessing the Power of Interleaving and Counterfactual Evaluation for Airbnb Search Ranking
+
+**Source:** KDD 2025 (31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining) · arXiv:2508.00751  
+**Authors:** Qing Zhang, Alex Deng, Michelle Du, Huiji Gao, Liwei He, Sanjeev Katariya (Airbnb Relevance Team)  
+**URL:** https://arxiv.org/abs/2508.00751
+
+**The problem:** For search ranking experiments, measuring success via booking conversion requires enormous sample sizes and long runtimes — a standard A/B test for a ranking change at Airbnb could take weeks to power. Offline evaluation (ranking metrics like NDCG) is fast but poorly correlated with actual booking outcomes.
+
+**What they built and measured:**
+- **Interleaving**: instead of splitting users into treatment and control groups, both ranking algorithms compete directly in each session — the treatment algorithm ranks some results, the control ranks others, and user clicks reveal which ranking is better. Achieved approximately **50x speedup** in sensitivity vs. standard A/B testing for the same traffic volume.
+- **Counterfactual Evaluation (ULCB — Unbiased Learning to rank with Click Behavioral feedback)**: a more generalizable approach that uses click data from production to estimate what would have happened under a different ranking policy, without requiring any simultaneous interleaving. Achieved up to **100x sensitivity improvement** vs. standard A/B testing in the traffic needed to achieve equivalent statistical power.
+- **Both in production simultaneously**: the paper is notable for being the first documented case where interleaving and counterfactual evaluation are running side-by-side in production at scale, with performance evaluated comparatively.
+
+**Why it matters:** Most teams treating search ranking as a standard A/B testing problem are dramatically over-investing in traffic and time to reach statistical significance. A 50x sensitivity improvement means what would have taken a 10-week A/B test with 1M users now takes a 1-week test with 20k users — that's a qualitative difference in how many ranking iterations a team can explore per quarter. The counterfactual evaluation approach is especially powerful because it doesn't require changing the experiment assignment mechanism at all: you log click behavior in production and retroactively score what other rankers would have produced.
+
+**Ibotta relevance:** Offer feed ranking at Ibotta (the order in which offers appear in the app) is a ranking experiment. If Ibotta tests ranking algorithm changes via standard A/B testing on redemption rate, runtime will be extremely long due to the conversion lag. Interleaving (showing competing offer orders in the same session and watching which offers get saved/clicked) or counterfactual evaluation (using observed offer interaction data to score what a different ranker would have produced) are both applicable and could dramatically shorten iteration cycles.
+
+**Tags added:** interleaving, off-policy-evaluation, sensitivity, ranking, search-ranking, counterfactual
