@@ -19,12 +19,16 @@ Create the directory if it's missing — don't fail because it isn't there.
 Claude Code installs plugins into a **versioned cache snapshot**:
 
 ```
-~/.claude/plugins/cache/ai-llyson/meeting-prep/0.1.0/
+~/.claude/plugins/cache/ai-llyson/meeting-prep/<version>/
 ```
 
 That directory is replaced wholesale on every update. Anything written under
 `$CLAUDE_PLUGIN_ROOT` is destroyed at the next version bump — which, for a plugin whose
 entire value is memory accumulating over months, means silent total data loss.
+
+The marketplace checkout is no safer: it is re-cloned on refresh. Observed on
+2026-09-21, `~/.claude/plugins/marketplaces/ai-llyson/` was deleted and re-cloned,
+discarding an unpushed local commit.
 
 Rule: **`$CLAUDE_PLUGIN_ROOT` is read-only.** Skills, references, and the two templates
 in `references/templates/` live there. Everything this plugin writes goes to the state
