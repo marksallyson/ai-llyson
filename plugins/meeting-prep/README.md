@@ -6,21 +6,23 @@ meeting transcripts, Slack, Gmail, and Jira — with memory that builds itself.
 ## How it works
 
 ```
+  state dir: ~/.claude/meeting-prep/   (outside the plugin — survives updates)
+
                  ┌──────────────────┐
-  7:30am ───────▶│ harvest-meetings │──▶ memory/series/*.md
-  (scheduled)    └──────────────────┘    memory/people/*.md
-                          │                      │
-                          ▼                      │
-                 ┌──────────────────┐            │
-                 │   daily-brief    │◀───────────┤
-                 └──────────────────┘            │
-                     │        │                  │
-             Slack DM ▼        ▼ memory/today-brief.md
-                              │
-                    SessionStart hook ──▶ shown in any session today
+  7:30am ───────▶│ harvest-meetings │──▶ series/*.md
+  (scheduled)    └──────────────────┘    people/*.md
+                          │                   │
+                          ▼                   │
+                 ┌──────────────────┐         │
+                 │   daily-brief    │◀────────┤
+                 └──────────────────┘         │
+                     │         │              │
+            Slack DM ▼         ▼ today-brief.md
+                               │
+                     SessionStart hook ──▶ shown in any session today
 
   anytime ──────▶┌──────────────────┐
-  "prep me for   │      prep        │◀───────────┘
+  "prep me for   │      prep        │◀────────┘
    my 2pm"       └──────────────────┘
 ```
 
@@ -34,7 +36,7 @@ asks about sample size and which thread has been open since June.
 |---|---|---|
 | `prep` | On demand | Preps one meeting or the rest of today. Tiered sweep — light for standups, deep for new stakeholders. |
 | `daily-brief` | Scheduled, weekday mornings | Harvests, briefs the day, caches it, DMs it to you on Slack. |
-| `harvest-meetings` | Auto, as brief phase 1 | Extracts decisions, action items, open questions, and person signals from Granola/Zoom transcripts into `memory/`. |
+| `harvest-meetings` | Auto, as brief phase 1 | Extracts decisions, action items, open questions, and person signals from Granola/Zoom transcripts into `~/.claude/meeting-prep/`. |
 
 ## The output format
 
@@ -95,7 +97,7 @@ to over-trigger. Ask the `data` or `looker-expert` skills when a readout needs n
 ## What it will not do
 
 Read-only against every external system, with exactly two exceptions: it writes to
-`memory/`, and it DMs the daily brief to you and only you.
+`~/.claude/meeting-prep/`, and it DMs the daily brief to you and only you.
 
 It never sends mail, replies to threads, creates or edits calendar events, comments on or
 transitions Jira issues, or messages anyone else. Writing to Jira belongs to
@@ -110,7 +112,9 @@ having occurred, with nothing about their content.
 
 ## Notes on memory
 
-`memory/` is auto-built, never hand-written. Two consequences worth knowing:
+State lives in `~/.claude/meeting-prep/` — outside the plugin, because Claude Code replaces
+a plugin's install directory on every update. It is auto-built, never hand-written.
+Two consequences worth knowing:
 
 - **Unrecorded meetings are invisible.** No Granola or Zoom record means nothing to
   harvest. Prep for those falls back to calendar + Slack.

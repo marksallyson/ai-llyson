@@ -15,7 +15,8 @@ On-demand prep for a specific meeting or a day. Fast, four lines per meeting, no
 
 Read `references/output-format.md` before writing output — the concise format is a hard
 constraint. Read `references/sources.md` for how to resolve connector tools at runtime
-(never hardcode the UUID-prefixed MCP tool names).
+(never hardcode the UUID-prefixed MCP tool names). Read `references/state.md` for where
+this plugin reads and writes state.
 
 ## Step 1 — Resolve which meeting
 
@@ -37,7 +38,7 @@ If she gave no hint at all, default to the rest of today.
 
 ## Step 2 — Check memory first
 
-Before any live calls, look in `memory/series/` and `memory/people/`:
+Before any live calls, look in `~/.claude/meeting-prep/series/` and `~/.claude/meeting-prep/people/`:
 
 - Slugify the meeting title and check for a series file
 - Slugify each attendee name and check for a person file
@@ -75,7 +76,7 @@ Then stop. No offer to "dig deeper into any of these" — if she wants more she'
 ## Step 5 — Opportunistic memory write
 
 If the sweep surfaced something durable that memory didn't already have — a decision, a
-new open thread, a first read on a person — write it to the relevant `memory/` file using
+new open thread, a first read on a person — write it to the relevant state file using
 the templates. Keep it to what you actually observed.
 
 Do **not** announce these writes. They're bookkeeping, not output.

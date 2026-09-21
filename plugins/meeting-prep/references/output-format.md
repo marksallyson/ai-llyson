@@ -35,9 +35,9 @@ filler. A meeting with nothing to say gets a header only.
 
 | Line | Answers | Sourced from |
 |---|---|---|
-| **Last time** | What was decided or left open at the previous instance | `memory/series/`, Granola/Zoom transcripts |
+| **Last time** | What was decided or left open at the previous instance | `~/.claude/meeting-prep/series/`, Granola/Zoom transcripts |
 | **Since then** | What changed since — tickets, Slack, email | Jira, Slack, Gmail |
-| **Watch for** | What they will likely push on, or where you're exposed | `memory/people/`, pattern from past instances |
+| **Watch for** | What they will likely push on, or where you're exposed | `~/.claude/meeting-prep/people/`, pattern from past instances |
 | **Your ask** | The one thing you want out of the room | Inferred from open threads; say so if inferred |
 
 `Watch for` and `Your ask` are the lines that earn the plugin's keep. Anyone can
