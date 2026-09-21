@@ -58,3 +58,19 @@ causal-inference, interference, marketplace, ml-integration, organizational-matu
 **Ibotta relevance:** Offer feed ranking at Ibotta (the order in which offers appear in the app) is a ranking experiment. If Ibotta tests ranking algorithm changes via standard A/B testing on redemption rate, runtime will be extremely long due to the conversion lag. Interleaving (showing competing offer orders in the same session and watching which offers get saved/clicked) or counterfactual evaluation (using observed offer interaction data to score what a different ranker would have produced) are both applicable and could dramatically shorten iteration cycles.
 
 **Tags added:** interleaving, off-policy-evaluation, sensitivity, ranking, search-ranking, counterfactual
+
+---
+
+## Recent: 2026-09-15 — Beyond the model: Engineering AI infra with scientific judgement
+
+**Source:** Airbnb Engineering & Data Science Blog, September 2026  
+**URL:** https://airbnb.tech/ai-ml/beyond-the-model-engineering-ai-infra-with-scientific-judgement/  
+**Medium mirror:** https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261
+
+**What they built:** Airbnb describes "Insight Miner," an AI agent harness built for unstructured data exploration at scale. The system lets a coding agent analyze 100,000 customer support conversations in minutes, producing taxonomies, prevalence numbers, and executive summaries. The key design choice: the methodology itself — how questions are framed, how evidence is selected and weighed, how decisions are recorded — is encoded as infrastructure around the model, not left to the model's discretion. The pipeline uses extract-embed-cluster, with prompt tuning, hard-example mining, and contrastive labeling to move from unsupervised exploration to a reproducible classification system. Subject matter experts who have never written code can directly conduct scaled analyses rather than waiting on engineering or data science resources.
+
+**Why it matters:** The core argument is that "intelligence without methodology is not science" — a deliberate rebuke of the pattern where teams point LLMs at data and treat the output as analysis. Airbnb's agent harness publishes transparent artifacts at each step (plans, evidence weights, decision logs, runnable notebooks) so results are reproducible, auditable, and challengeable. The system is designed to be inspected and overridden, not trusted blindly. This is the first major engineering blog post from a top-tier tech company describing how to operationalize scientific rigor in AI-driven data exploration at production scale.
+
+**Ibotta relevance:** The DS team at Ibotta increasingly uses AI tools for exploratory analysis of offer performance, user behavior, and redemption patterns. Insight Miner's pattern — treat the methodology (hypothesis framing, evidence standards, decision logging) as infrastructure, not afterthought — is directly applicable. A Databricks-native version of this approach would mean structured analysis notebooks where the question, evidence criteria, and decision rationale are always recorded alongside results, whether a human or an AI agent ran the analysis.
+
+**Tags added:** agentic-ai, scientific-methodology, reproducibility, data-exploration, organizational-maturity
