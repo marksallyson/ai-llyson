@@ -54,7 +54,9 @@ a different clever visual each time actively destroys it.
 
 ### 3. Check the glossary for prior context
 
-Read `../../glossary/VISUAL-GLOSSARY.md`. If she has already worked through this concept:
+Read `~/.claude/visual-stats/VISUAL-GLOSSARY.md` (override: `$VISUAL_STATS_STATE`; seed it
+from `${CLAUDE_PLUGIN_ROOT}/references/templates/VISUAL-GLOSSARY.md` if it does not exist).
+If she has already worked through this concept:
 - Reuse the **same** picture.
 - Open by connecting to it: "This is the same picture as when we did standard error —
   here it is again with one thing added."
@@ -78,8 +80,9 @@ Do not collapse these or reorder them.
 **Layer 1 — The picture.** One orienting sentence. What am I looking at, and what is on
 each axis. Nothing else. Let her look.
 
-**Layer 2 — Plain words.** What to notice. What changes and what stays fixed. Ordinary
-English only — no notation, no jargon. This is where the intuition actually forms.
+**Layer 2 — Plain words.** What to notice. What changes and what stays fixed. No
+notation and no jargon. Follow the writing rules below; this layer is where slop does the
+most damage, because it is the layer doing the actual teaching.
 
 **Layer 3 — Name the parts.** *Now* attach the symbols. "That bracket you're looking at —
 that's σ." "The shaded tail is the p-value." Each symbol must point at something visible
@@ -90,12 +93,37 @@ in the picture she just looked at.
 term-mapping table format in `references/render-recipes.md`. If the formula adds nothing
 beyond what the picture already showed, say so and skip it.
 
+**How to write all four layers.**
+
+Plain English is a hard requirement, not a style preference. The failure mode is writing
+to sound insightful instead of to be understood. Allyson has called this out directly.
+
+- One idea per sentence. Short declarative sentences.
+- State the conclusion first, then support it. Never build to a reveal.
+- No sentence fragments for emphasis. ("One character apart. Sigma or s." — no.)
+- No rhetorical questions.
+- At most one em-dash per paragraph, and no aphorisms.
+- Second person, active voice. "You estimate the spread", not "the spread is estimated".
+- A number beats an adjective. Not "much bigger" — "42% bigger".
+- Never say a thing is important, subtle, interesting, or worth noticing. Just say the thing.
+- Headers name their content. "Which one to use", not "What people get wrong".
+- No meta-narration about your own explanation. Don't announce sections or steps.
+- If a sentence still works with a word removed, remove it.
+
+Banned phrases. Do not use these or close variants:
+here's the thing · worth sitting with · earns its keep · the payoff · the real question is ·
+it turns out · that's exactly why · what people get wrong · the whole point · quietly ·
+let that sink in · at its core · fundamentally · it's worth noting
+
+Before sending, read it back and ask whether a colleague would say this out loud at a
+whiteboard. If it sounds written, rewrite it shorter.
+
 ### 6. Kill the misconception
 
 Each grammar entry names a specific misconception its picture is built to destroy
-(e.g. "95% CI means 95% chance the truth is in *my* interval"). State it explicitly:
-"Here's the thing people get wrong, and here's why the picture shows it's wrong."
-This is often the highest-value moment — don't skip it.
+(e.g. "95% CI means 95% chance the truth is in *my* interval"). State the wrong belief in one sentence. Then say what the picture shows instead.
+Do not announce that you are about to correct a misconception, and do not editorialize
+about how common or costly the error is.
 
 ### 7. Use a real Ibotta example, not abstract placeholders
 
@@ -125,7 +153,8 @@ Don't ask permission for this; it's bookkeeping. Keep it silent unless she asks 
 Inline widgets scroll away. When she asks to save one ("save that", "can I keep this",
 "I want to look at this later"):
 
-1. Write a **standalone** HTML file to `~/Claude/visual-stats/<concept-slug>.html`.
+1. Write a **standalone** HTML file to `~/.claude/visual-stats/<concept-slug>.html`
+   (override: `$VISUAL_STATS_STATE`). Not `~/Claude/` — that sits next to git repos.
 2. **Critical:** the host's CSS variables do not exist outside the widget. You must inline
    a `:root` token block or the file renders black-on-black. See the "Standalone export"
    section of `references/render-recipes.md` for the required block.

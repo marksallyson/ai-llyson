@@ -18,7 +18,15 @@ Allyson's personal record of stats concepts she has worked through visually. It 
 one reason: **the same concept must get the same picture every time.** Re-explaining
 variance with a different metaphor each session means she learns it zero times.
 
-Glossary file: `../../glossary/VISUAL-GLOSSARY.md`
+Glossary file: `~/.claude/visual-stats/VISUAL-GLOSSARY.md` (override: `$VISUAL_STATS_STATE`).
+
+This lives **outside** the plugin on purpose. The plugin installs into a versioned cache
+snapshot that Claude Code replaces wholesale on every update, so a glossary stored inside
+the plugin would be wiped at the next version bump — see `../visualize-concept/references/state.md`.
+
+If the file does not exist yet, create it by copying the seed template from
+`${CLAUDE_PLUGIN_ROOT}/references/templates/VISUAL-GLOSSARY.md`. Create the
+`~/.claude/visual-stats/` directory if missing; never fail because it isn't there.
 
 ---
 

@@ -31,10 +31,11 @@ becomes a name for something you've already seen rather than something to decode
 The picture for each concept is fixed in `skills/visualize-concept/references/visual-grammar.md`,
 so the same idea always renders the same way. That consistency is the point: a new clever
 metaphor every session undoes the last one. When you work through a concept it gets logged
-in `glossary/VISUAL-GLOSSARY.md`, which also tracks *what kind* of explanation lands for you.
+in `~/.claude/visual-stats/VISUAL-GLOSSARY.md`, which also tracks *what kind* of explanation
+lands for you. That file lives outside the plugin so a version bump can't wipe it.
 
 Visuals render inline by default. Say "save that" and you get a self-contained HTML file in
-`~/Claude/visual-stats/` that still works offline in two years.
+`~/.claude/visual-stats/` that still works offline in two years.
 
 ## Confident voice
 

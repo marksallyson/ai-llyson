@@ -155,7 +155,7 @@ Export checklist:
 - The picture, **plus** the Layer 2 (plain words) and Layer 3 (named parts) text
 - Date, so she knows when she worked through it
 - Self-contained: no CDN links, no external fonts. It must work offline in two years.
-- Save to `~/Claude/visual-stats/<concept-slug>.html`
+- Save to `~/.claude/visual-stats/<concept-slug>.html` (override: `$VISUAL_STATS_STATE`)
 - Deliver with `SendUserFile`, `display: "render"`
 
 ---
