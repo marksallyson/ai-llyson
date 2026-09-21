@@ -11,14 +11,15 @@ metadata:
 ---
 
 The memory builder. Allyson chose **auto-only memory** — she never hand-writes notes for
-this plugin, so everything in `memory/` has to come from transcripts. That makes this
+this plugin, so everything in the state directory has to come from transcripts. That makes this
 skill the whole engine: prep quality is capped by how well this runs.
 
-Read `references/sources.md` for connector resolution.
+Read `references/sources.md` for connector resolution and `references/state.md` for
+where state lives.
 
 ## Step 1 — Determine the harvest window
 
-Read `memory/HARVEST_LOG.md`. Take the `last_harvest` timestamp from the top entry.
+Read `~/.claude/meeting-prep/HARVEST_LOG.md`. Take the `last_harvest` timestamp from the top entry.
 
 - If the log is missing or empty, harvest the **last 14 days** and create the log
 - If the last harvest was under 6 hours ago, stop — say `Memory is current` and exit
@@ -52,10 +53,10 @@ and because nothing here is human-reviewed there's no safety net. When unsure, d
 
 ## Step 4 — Write to memory
 
-### Series files (`memory/series/<slug>.md`)
+### Series files (`~/.claude/meeting-prep/series/<slug>.md`)
 
 Match the meeting to an existing series by title similarity **and** ≥2 attendee overlap.
-Titles drift; attendees don't. Create a new file from `memory/_TEMPLATE_series.md` when
+Titles drift; attendees don't. Create a new file from `references/templates/series.md` when
 there's no match and the meeting looks recurring (cadence in the title, or a third
 occurrence with the same group).
 
@@ -66,9 +67,9 @@ occurrence with the same group).
 - Add to `Recurring patterns` only when you've seen something **three times**. One
   occurrence is noise.
 
-### Person files (`memory/people/<slug>.md`)
+### Person files (`~/.claude/meeting-prep/people/<slug>.md`)
 
-Create from `memory/_TEMPLATE_person.md` for anyone appearing in ≥2 harvested meetings.
+Create from `references/templates/person.md` for anyone appearing in ≥2 harvested meetings.
 One-off attendees don't need a file.
 
 - Add one `History` line per meeting — one line, not a paragraph
@@ -84,7 +85,7 @@ entries and closed threads. Keep all decisions.
 
 ## Step 5 — Update the log
 
-Prepend to `memory/HARVEST_LOG.md`:
+Prepend to `~/.claude/meeting-prep/HARVEST_LOG.md`:
 
 ```
 ## <YYYY-MM-DD HH:MM>

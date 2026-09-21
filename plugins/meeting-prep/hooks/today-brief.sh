@@ -3,10 +3,14 @@
 #
 # Deliberately does no network or MCP work — the brief is generated once each morning by
 # the daily-brief skill and cached. This hook only decides whether the cache is fresh.
+#
+# Reads from the state dir, NOT from the plugin dir: plugins are installed into a
+# versioned cache snapshot that is replaced on every update, so anything written inside
+# CLAUDE_PLUGIN_ROOT is lost when the plugin is upgraded. See references/state.md.
 
 set -u
 
-BRIEF="${CLAUDE_PLUGIN_ROOT:-.}/memory/today-brief.md"
+BRIEF="${MEETING_PREP_STATE:-$HOME/.claude/meeting-prep}/today-brief.md"
 
 [ -f "$BRIEF" ] || exit 0
 
