@@ -1,0 +1,9 @@
+{
+  "name": "visual-stats",
+  "version": "0.1.0",
+  "description": "Visual explanations of math and statistics concepts — leads with a picture, attaches the symbols to it, and keeps a personal glossary of what you've worked through. Built for visual learners.",
+  "author": {
+    "name": "Allyson Marks"
+  },
+  "keywords": ["visualization", "statistics", "visual-learning", "education", "math", "explainer"]
+}

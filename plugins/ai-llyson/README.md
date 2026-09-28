@@ -17,25 +17,11 @@ Every session automatically loads your profile so Claude knows your context, wor
 | **skill-optimizer** | "Help me work smarter on X" or "Optimize my workflow" |
 | **weekly-review** | "Weekly review" or "Let's do a Friday check-in" |
 | **decision-log** | "Log this decision" or "Help me decide between X and Y" |
-| **visualize-concept** | "Show me what a p-value looks like" or "I don't get CUPED" |
-| **visual-glossary** | "What concepts have we covered?" or "What should I learn next?" |
 | **confident-voice** | "How did I sound this week?" or "Am I hedging?" (also runs weekly) |
 | **say-it-straight** | Paste a draft: "How does this sound?" or "Can I send this?" |
 
-## Visual stats
-
-`visualize-concept` turns math and stats concepts into pictures instead of formulas. It
-always leads with a drawing, then attaches the Greek letters to it as labels — so notation
-becomes a name for something you've already seen rather than something to decode.
-
-The picture for each concept is fixed in `skills/visualize-concept/references/visual-grammar.md`,
-so the same idea always renders the same way. That consistency is the point: a new clever
-metaphor every session undoes the last one. When you work through a concept it gets logged
-in `~/.claude/visual-stats/VISUAL-GLOSSARY.md`, which also tracks *what kind* of explanation
-lands for you. That file lives outside the plugin so a version bump can't wipe it.
-
-Visuals render inline by default. Say "save that" and you get a self-contained HTML file in
-`~/.claude/visual-stats/` that still works offline in two years.
+> Visualizing math and stats concepts moved to the separate **visual-stats** plugin
+> (same repo, `plugins/visual-stats`). Add that one on its own if you want it in Cowork.
 
 ## Confident voice
 
