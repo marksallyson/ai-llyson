@@ -28,16 +28,22 @@ Local 12-hour, no minutes on the hour. Shorten titles aggressively. First names 
 
 ## The Full prep sheet
 
-Four blocks, in this order. Omit a block entirely rather than padding it.
+Four blocks, in this order: orient, then act. Omit a block entirely rather than
+padding it.
 
-### 1. `Ask:` — questions she needs answered
+### 1. `Context:` — one line, first
+Compressed history: what was settled last time, what changed since. It runs first so she
+lands in the meeting oriented before she reads what to do. **One line.** If it needs two,
+the extra belongs in `Ask` or `Be ready for` instead.
+
+### 2. `Ask:` — questions she needs answered
 The things she is blocked on, or that the meeting exists to settle. **Name who owns the
 answer.** Phrase as the actual question she would say out loud, not a topic.
 
 - ✅ `Josh — is prediction-override tracking required for V1, or can it wait for V2?`
 - ❌ `Discuss override tracking scope`
 
-### 2. `Be ready for:` — incoming questions, with her answer
+### 3. `Be ready for:` — incoming questions, with her answer
 Questions likely aimed at her, each paired with the answer or number she should have
 ready. This is the block that saves her in the room. Source it from what attendees have
 pushed on before (`people/` files) and from unanswered questions in Slack and email.
@@ -48,14 +54,10 @@ pushed on before (`people/` files) and from unanswered questions in Slack and em
 If she has no good answer to a likely question, **say so** — that is the single most
 useful thing prep can surface. Mark it: `→ no answer yet, expect to defer.`
 
-### 3. `You owe:` / `Waiting on:` — commitments
+### 4. `You owe:` / `Waiting on:` — commitments
 Two short lists, from `series/` action items and the open-questions ledger.
 `You owe` is hers, past due first. `Waiting on` is what others owe her, with age —
 an item aging past two weeks is worth chasing in the room.
-
-### 4. `Context:` — one line, last
-Compressed history: what was settled last time, what changed since. **One line.** If it
-needs two, it belongs in `Ask` or `Be ready for` instead.
 
 ## Brief tier
 
