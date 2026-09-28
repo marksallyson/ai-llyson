@@ -4,6 +4,7 @@
 
 ```
 ~/.claude/meeting-prep/
+├── OPEN-QUESTIONS.md       # the ledger — what she's waiting on, what she owes
 ├── HARVEST_LOG.md          # harvest windows, newest first
 ├── today-brief.md          # cached daily brief, read by the SessionStart hook
 ├── people/<slug>.md        # one file per recurring collaborator

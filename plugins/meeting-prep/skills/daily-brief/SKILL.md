@@ -6,14 +6,15 @@ description: >
   Also triggers when she says "send me my brief", "run the daily brief", "what's my day
   look like", "brief me on today", or asks to re-send or regenerate today's brief.
 metadata:
-  version: "0.1.0"
+  version: "0.3.0"
 ---
 
 The scheduled counterpart to `prep`. One push each weekday morning covering the day's
 meetings, so she starts the day already oriented.
 
-Read `references/output-format.md`, `references/sources.md`, and `references/state.md`
-first.
+Read `references/output-format.md` (tiering and prep-sheet blocks),
+`references/open-questions.md` (the ledger), `references/sources.md`, and
+`references/state.md` first.
 
 ## The routine, in order
 
@@ -40,7 +41,12 @@ Budget discipline matters here because this runs unattended across a whole day:
 - Standups, all-hands, and sub-15-minute items get `(no prep needed)` with no sweep
 
 Write the day brief per the whole-day format in `references/output-format.md`: one
-orienting line, then meetings in start-time order.
+orienting line, then meetings in start-time order, tiered Skip / Brief / Full with Full
+capped at two. Close with the `Still waiting on` digest only when ledger items are aging
+past 7 days or past a stated due date.
+
+The orienting line should name the heaviest meeting and flag collisions. If the ledger
+has aging items, say how many.
 
 ### Phase 4 — Cache for the session hook
 Write the finished brief to `~/.claude/meeting-prep/today-brief.md` with today's date as the first line:

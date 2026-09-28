@@ -7,15 +7,15 @@ description: >
   the daily-brief routine. Also triggers when Allyson says "harvest my meetings", "update
   meeting memory", "catch memory up", or "why doesn't it know about my meeting with X".
 metadata:
-  version: "0.1.0"
+  version: "0.3.0"
 ---
 
 The memory builder. Allyson chose **auto-only memory** — she never hand-writes notes for
 this plugin, so everything in the state directory has to come from transcripts. That makes this
 skill the whole engine: prep quality is capped by how well this runs.
 
-Read `references/sources.md` for connector resolution and `references/state.md` for
-where state lives.
+Read `references/sources.md` for connector resolution, `references/state.md` for where
+state lives, and `references/open-questions.md` for the ledger rules.
 
 ## Step 1 — Determine the harvest window
 
@@ -82,6 +82,23 @@ One-off attendees don't need a file.
 
 Cap each memory file at roughly 150 lines. When one exceeds it, prune oldest `History`
 entries and closed threads. Keep all decisions.
+
+
+### The open-questions ledger (`~/.claude/meeting-prep/OPEN-QUESTIONS.md`)
+
+This is the most actionable thing the plugin produces. Maintain it on every run, per
+`references/open-questions.md`.
+
+- **Add** each newly-raised open question to the right bucket: `Waiting on others`
+  (she needs someone's answer), `They're waiting on me` (aimed at her, unanswered),
+  `Unowned` (real design question, no owner).
+- **Delete** any entry the transcripts show was answered. Do not mark it done and leave
+  it — a ledger full of resolved items stops being read. Record the answer as a decision
+  in the relevant `series/` file instead.
+- **Move** entries between buckets when ownership changes.
+- **Merge** near-duplicates rather than appending a second wording.
+- Phrase every entry as a question she could say out loud, not a topic.
+- Cap at 25; over that, drop the oldest `Unowned` entries.
 
 ## Step 5 — Update the log
 
