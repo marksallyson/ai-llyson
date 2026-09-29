@@ -15,12 +15,12 @@ Someone else has already solved these problems, I want to learn from their appro
 ---
 
 ## 📅 meeting-prep
-For someone who context switches roughly forty times before lunch
+Less context switching, more actually being present
 
 ---
 
 ## 📊 visual-stats
-I'm a visual learner, numbers and Greek letters need not apply
+I'm a visual learner
 
 ---
 
