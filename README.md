@@ -15,12 +15,12 @@ Someone else has already solved these problems, I want to learn from their appro
 ---
 
 ## 📅 meeting-prep
-Remembers my meetings so I can pretend I did too
+For someone who context switches roughly forty times before lunch
 
 ---
 
 ## 📊 visual-stats
-For when the Greek letters start winning
+I'm a visual learner, numbers and Greek letters need not apply
 
 ---
 
