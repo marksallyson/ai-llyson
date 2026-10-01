@@ -1,9 +1,22 @@
 {
   "name": "experiment-research-buddy",
-  "version": "0.1.0",
-  "description": "Real-world counterpart to stats-research-buddy — expert on what modern, reputable tech companies actually do in their experimentation programs. Grounds every recommendation in company-specific practice (LinkedIn, DoorDash, Netflix, Spotify, Microsoft ExP, etc.) rather than theory alone.",
+  "version": "0.2.0",
+  "description": "A senior experimentation advisor grounded in what mature tech companies actually do. Answers experiment design, statistics, and strategy questions from a curated knowledge base of documented practice at LinkedIn, DoorDash, Netflix, Spotify, Microsoft ExP, Booking.com and others — then applies it to your company via a local profile you configure once.",
   "author": {
-    "name": "Allyson"
+    "name": "Allyson Marks",
+    "url": "https://github.com/marksallyson"
   },
-  "keywords": ["experimentation", "a/b testing", "statistics", "product analytics", "causal inference"]
+  "homepage": "https://github.com/marksallyson/ai-llyson/tree/main/plugins/experiment-research-buddy",
+  "repository": "https://github.com/marksallyson/ai-llyson",
+  "license": "MIT",
+  "keywords": [
+    "experimentation",
+    "a/b testing",
+    "statistics",
+    "causal inference",
+    "product analytics",
+    "power analysis",
+    "cuped",
+    "sequential testing"
+  ]
 }

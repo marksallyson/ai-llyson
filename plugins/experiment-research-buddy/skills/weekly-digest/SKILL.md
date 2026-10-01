@@ -16,19 +16,24 @@ metadata:
 
 After the kb-curator has scanned sources and written new/updated KB entries, this skill
 composes and delivers the weekly digest. The digest is a curated newsletter — opinionated,
-scannable in 2 minutes, with explicit Ibotta callouts.
+scannable in 2 minutes, with explicit callouts tying each item to the user's own company.
 
-**Recipient:** allyson.marks@ibotta.com  
-**Delivery:** Slack DM + Gmail  
-**Cadence:** Every Monday ~8am Denver time (automated), or on-demand
+## Step 0 — Load delivery settings
+
+Read the **Digest delivery** section of `${CLAUDE_PLUGIN_ROOT}/config/company-profile.md`
+for the recipient, channels, cadence, and timezone. Also read the **Identity** and
+**Metrics** sections so the "angle" lines below are about the user's actual business.
+
+If the profile is missing, ask the user where to send the digest and offer the **setup**
+skill. If it says `disabled`, generate the digest in the chat and do not send anything.
 
 ---
 
 ## Step 1: Gather what changed this week
 
-Read `knowledge-base/_INDEX.md` and scan the `added:` frontmatter dates across all entries
-in `knowledge-base/companies/`, `knowledge-base/individuals/`, `knowledge-base/papers/`,
-and `knowledge-base/articles/`.
+Read `${CLAUDE_PLUGIN_ROOT}/knowledge-base/_INDEX.md` and scan the `added:` frontmatter dates across all entries
+in `${CLAUDE_PLUGIN_ROOT}/knowledge-base/companies/`, `${CLAUDE_PLUGIN_ROOT}/knowledge-base/individuals/`, `${CLAUDE_PLUGIN_ROOT}/knowledge-base/papers/`,
+and `${CLAUDE_PLUGIN_ROOT}/knowledge-base/articles/`.
 
 Identify:
 - **New entries** added in the last 7 days (frontmatter `added:` date)
@@ -66,9 +71,9 @@ name the technique, the number, the surprise. Don't say "they found interesting 
 **So what?** [1 sentence: why does this matter in practice? What would change about
 how you run or interpret a test if you applied this?]
 
-⚡ Ibotta angle: [One sentence connecting this to offer testing, CPG tests,
-Walmart linking, incentive design, or Allyson's current work. Only include if
-the connection is genuine — skip if it's a stretch.]
+⚡ Your angle: [One sentence connecting this to the surfaces, metrics, and
+business model in the company profile, or to the user's current work. Only
+include if the connection is genuine — skip if it's a stretch.]
 → Full entry: knowledge-base/[subdir]/[filename].md
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -78,14 +83,14 @@ the connection is genuine — skip if it's a stretch.]
 • [Company/Person] — [Title]
   Plain English: [One sentence — what is this about, no jargon.]
   Interesting because: [One sentence — the specific finding or implication.]
-  ⚡ Ibotta angle: [One sentence, only if genuinely applicable — skip if not.]
+  ⚡ Your angle: [One sentence, only if genuinely applicable — skip if not.]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 💡 HOT TAKE OF THE WEEK
 [One spicy, opinionated observation based on this week's reading.
-Write it as if you're explaining it to Allyson over coffee — plain language,
-no assumed knowledge, but treat her as smart. If the hot take involves a
+Write it as if you're explaining it to the user over coffee — plain language,
+no assumed knowledge, but treat them as smart. If the hot take involves a
 statistical concept, use an analogy to make it land. Could be a contrarian view,
 a surprising finding, a pattern across sources, or something worth raising in a
 DS team meeting. 3-5 sentences. Be specific, not vague.]
@@ -96,7 +101,7 @@ DS team meeting. 3-5 sentences. Be specific, not vague.]
 [N] new entries · [N] updated · [List filenames, one per line, with one-word type tag]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Experiment Lab v0.1.0 · kb-curator ran [Day Month Date] at 8am Denver
+Experiment Research Buddy · kb-curator ran [Day Month Date] at [time, profile timezone]
 ```
 
 ### Composing guidelines
@@ -119,9 +124,9 @@ Examples:
 
 **Highlight of the Week:** Pick the single most interesting or envelope-pushing item.
 Prioritize: novel methodology > surprising finding > useful tool > process improvement.
-If there's a clear Ibotta-relevant item, that gets priority for the highlight spot.
+If there's an item clearly relevant to the user's company, it gets the highlight spot.
 
-**Also Notable:** Max 3 bullets. Skip Ibotta angle if it's a stretch.
+**Also Notable:** Max 3 bullets. Skip the angle line if it's a stretch.
 Don't force it — only flag genuine connections.
 
 **Hot Take:** This is the most important section for making the digest worth reading.
@@ -131,7 +136,7 @@ a hedge. Examples of good hot takes:
   the ML model to beat standard CUPED. It's like buying a sports car when you haven't
   learned to drive stick yet — master the basics first."
 - "The Booking.com research quietly buries the idea that you can learn anything
-  meaningful from a two-week experiment. Most Ibotta offer tests are shorter than that.
+  meaningful from a two-week experiment. Most of our tests are shorter than that.
   We might be making decisions from data that's more noise than signal."
 - "Microsoft found that concurrent tests interfere with each other only 1 in 50,000
   times. Yet most teams — including ours — treat overlap like it's a fire hazard.
@@ -145,10 +150,10 @@ a hedge. Examples of good hot takes:
 
 Send the composed digest:
 
-1. **Slack DM** to the user (search for allyson.marks@ibotta.com or Allyson Marks).
+1. **Slack DM** to the recipient named in the company profile's Digest delivery section.
    Use the Slack MCP tool. Send as a DM, not a channel post.
 
-2. **Gmail** to allyson.marks@ibotta.com.
+2. **Email** to the same recipient.
    Use the Gmail MCP tool to create a draft or send directly.
    Subject line: `🧪 Experiment Lab Weekly · [Month Day]`
 
@@ -158,7 +163,7 @@ If either delivery fails, output the full digest text to the session so it's not
 
 ## On-demand usage
 
-When Allyson invokes this skill manually (not via the automated routine):
+When the user invokes this skill manually (not via the automated routine):
 - Ask: "Do you want this week's digest based on recent KB changes, or a digest on a
   specific topic?" 
 - If topic-based: pull the most relevant KB entries by tag and compose a focused version

@@ -13,7 +13,7 @@
     },
     {
       "name": "experiment-research-buddy",
-      "description": "Expert advisor on consumer product experimentation — experiment design, statistical methods, and strategy for a Decision Scientist",
+      "description": "A senior experimentation advisor grounded in what mature tech companies actually do — experiment design, statistics, and strategy from a curated knowledge base of documented practice, applied to your company via a local profile you configure once.",
       "source": "./plugins/experiment-research-buddy"
     },
     {

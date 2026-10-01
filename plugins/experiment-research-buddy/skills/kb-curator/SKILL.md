@@ -22,15 +22,17 @@ Manage and surface knowledge from the experiment-lab knowledge base. This skill 
 3. **Reading list** — generate a focused reading list on a topic, scoped to what's most relevant to the user's current work
 4. **Summarize** — when the user pastes or links content, extract it into a formatted KB entry
 
-The KB lives at `knowledge-base/` in this plugin's directory.
-When accessing files, use the plugin's install path from `installed_plugins.json`, or
-look for the files relative to where this SKILL.md is located (two levels up: `../../knowledge-base/`).
+The KB lives at `${CLAUDE_PLUGIN_ROOT}/knowledge-base/`. Always resolve paths through
+`${CLAUDE_PLUGIN_ROOT}` — it is set by the plugin loader and is correct on any machine.
+Do not use relative paths from this SKILL.md; they break depending on the working directory.
 
 Structure:
 - `_TEMPLATE.md` — template for new entries
 - `_INDEX.md` — master index of all entries
 - `companies/` — one file per company
 - `individuals/` — one file per person
+- `papers/` — one file per academic paper
+- `articles/` — one file per practitioner article, with a credibility assessment
 
 ---
 
@@ -118,6 +120,6 @@ If the user provides a URL but you can't fetch it, ask them to paste the relevan
 
 - Direct. No hedging, no filler.
 - Assume the user knows statistics. Skip definitions of p-values and confidence intervals.
-- Takeaways should be actionable at Ibotta — tie to offer testing, incentive design, brand/retailer experiments, two-sided marketplace dynamics wherever the connection is real.
+- Takeaways should be actionable at the user's company. Read `${CLAUDE_PLUGIN_ROOT}/config/company-profile.md` and tie each takeaway to their business model, surfaces, and metrics wherever the connection is real. Do not force it.
 - If a KB entry is thin or outdated, say so and offer to improve it.
 - Don't pad reading lists. 5 well-annotated items beat 15 unannotated ones.

@@ -1,81 +1,174 @@
 # experiment-research-buddy
 
-A Claude Code plugin for Decision Scientists at Ibotta — built to think like a senior experimentation advisor who has worked inside the best programs in the industry.
+A Claude Code plugin that acts as a senior experimentation advisor — one who has read what
+the most mature experimentation programs in the industry actually published, and applies it
+to your company.
 
-## What This Is
+> **New here? Go to [SETUP.md](SETUP.md).** Install, then run one setup conversation. Takes
+> about 10 minutes.
 
-A **knowledge-grounded consultation plugin.** You bring it a problem in experiment design, strategy, or statistics, and it responds the way a senior advisor would — grounded in documented practice from the most mature experimentation programs in the industry, calibrated to your expertise level.
+## What it is
 
-It is not a passive reference tool you search. It is not an autonomous agent that watches your work and flags things. It is the expert you bring into the conversation when you have a decision to make.
+A **knowledge-grounded consultation plugin.** You bring a problem in experiment design,
+strategy, or statistics; it answers the way a senior advisor would — grounded in documented
+practice, calibrated to your expertise level, and specific to your company.
 
-## The Premise
+It is not a reference tool you search, and not an agent that watches your work. It's the
+expert you pull into the conversation when you have a decision to make.
 
-Companies like Booking.com, Duolingo, Airbnb, DoorDash, LinkedIn, Netflix, and Microsoft ExP are years — sometimes decades — ahead of most experimentation programs. They've already hit the walls, made the mistakes, built the infrastructure, and figured out what actually works at scale. That knowledge exists in their engineering blogs, conference talks, papers, and public postmortems — but it's scattered and hard to synthesize.
+## The premise
 
-This plugin is that synthesis. When you ask it a question, it doesn't give you textbook answers — it tells you what Booking.com did when they hit this problem, what DoorDash learned when they tried to scale experiment capacity, how LinkedIn handled the peeking problem when PMs wouldn't stop looking at dashboards. The goal is to skip the mistakes these companies already made and apply what they learned to Ibotta's specific situation.
+Booking.com, Duolingo, Airbnb, DoorDash, LinkedIn, Netflix, Spotify and Microsoft ExP are
+years — sometimes decades — ahead of most experimentation programs. They already hit the
+walls, made the mistakes, built the infrastructure, and wrote down what worked. That
+knowledge exists in engineering blogs, conference talks, papers and public postmortems, but
+it's scattered and hard to synthesize.
 
-## How to Use It
+This plugin is that synthesis. Ask it a question and it doesn't give you a textbook answer —
+it tells you what Booking.com did when they hit this problem, what DoorDash learned scaling
+experiment capacity, how LinkedIn handled peeking when PMs wouldn't stop refreshing
+dashboards. The point is to skip the mistakes those companies already paid for.
 
-Bring it a real problem. "I need to design a test for X." "My PM wants to stop this test early." "What should we test on the home screen?" "My result looks weird." It works best as a consultation — you're in the conversation, it's a resource you're drawing from.
+## How it becomes *your* advisor
 
-It also works best alongside **Emma's `stats-research-buddy`**, which covers the academic literature — what the research says is correct. This plugin covers practice — what reputable companies actually shipped and why. Academic rigor + real-world precedent = better decisions.
+One local file, `config/company-profile.md`, holds your company's business model, product
+surfaces, metrics, experimentation stack, and process rules. Every skill reads it before
+answering.
+
+That file is **gitignored and never shipped**. You create it by running the **setup** skill,
+which interviews you and writes it. Everything else in this repo is generic and shareable.
+
+Why it matters: business model decides which precedent is valid. A two-sided marketplace
+benchmarked against Netflix gets bad advice. Tell the plugin what you are, once, and every
+answer afterward picks the right analogues.
+
+Without a profile, the plugin still works — it answers generically and says so, rather than
+inventing your tool names or policies.
 
 ## Skills
 
+### setup
+Interviews you about your company and writes `config/company-profile.md`. Run this first.
+Run it again when your stack changes.
+
+**Try:** "set up experiment research buddy", "we switched from LaunchDarkly to Statsig"
+
 ### experiment-design
-Design an experiment from scratch, grounded in how mature programs handle the same design challenge. Covers test type selection, interference, randomization unit, and validity threats — always anchored in a real company example.
+Design an experiment from scratch, grounded in how mature programs handled the same design
+challenge. Test type selection, interference, randomization unit, validity threats — always
+anchored in a real company example.
 
-**Trigger examples:** "How should I design this test?", "Should I use a holdout?", "How do I handle network effects?", "Can I even run an A/B test for this?"
-
-### experiment-strategy
-Choose the right metric, set guardrails, interpret results, and make ship/no-ship decisions — the way LinkedIn or Netflix would approach it, not just from first principles.
-
-**Trigger examples:** "What metric should I use?", "Should we ship this?", "The test was significant but...", "Novelty effect", "Incrementality"
+**Try:** "How should I design this test?", "Should I use a holdout?", "How do I handle
+network effects?", "Can I even run an A/B test for this?"
 
 ### statistical-methods
-Power analysis, CUPED, sequential testing, SRM detection, ratio metrics, Bayesian vs. frequentist — with company-specific context for which method each mature program actually uses and why.
+Power analysis, CUPED, sequential testing, SRM detection, ratio metrics, multiple
+comparisons, Bayesian vs. frequentist — with company-specific context on which method each
+mature program actually uses, and why.
 
-**Trigger examples:** "How do I power this?", "Can I peek at results?", "CUPED", "SRM", "Multiple comparisons", "mSPRT"
+**Try:** "How do I power this?", "Can I peek at results?", "CUPED", "SRM", "mSPRT"
 
-### ibotta-ab-process
-The complete Ibotta-specific experiment lifecycle: LaunchDarkly/ConfigCat setup, event tracking and Jira workflow, Ibotta power tools (`ib_util`, `ds_util`, Looker calculator), data cleaning, and the Monday launch rule. Benchmarks Ibotta's process against mature programs and flags gaps.
+### experiment-strategy
+Pick the right OEC, set guardrails, interpret weird results, make ship/no-ship calls — the
+way LinkedIn or Netflix would approach it, not just from first principles.
 
-**Trigger examples:** "How do we set up LaunchDarkly for this?", "What's the Jira event trigger process?", "At Ibotta, how do we...", "get_ld_variants"
+**Try:** "What metric should I use?", "Should we ship this?", "The test was significant
+but…", "Novelty effect", "Incrementality"
+
+### company-ab-process
+Your company's operational experiment lifecycle: feature-flag platform setup and gotchas,
+event tracking and ticketing workflow, internal power tooling, data cleaning, launch rules.
+Reads your profile for the specifics, and benchmarks your process against mature programs to
+flag gaps.
+
+**Try:** "How do we set up the flag for this?", "What's our event tracking process?",
+"What's our launch rule?"
 
 ### hypothesis-generation
-Generate experiment ideas for a specific product surface, grounded in what real companies tested on analogous surfaces. Cross-references Ibotta's 34-experiment history to avoid re-testing, and prioritizes by expected impact vs. cost to run.
+Generate experiment ideas for a product surface, grounded in what real companies tested on
+analogous surfaces. Cross-references your own past-experiment inventory to avoid re-testing,
+and prioritizes by expected impact vs. cost to run.
 
-**Trigger examples:** "What should we test on the home screen?", "Give me hypotheses for the offer card", "We've never tested X — is it worth it?", "What would DoorDash test here?"
+**Try:** "What should we test on the home screen?", "Give me hypotheses for the checkout
+flow", "What would DoorDash test here?"
 
 ### stakeholder-communication
-Translate experiment results, proposals, and methodology into language that lands with PMs, brand managers, and leadership. Includes ready-to-use scripts for the hard conversations.
+Translate results, proposals and methodology into language that lands with PMs and
+leadership. Includes ready-to-use scripts for the hard conversations.
 
-**Trigger examples:** "My PM wants to stop the test early", "How do I explain a null result?", "Help me write the readout", "How do I push back on this?", "Make this accessible for leadership"
+**Try:** "My PM wants to stop the test early", "How do I explain a null result?", "Help me
+write the readout", "Make this accessible for leadership"
 
 ### kb-curator
-Manage and surface knowledge from the knowledge base: look up what's in the KB on a topic, add a new entry, build a reading list, or summarize a paper or article into a KB entry.
+Look up what the knowledge base holds on a topic, add a new entry from a URL or paper, build
+a reading list, or summarize a source into a KB entry.
 
-**Trigger examples:** "What do we have on variance reduction?", "Add this paper to the KB", "Build me a reading list on sequential testing", "Who should I read for marketplace interference?"
+**Try:** "What do we have on variance reduction?", "Add this paper to the KB", "Reading list
+on sequential testing"
 
-## Knowledge Base
+### weekly-digest
+Composes and delivers a weekly newsletter from what changed in the knowledge base. Optional,
+and only runs on a schedule if you set one up — see [SETUP.md](SETUP.md).
 
-The `knowledge-base/` directory is the source of truth this plugin draws from. Every skill reads from it before answering — not from generic training knowledge.
+**Try:** "send the weekly digest", "what's new in the KB this week"
 
-- `companies/` — 17 entries covering the most rigorous experimentation programs in the industry: Airbnb, Booking.com, DoorDash, Duolingo, Etsy, Google, LinkedIn, Lyft, Meta, Microsoft ExP, Netflix, Pinterest, Shopify, Spotify, Statsig, Twitter/X, Uber
-- `individuals/` — 10 entries on the practitioners who built these programs: Ron Kohavi, Diane Tang, Ya Xu, Alex Deng, Aleksander Fabijan, Lukas Vermeer, Chetan Sharma, Evan Miller, Rommil Santiago, Martin Tingley
-- `papers/` — 7 foundational papers (CUPED, overlapping experiments, peeking/mSPRT, SRM, Trustworthy OCE, empirical Bayes)
-- `articles/` — 8 essential practitioner articles with credibility assessments
+## Knowledge base
+
+`knowledge-base/` is the source of truth the skills draw from. Skills read it before
+answering instead of relying on generic training knowledge.
+
+- `companies/` — 17 entries on the most rigorous programs in the industry: Airbnb,
+  Booking.com, DoorDash, Duolingo, Etsy, Google, LinkedIn, Lyft, Meta, Microsoft ExP,
+  Netflix, Pinterest, Shopify, Spotify, Statsig, Twitter/X, Uber
+- `individuals/` — 10 entries on the practitioners who built them: Ron Kohavi, Diane Tang,
+  Ya Xu, Alex Deng, Aleksander Fabijan, Lukas Vermeer, Chetan Sharma, Evan Miller, Rommil
+  Santiago, Martin Tingley
+- `papers/` — 22 papers, foundational through 2026 (CUPED, overlapping experiments,
+  peeking/mSPRT, SRM, Trustworthy OCE, winner's curse, network interference, LLM surrogacy)
+- `articles/` — 13 practitioner articles, each with a credibility assessment
 - `_INDEX.md` — master index with tags for fast lookup
 - `_TEMPLATE.md` — template for new entries
-- `GLOSSARY.md` — definitions of all key terms
+- `GLOSSARY.md` — definitions of key terms
 
-## Adding to the Knowledge Base
+**A note on the examples.** Many entries end with an **"Ibotta relevance"** paragraph.
+Ibotta is this plugin's original home — a consumer cashback app with a two-sided
+brand/retailer marketplace. Those paragraphs are left in deliberately, as worked examples of
+how to turn a company's published practice into a concrete recommendation for one specific
+business. Read them as the pattern, not as advice for yours. Once your company profile exists,
+skills generate the equivalent translation for *your* surfaces and metrics, and `kb-curator`
+writes new entries in your terms.
 
-1. Use **kb-curator**: "Add this paper to the KB" or "Summarize this URL for the KB"
-2. Or manually: copy `_TEMPLATE.md`, fill it out, save to the right subdirectory, update `_INDEX.md`
+## Adding to the knowledge base
 
-**Filename convention:** slugified title, lowercase, hyphens, `.md`
+1. Use **kb-curator**: "Add this paper to the KB", or "Summarize this URL for the KB"
+2. Or by hand: copy `_TEMPLATE.md`, fill it in, save to the right subdirectory, update
+   `_INDEX.md`
 
-## GitHub
+Filename convention: slugified title, lowercase, hyphens, `.md`.
 
-https://github.com/marksallyson/ai-llyson (plugin lives in `plugins/experiment-research-buddy/`)
+## What stays on your machine
+
+These are gitignored. Nothing company-specific is published by installing or updating.
+
+| File | What it holds |
+|---|---|
+| `config/company-profile.md` | Your company, stack, metrics, process rules |
+| `config/local/` | Any other private notes |
+| `skills/company-ab-process/references/past-experiments.md` | Your past experiment inventory |
+
+Templates for the first and last ship in the repo as `*.example.md`.
+
+## Companion plugin
+
+Works well alongside a literature-focused research plugin. This one covers **practice** —
+what reputable companies shipped and why. A literature plugin covers **theory** — what the
+research says is correct. Academic rigor plus real-world precedent beats either alone.
+
+## Contributing
+
+Knowledge base entries are the most useful contribution. Use `_TEMPLATE.md`, cite a public
+source, and include a credibility assessment for anything from a vendor blog.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

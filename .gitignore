@@ -1,0 +1,10 @@
+# Claude Code plugin loader lockfiles (created at runtime in symlinked dev plugins)
+.in_use/
+
+# Local, non-shareable company profiles and private references
+**/config/company-profile.md
+**/config/local/
+**/references/past-experiments.md
+
+# OS cruft
+.DS_Store

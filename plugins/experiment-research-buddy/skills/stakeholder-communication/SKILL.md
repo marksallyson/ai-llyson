@@ -15,16 +15,28 @@ metadata:
 
 # Stakeholder Communication
 
-You are helping a Decision Scientist at Ibotta translate rigorous experiment thinking into
+You are helping a Decision Scientist translate rigorous experiment thinking into
 language that lands with non-technical stakeholders. The goal is never to dumb things down
 — it is to find the framing that makes the right conclusion feel inevitable to someone who
 doesn't think in p-values.
 
+## Company Context — Read First
+
+Read `${CLAUDE_PLUGIN_ROOT}/config/company-profile.md` before answering.
+
+It tells you the company's name, business model, product surfaces, metrics, and stack.
+Use it to pick which knowledge-base companies are valid precedent — a two-sided
+marketplace should be benchmarked against Airbnb, DoorDash, Uber or Etsy, not Netflix —
+and to make examples concrete in the user's own terms.
+
+**If the profile is missing:** say so in one sentence, offer the **setup** skill, and then
+answer generically. Do not invent the company's tools, surfaces, metrics, or policies.
+
 ## Before Answering
 
-Read `knowledge-base/individuals/rommil-santiago.md` — his *Prove It or Lose It* (2025)
+Read `${CLAUDE_PLUGIN_ROOT}/knowledge-base/individuals/rommil-santiago.md` — his *Prove It or Lose It* (2025)
 is the best practitioner resource on this specific problem. Also read
-`knowledge-base/articles/surprising-ab-test-results.md` — the Microsoft catalog of
+`${CLAUDE_PLUGIN_ROOT}/knowledge-base/articles/surprising-ab-test-results.md` — the Microsoft catalog of
 experiments that contradicted expert intuition is the most powerful tool for pushing back
 on premature conclusions.
 
@@ -141,7 +153,7 @@ The key is translating statistical improvement into business terms:
 > "We can run tests 30–40% faster — or detect effects that are 30–40% smaller —
 > by using each user's behavior from before the test started to reduce noise.
 > DoorDash implemented this and it's one of the primary reasons they scaled from
-> ~20 experiments/month to hundreds. For Ibotta, the concrete impact is: tests
+> ~20 experiments/month to hundreds. For us, the concrete impact is: tests
 > that currently require 6 weeks could finish in 4."
 
 **Sequential testing / mSPRT:**
@@ -149,7 +161,7 @@ The key is translating statistical improvement into business terms:
 > inflates our false positive rate. mSPRT is a monitoring approach — used by LinkedIn,
 > Booking.com, and Spotify — that makes daily monitoring mathematically valid. It
 > doesn't change how we analyze results; it changes whether peeking at dashboards
-> invalidates them. For Ibotta, the practical benefit is: PMs can see a live dashboard
+> invalidates them. For us, the practical benefit is: PMs can see a live dashboard
 > without us worrying they're poisoning the test."
 
 **Bayesian (for small-N experiments):**
@@ -176,14 +188,14 @@ The key is translating statistical improvement into business terms:
 
 ## References
 
-- `knowledge-base/individuals/rommil-santiago.md` — *Prove It or Lose It* (2025); stakeholder communication chapters
-- `knowledge-base/articles/surprising-ab-test-results.md` — base rate argument for mandatory testing
-- `knowledge-base/articles/how-not-to-run-an-ab-test.md` — shareable resource for the early-stopping conversation
-- `knowledge-base/individuals/lukas-vermeer.md` — "education before tooling" principle at Booking.com
-- `knowledge-base/individuals/aleksander-fabijan.md` — maturity model framing for organizational conversations
+- `${CLAUDE_PLUGIN_ROOT}/knowledge-base/individuals/rommil-santiago.md` — *Prove It or Lose It* (2025); stakeholder communication chapters
+- `${CLAUDE_PLUGIN_ROOT}/knowledge-base/articles/surprising-ab-test-results.md` — base rate argument for mandatory testing
+- `${CLAUDE_PLUGIN_ROOT}/knowledge-base/articles/how-not-to-run-an-ab-test.md` — shareable resource for the early-stopping conversation
+- `${CLAUDE_PLUGIN_ROOT}/knowledge-base/individuals/lukas-vermeer.md` — "education before tooling" principle at Booking.com
+- `${CLAUDE_PLUGIN_ROOT}/knowledge-base/individuals/aleksander-fabijan.md` — maturity model framing for organizational conversations
 
 ## Related Skills
 
 - For the technical analysis underlying the communication: **experiment-strategy**
 - For methodology improvement proposals: **statistical-methods**
-- For Ibotta-specific process questions that come up: **ibotta-ab-process**
+- For company-specific process questions that come up: **company-ab-process**

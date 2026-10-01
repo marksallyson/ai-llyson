@@ -2,11 +2,11 @@
 name: hypothesis-generation
 description: >
   Use this skill when the user wants to generate experiment ideas for a specific product
-  surface, feature area, or business problem at Ibotta. Trigger on: "what should we test",
+  surface, feature area, or business problem at their company. Trigger on: "what should we test",
   "what experiments could we run", "give me hypotheses for", "what's worth testing on",
   "we've never tested X", "what would you test here", "help me brainstorm experiments",
   "what did [company] test on [surface]", or any request for experiment ideas rooted in
-  company precedent. Also trigger when Allyson is planning a roadmap and wants to identify
+  company precedent. Also trigger when the user is planning a roadmap and wants to identify
   high-value experiment opportunities. Complements experiment-design (execution) with
   upstream ideation grounded in what real companies actually tested.
 metadata:
@@ -15,17 +15,29 @@ metadata:
 
 # Hypothesis Generation
 
-You are helping a Decision Scientist at Ibotta generate experiment ideas that are grounded
+You are helping a decision scientist generate experiment ideas that are grounded
 in what real, mature companies have tested — not generic UX intuition. Every hypothesis
 you produce must trace back to a company precedent or a pattern from the knowledge base.
 
+## Company Context — Read First
+
+Read `${CLAUDE_PLUGIN_ROOT}/config/company-profile.md` before answering.
+
+It tells you the company's name, business model, product surfaces, metrics, and stack.
+Use it to pick which knowledge-base companies are valid precedent — a two-sided
+marketplace should be benchmarked against Airbnb, DoorDash, Uber or Etsy, not Netflix —
+and to make examples concrete in the user's own terms.
+
+**If the profile is missing:** say so in one sentence, offer the **setup** skill, and then
+answer generically. Do not invent the company's tools, surfaces, metrics, or policies.
+
 ## Before Answering
 
-1. **Read `knowledge-base/_INDEX.md`** to identify which KB entries are most relevant to
+1. **Read `${CLAUDE_PLUGIN_ROOT}/knowledge-base/_INDEX.md`** to identify which KB entries are most relevant to
    the surface or problem area the user described.
-2. **Read the relevant company KB files** (`knowledge-base/companies/`) for any company
+2. **Read the relevant company KB files** (`${CLAUDE_PLUGIN_ROOT}/knowledge-base/companies/`) for any company
    whose experiments are applicable. Do not rely on training knowledge.
-3. **Read `skills/ibotta-ab-process/references/past-experiments.md`** to check what Ibotta
+3. **Read `skills/company-ab-process/references/past-experiments.md`** to check what the company
    has already tested on this surface. Never propose re-testing something that's been run
    unless there's a strong reason (e.g., new platform, changed baseline, contradictory prior result).
 
@@ -42,9 +54,12 @@ Before generating hypotheses, confirm:
 
 ### Step 2: Map to company analogues
 
-For each surface, identify which KB companies have tested something analogous:
+For each surface, identify which KB companies have tested something analogous. The table
+below is a worked example for a consumer commerce / rewards app — build the equivalent
+mapping from the surfaces listed in `${CLAUDE_PLUGIN_ROOT}/config/company-profile.md`,
+preferring the analogue companies that profile names.
 
-| Ibotta Surface | Closest Company Analogues |
+| Surface | Closest Company Analogues |
 |---|---|
 | Home screen / offer feed | Booking.com (homepage personalization), Pinterest (feed ranking), DoorDash (carousel ranking) |
 | Onboarding / post-reg | Duolingo (activation flows), Airbnb (signup friction), TikTok/Pinterest (deferred commitment) |
@@ -71,7 +86,7 @@ For each hypothesis:
 **Primary metric:** [What moves if this works]
 **Guardrail:** [What must not degrade]
 **Company precedent:** [Which KB company tested something analogous, and what they found]
-**Why Ibotta specifically:** [One sentence on why this applies to Ibotta's context]
+**Why us specifically:** [One sentence on why this applies to the company's context, using the profile's business model and surfaces]
 **Power consideration:** [Rough eligible population estimate and whether this is
   testable at standard MDEs — flag if likely underpowered]
 **Risk:** [What could go wrong — novelty effect, SUTVA violation, wrong direction, etc.]
@@ -81,7 +96,7 @@ For each hypothesis:
 
 After generating hypotheses, rank them on two dimensions:
 
-**Expected impact:** Based on what the company precedent showed + Ibotta's surface traffic
+**Expected impact:** Based on what the company precedent showed + the surface traffic in the company profile
 **Cost to run:** Time to implement + power requirements + instrumentation complexity
 
 Output a 2×2 prioritization:
@@ -98,12 +113,12 @@ Low impact, high cost → Skip
 
 1. **KB company entries** — What DoorDash, Booking.com, Netflix, LinkedIn, Duolingo, etc. actually shipped and found. Highest credibility.
 2. **KB articles** — GoodUI (IMPLEMENTED/REJECTED classification) and abtest.design (hypotheses only, not effect sizes). Medium credibility. See credibility assessments in each article entry before citing.
-3. **Ibotta past experiments** — Look for follow-up opportunities: surfaces where a test was inconclusive, underpowered, or showed directional signal not worth shipping at the time.
+3. **Your own past experiments** — Look for follow-up opportunities: surfaces where a test was inconclusive, underpowered, or showed directional signal not worth shipping at the time.
 4. **First-principles reasoning** — Acceptable only when no company precedent exists and the mechanism is well-established (e.g., friction reduction, loss aversion). Always flag when you're operating from first principles.
 
 ## Anti-patterns to Avoid
 
-- **Proposing a test that's already been run at Ibotta** — always check past-experiments.md first
+- **Proposing a test that has already been run here** — always check past-experiments.md first
 - **Citing effect sizes from abtest.design** — those numbers are not credible; cite the pattern, not the magnitude
 - **Proposing tests that are structurally underpowered** — if the eligible population is ~3,000 users, flag it before proposing the test
 - **Generic "best practice" hypotheses** without a company anchor — "test a simpler CTA" is not a hypothesis; "test a simpler CTA because Booking.com found [specific thing]" is
@@ -114,4 +129,4 @@ Low impact, high cost → Skip
 - For executing the chosen hypothesis: **experiment-design** (test type, randomization unit, interference)
 - For sizing the test: **statistical-methods** (power analysis, CUPED impact on sample size)
 - For communicating the idea to stakeholders: **stakeholder-communication**
-- For checking Ibotta process: **ibotta-ab-process**
+- For checking your company's process: **company-ab-process**
