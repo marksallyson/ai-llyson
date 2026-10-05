@@ -118,3 +118,33 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** Ibotta's offer redemption rate is a classic heavy-tailed conversion metric (most users don't redeem; a few redeem many times; one $500 Walmart receipt inflates user-level totals). Winsorizing at the 99th percentile — and validating that the capped metric is still a valid proxy for what you care about — could meaningfully reduce experiment runtime for offer-level tests. This is a low-cost technique to try before asking for more traffic or longer experiments.
 
 **Tags added:** variance-reduction, metric-design, sample-size, heavy-tailed, proxy-metrics
+
+---
+
+## Recent: 2026-09-15 — Beyond the A/B Test: Experiment Design for Your Toughest Questions
+
+**Source:** Statsig Blog, September 15, 2026 · https://statsig.com/blog/beyond-the-a-b-test-blog-version  
+**Author:** Pritul Patel (Senior Customer Data Scientist, Statsig + Amplitude)
+
+**What this covers:** A practitioner's guide to experiment designs that handle situations where a standard A/B test breaks down: small traffic or rare events, network interference, high-risk interventions, and questions that require a quasi-experimental setup. The article walks through four alternative designs with concrete guidance on when to use each: (1) Bayesian + CUPED for small samples, where reducing variance is the only lever you have; (2) switchback and cluster randomization for settings with marketplace interference (like rideshare or delivery platforms); (3) sequential testing with early stopping for experiments where exposing users to a degraded experience is ethically or commercially costly; (4) synthetic control and difference-in-differences for interventions that can't be randomized at all (like a new market launch or a pricing change that must apply to everyone in a region).
+
+**Why it matters:** Most DS teams have a mental model of "A/B test or nothing," and this post gives them vocabulary for two other options (interference-aware designs, quasi-experimental methods) that are directly relevant to marketplace platforms. The framing is accessible — it names the problem before the solution — which makes it useful for educating non-technical stakeholders on why a simple A/B isn't always the right tool.
+
+**Ibotta relevance:** Ibotta's two-sided marketplace creates exactly the interference conditions this post addresses. An offer experiment that changes the number of redemptions in a region may affect retailer fulfillment capacity, which affects *all* users in that region — violating the SUTVA assumption underlying standard A/B tests. Switchback designs (alternating treatment and control periods) are the right tool here. This post is a useful starting point for building that case internally.
+
+**Tags added:** two-sided-markets, interference, switchback, cluster-randomization, synthetic-control, quasi-experimental, sample-size, sequential-testing
+
+---
+
+## Recent: 2026-09-29 — Multiple Comparisons: More Comparisons, More Problems
+
+**Source:** Statsig Blog, September 29, 2026 · https://statsig.com/blog/more-comparisons-more-problems  
+**Author:** Matthew Rogers (Customer Data Scientist, Statsig + Amplitude)
+
+**What this covers:** A clear, practitioner-facing walkthrough of three ways the multiple comparisons problem bites A/B testers: (1) **multiple metrics** — testing 20 metrics at α=0.05 gives you an expected 1 false positive even when nothing moves; (2) **multiple variants** — A/B/C/D tests compound Type I error across pairwise comparisons unless a family-wise correction is applied; (3) **segment slices** — analyzing results by 8 demographic cuts post-hoc produces spuriously significant subgroups at a rate practitioners chronically underestimate. The post covers Bonferroni correction (strict but easy), Benjamini-Hochberg (less conservative, better for exploratory metric monitoring), and emphasizes pre-specifying the primary metric before the experiment runs as the cleanest solution.
+
+**Why it matters:** The multiple comparisons problem is the single most common way statistically literate teams produce misleading results — not through p-hacking in the stereotyped sense, but through routine practices like "checking all metrics" and "looking at how it performed for mobile users." This post names the mechanism clearly and recommends the right corrective (pre-specification of primary + Benjamini-Hochberg for guardrails). It also implicitly calls out the vendor problem: platforms that show you 20 metrics all flagged for significance without applying any correction are giving you a false sense of rigor.
+
+**Ibotta relevance:** Ibotta offer experiments likely monitor multiple metrics simultaneously (redemption rate, session count, GMV, DAU, push notification CTR). If the experimentation platform reports all of these without a multiple-comparison correction, statistically significant "wins" on secondary metrics should be treated as exploratory findings, not confirmatory results. This post gives the vocabulary to have that conversation with stakeholders who ask "but it was significant, wasn't it?"
+
+**Tags added:** multiple-testing, false-positive, type-i-error, metric-design, guardrail-metrics, frequentist-vs-bayesian

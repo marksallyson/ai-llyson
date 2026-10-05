@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-09-28 (2 new papers: future-large-scale-experiments-nature-2026.md — 28-author Nature Human Behaviour Perspective mapping six open challenges for large-scale digital experiments (governance, privacy/ethics, long-term effects, time-adaptive studies, HTE, GenAI); robust-ab-decisions-farrell-2026.md — Farrell et al. arXiv:2609.07633, distributionally robust optimization for A/B deployment decisions, 25% regret reduction on 552 advertising experiments)
+Last updated: 2026-10-05 (1 new paper: testing-trends-online-experiments-google-2026.md — Haulk, Richardson & Soriano (Google), arXiv:2609.01973, regression + jackknife method for detecting novelty/primacy trends in online A/B experiments; 2 Statsig Recent sections added: Sep 15 "Beyond the A/B Test" and Sep 29 "Multiple Comparisons: More Comparisons, More Problems")
 
 ---
 
@@ -73,6 +73,7 @@ Last updated: 2026-09-28 (2 new papers: future-large-scale-experiments-nature-20
 | [persona-conditioned-agents-ab-simulation-emnlp2026.md](papers/persona-conditioned-agents-ab-simulation-emnlp2026.md) | Data-Driven Persona-Conditioned Agents for A/B Test Simulation (Benomar et al., Amazon, EMNLP 2026) | LLM agents grounded in real user behavioral data pre-screen A/B tests; 0.75–0.90 directional accuracy on 40-test benchmark — a filter, not a replacement for live experiments |
 | [future-large-scale-experiments-nature-2026.md](papers/future-large-scale-experiments-nature-2026.md) | The Future of Large-Scale Experiments and Their Challenges in the Digital Era (Holtz, Deng, Tingley, Schmit et al., Nature Human Behaviour 2026) | 28-author Perspective mapping six open challenges: governance, privacy/ethics, long-term effects, time-adaptive studies, HTE, and GenAI |
 | [robust-ab-decisions-farrell-2026.md](papers/robust-ab-decisions-farrell-2026.md) | Robust A/B Decisions (Farrell, Korganbekova & Misra, arXiv:2609.07633, September 2026) | Distributionally robust deployment rule replaces t-test threshold; 25% regret reduction on 552 advertising experiments; treats deployment uncertainty, not just experimental uncertainty |
+| [testing-trends-online-experiments-google-2026.md](papers/testing-trends-online-experiments-google-2026.md) | Testing for Trends in Online Experiments (Haulk, Richardson & Soriano, Google, arXiv:2609.01973, September 2026) | Regression + jackknife method for detecting novelty/primacy time trends in A/B experiments; no cookie-cookie-day design required; practical slope test for every post-experiment analysis |
 
 ---
 
