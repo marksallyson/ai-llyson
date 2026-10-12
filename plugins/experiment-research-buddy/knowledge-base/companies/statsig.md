@@ -148,3 +148,18 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** Ibotta offer experiments likely monitor multiple metrics simultaneously (redemption rate, session count, GMV, DAU, push notification CTR). If the experimentation platform reports all of these without a multiple-comparison correction, statistically significant "wins" on secondary metrics should be treated as exploratory findings, not confirmatory results. This post gives the vocabulary to have that conversation with stakeholders who ask "but it was significant, wasn't it?"
 
 **Tags added:** multiple-testing, false-positive, type-i-error, metric-design, guardrail-metrics, frequentist-vs-bayesian
+
+---
+
+## Recent: 2026-10-07 — Introducing Statsig MCP v3
+
+**Source:** Statsig Blog, October 7, 2026 · https://www.statsig.com/blog/introducing-statsig-mcp-v3  
+**Author:** Madelyn Tarr (Statsig)
+
+**What's new:** Statsig released v3 of its Model Context Protocol (MCP) server — the integration layer that lets AI agents (Claude, GPT-4, Gemini, Cursor, etc.) read and write directly to the Statsig experimentation platform without a human operator. The core changes: v3 reduces the default toolset from the full catalog to 18 tools for read-write sessions (10 for read-only), cutting input token consumption by ~43% on equivalent tasks in internal testing. Permissions are now enforced *twice* — at tool discovery (an unauthorized tool never appears in the agent's session) and again at execution (a second guard against privilege escalation). Breaking change: v2 users must reauthenticate and update hardcoded tool names; the new server lives at a remote endpoint (`api.statsig.com/v3/mcp`).
+
+**Why it matters:** This release formalizes the idea that AI agents — not just human analysts — are first-class operators of experimentation infrastructure. An agent with MCP v3 access can read experiment results, create new feature gates, update rollout percentages, and query metric definitions, all within the user's permission scope. The governance architecture (double-check permissions, scoped discovery) is the right design for teams worried about an AI agent doing something irreversible. The 43% token reduction matters practically: fewer tokens per operation means more agentic loops fit in a context window and costs stay manageable.
+
+**Ibotta relevance:** If Ibotta evaluates Statsig (now under Amplitude stewardship), MCP v3 opens a path to agentic workflows: a DS could instruct Claude to monitor a set of running experiments, surface metrics that are near significance, and draft a recommendation — without touching the Statsig UI. The double-permission model means that read-only agents can't accidentally touch a running experiment. Worth tracking this trend: within 12–18 months, most major experimentation platforms will have similar agent interfaces, and the governance design will differ significantly between vendors.
+
+**Tags added:** agentic-experimentation, agentic-ai, feature-flags, platform-update, amplitude

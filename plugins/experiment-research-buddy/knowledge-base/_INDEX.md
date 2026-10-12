@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-10-05 (1 new paper: testing-trends-online-experiments-google-2026.md — Haulk, Richardson & Soriano (Google), arXiv:2609.01973, regression + jackknife method for detecting novelty/primacy trends in online A/B experiments; 2 Statsig Recent sections added: Sep 15 "Beyond the A/B Test" and Sep 29 "Multiple Comparisons: More Comparisons, More Problems")
+Last updated: 2026-10-12 (2 Recent sections added: Statsig Oct 7 "Introducing Statsig MCP v3" — agentic experimentation with AI agents as first-class operators, 43% token reduction, double-permission governance; Spotify Oct 8 "Introducing Spotify Technology" — Confidence officially commercialized under new enterprise brand alongside Portal and Xirp)
 
 ---
 

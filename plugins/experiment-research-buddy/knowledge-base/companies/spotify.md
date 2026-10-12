@@ -117,3 +117,17 @@ always-valid-inference, bayesian, long-term-effects, metric-design, organization
 **Ibotta relevance:** When Ibotta evaluates experimentation platforms — Amplitude+Statsig, GrowthBook, or others that advertise Bayesian testing — this post is the right framework for asking the pointed question. Bayesian by default does not mean safe-to-peek. Ask specifically: does the platform's Bayesian mode provide Type I error control when you look at results mid-experiment, or does it reproduce the peeking false positive inflation under a Bayesian label?
 
 **Tags added:** bayesian, false-positive, platform-evaluation, tier-framework, frequentist-vs-bayesian
+
+---
+
+## Recent: 2026-10-08 — Introducing Spotify Technology: Proven at Spotify, Now Yours
+
+**Source:** Spotify Engineering Blog, October 8, 2026 · https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours
+
+**What happened:** Spotify launched a new commercial brand — **Spotify Technology** — to unify the internal tools it has been selling externally for the past few years: Confidence (experimentation platform, commercially available since 2023), Portal by Spotify (their Backstage-based developer portal, since 2024), and Xirp (a reliability engineering tool released earlier in 2026). The framing: "proven at Spotify, now yours" — tools that survived production at Spotify's scale are packaged as enterprise products for other R&D organizations.
+
+**Why it matters:** This is a strategic signal, not just a branding change. Spotify is making a serious commercial bet on Confidence as a standalone enterprise product — not a side project. For teams evaluating experimentation platforms, this means: (1) Confidence has a dedicated commercial team and roadmap rather than being an ad hoc spin-off; (2) support, documentation, and SLAs should improve as the product matures; (3) the competitive landscape for warehouse-native experimentation is now Amplitude+Statsig (enterprise analytics pivot), Confidence by Spotify (engineering-culture-first, commercial), Eppo-now-Datadog (dev-tools integration), and GrowthBook (open-source). Each has a distinct origin story and strategic incentive, which should shape how a team evaluates long-term vendor alignment.
+
+**Ibotta relevance:** Ibotta's experimentation platform evaluation should include Confidence as a serious option alongside Amplitude+Statsig. Confidence's core differentiator — the "learning framework" that treats null results as valuable outputs, not failures — is culturally useful for a DS team trying to grow experiment volume without overpromising to stakeholders. The "Spotify Technology" branding signals a stable commercial entity, not a tool that might be wound down. Worth requesting a current pricing/feature brief from the Confidence team.
+
+**Tags added:** platform-update, warehouse-native, platform-evaluation, organizational-maturity
