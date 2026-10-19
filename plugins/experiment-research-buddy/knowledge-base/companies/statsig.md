@@ -163,3 +163,18 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** If Ibotta evaluates Statsig (now under Amplitude stewardship), MCP v3 opens a path to agentic workflows: a DS could instruct Claude to monitor a set of running experiments, surface metrics that are near significance, and draft a recommendation — without touching the Statsig UI. The double-permission model means that read-only agents can't accidentally touch a running experiment. Worth tracking this trend: within 12–18 months, most major experimentation platforms will have similar agent interfaces, and the governance design will differ significantly between vendors.
 
 **Tags added:** agentic-experimentation, agentic-ai, feature-flags, platform-update, amplitude
+
+---
+
+## Recent: 2026-10-16 — New Features, New Ways to Learn (Color Commentary: September 2026)
+
+**Source:** Statsig Blog, October 16, 2026 · https://www.statsig.com/blog/color-commentary-sep-2026  
+**Author:** Eric Metelka (Statsig + Amplitude)
+
+**What's in it:** The monthly "color commentary" product roundup for September 2026. The framing: September's features are designed to "speed up learning as shipping accelerates" — i.e., reduce the cycle time between running an experiment and drawing a decision. This is the first color commentary post under the combined Statsig/Amplitude operational structure (following the Phase 1 data integration completed in Q3 2026).
+
+**Why it matters (context):** Statsig's monthly roundups are the best way to track what the combined Amplitude+Statsig platform is actually shipping versus what the Phase 1/Phase 2 roadmap promised. The framing "speeding up learning" suggests the September focus was on analysis latency (how fast you get results after an experiment ends) and decision tooling (how you convert a result into a launch or kill decision), rather than new statistical methods. The specific features are documented in the post itself; notable ones to watch for: cross-platform experiment views (Statsig features + Amplitude data in one dashboard), updated sequential testing readouts, and metric annotation tools.
+
+**Ibotta relevance:** If Ibotta is evaluating or using Statsig, the monthly roundup is the right document to track actual platform progress vs. the pre-acquisition promises about Amplitude+Statsig integration. As of September 2026, the two products are in "Phase 1" (data connectors), with Phase 2 (deeper workflow unification) still forthcoming.
+
+**Tags added:** platform-update, amplitude, platform-consolidation, warehouse-native

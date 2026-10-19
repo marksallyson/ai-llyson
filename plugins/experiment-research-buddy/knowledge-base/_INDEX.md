@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-10-12 (2 Recent sections added: Statsig Oct 7 "Introducing Statsig MCP v3" — agentic experimentation with AI agents as first-class operators, 43% token reduction, double-permission governance; Spotify Oct 8 "Introducing Spotify Technology" — Confidence officially commercialized under new enterprise brand alongside Portal and Xirp)
+Last updated: 2026-10-19 (1 new paper: arXiv:2610.07831 "Design-Driven Inference for Online Experiments" — jointly optimal allocation and evidence rule; block-orthogonal designs for multifactor experiments; 1 Recent section updated: Statsig Oct 16 "New Features, New Ways to Learn" — monthly color commentary for Sep 2026)
 
 ---
 
@@ -74,6 +74,7 @@ Last updated: 2026-10-12 (2 Recent sections added: Statsig Oct 7 "Introducing St
 | [future-large-scale-experiments-nature-2026.md](papers/future-large-scale-experiments-nature-2026.md) | The Future of Large-Scale Experiments and Their Challenges in the Digital Era (Holtz, Deng, Tingley, Schmit et al., Nature Human Behaviour 2026) | 28-author Perspective mapping six open challenges: governance, privacy/ethics, long-term effects, time-adaptive studies, HTE, and GenAI |
 | [robust-ab-decisions-farrell-2026.md](papers/robust-ab-decisions-farrell-2026.md) | Robust A/B Decisions (Farrell, Korganbekova & Misra, arXiv:2609.07633, September 2026) | Distributionally robust deployment rule replaces t-test threshold; 25% regret reduction on 552 advertising experiments; treats deployment uncertainty, not just experimental uncertainty |
 | [testing-trends-online-experiments-google-2026.md](papers/testing-trends-online-experiments-google-2026.md) | Testing for Trends in Online Experiments (Haulk, Richardson & Soriano, Google, arXiv:2609.01973, September 2026) | Regression + jackknife method for detecting novelty/primacy time trends in A/B experiments; no cookie-cookie-day design required; practical slope test for every post-experiment analysis |
+| [design-driven-inference-online-experiments-2026.md](papers/design-driven-inference-online-experiments-2026.md) | Design-Driven Inference for Online Experiments: Jointly Optimal Evidence Collection, Testing, and Estimation (Yu, Zhao & Zhu, arXiv:2610.07831, October 2026) | Jointly optimizing experimental allocation and evidence rule; block-orthogonal designs for multifactor A/B tests; universal MLE optimality from same allocation |
 
 ---
 
