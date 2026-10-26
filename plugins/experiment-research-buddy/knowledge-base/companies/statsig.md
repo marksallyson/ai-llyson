@@ -178,3 +178,21 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 **Ibotta relevance:** If Ibotta is evaluating or using Statsig, the monthly roundup is the right document to track actual platform progress vs. the pre-acquisition promises about Amplitude+Statsig integration. As of September 2026, the two products are in "Phase 1" (data connectors), with Phase 2 (deeper workflow unification) still forthcoming.
 
 **Tags added:** platform-update, amplitude, platform-consolidation, warehouse-native
+
+---
+
+## Recent: 2026-10-21 — Running Faster Tests: Shift Your Targets (Part 3)
+
+**Source:** Statsig Blog, October 21, 2026 · https://www.statsig.com/blog/running-faster-tests-part-3  
+**Author:** Akhil Prakash (Statsig + Amplitude)  
+**Series:** Part 3 of 4 — "Running Faster Tests" (Part 1: Adjusting Constraints; Part 2: Modifying Metrics; Part 4: Other Experiment Types)
+
+**What this covers:** Part 3 of Statsig's four-part series on experiment velocity addresses the *targeting* lever: who is included in an experiment determines both the expected statistical power and the practical runtime. When an experiment is enrolled broadly (all users regardless of likelihood of engagement), most observations contribute little signal — the users who are unlikely to encounter the feature, take the key action, or be responsive to the treatment are diluting the variance estimate. By targeting the experiment toward users most likely to be affected, teams can reach the same statistical conclusion with fewer users or a shorter runtime.
+
+The post covers techniques including: restricting the experiment to users with high prior probability of triggering the feature (pre-experiment activity filtering); stratified enrollment to ensure balance on key covariates; and using predicted responsiveness (from historical data or a ML model) to concentrate traffic on users where the treatment effect is most detectable. It situates these techniques alongside the series' earlier levers — adjusting significance thresholds and modifying metrics — to give a decision tree for teams facing sample size or timeline constraints.
+
+**Why it matters:** Most teams treat experiment eligibility as a fixed given — "everyone who uses feature X is in the experiment." This post reframes eligibility as a design choice with direct consequences for runtime and power. The key risk is generalizability: a test run only on "high-activity users" may overestimate the treatment effect relative to all users, so the post addresses when targeting is appropriate (when the team genuinely only cares about the high-activity subgroup) versus when it creates a validity problem (when the goal is population-level inference).
+
+**Ibotta relevance:** Offer experiments at Ibotta have natural targeting opportunities: users who have previously redeemed in the relevant category, users in a particular retailer's footprint, users with high session frequency, or users in a specific DMA. Targeting the experiment to the relevant sub-population — rather than all app users — could meaningfully shrink required sample sizes for niche offer tests, where eligible populations are already small. The generalizability caveat applies: results from heavy-redeemer experiments shouldn't be used to forecast incremental redemptions across the full user base.
+
+**Tags added:** sample-size, experiment-velocity, stratification, targeting, hte, metric-design

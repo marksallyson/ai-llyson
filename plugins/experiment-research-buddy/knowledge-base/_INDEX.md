@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-10-19 (1 new paper: arXiv:2610.07831 "Design-Driven Inference for Online Experiments" — jointly optimal allocation and evidence rule; block-orthogonal designs for multifactor experiments; 1 Recent section updated: Statsig Oct 16 "New Features, New Ways to Learn" — monthly color commentary for Sep 2026)
+Last updated: 2026-10-26 (1 new paper: arXiv:2610.27899 "Let Them Peek: Group Sequential Designs for A/B Testing" — 43.1% reduction in experiment duration, 76% capacity gain using predictive probability of success stopping rules; 1 Recent section added: Statsig Oct 21 "Running Faster Tests Part 3: Shift Your Targets" — user targeting as a lever for experiment velocity)
 
 ---
 
@@ -75,6 +75,7 @@ Last updated: 2026-10-19 (1 new paper: arXiv:2610.07831 "Design-Driven Inference
 | [robust-ab-decisions-farrell-2026.md](papers/robust-ab-decisions-farrell-2026.md) | Robust A/B Decisions (Farrell, Korganbekova & Misra, arXiv:2609.07633, September 2026) | Distributionally robust deployment rule replaces t-test threshold; 25% regret reduction on 552 advertising experiments; treats deployment uncertainty, not just experimental uncertainty |
 | [testing-trends-online-experiments-google-2026.md](papers/testing-trends-online-experiments-google-2026.md) | Testing for Trends in Online Experiments (Haulk, Richardson & Soriano, Google, arXiv:2609.01973, September 2026) | Regression + jackknife method for detecting novelty/primacy time trends in A/B experiments; no cookie-cookie-day design required; practical slope test for every post-experiment analysis |
 | [design-driven-inference-online-experiments-2026.md](papers/design-driven-inference-online-experiments-2026.md) | Design-Driven Inference for Online Experiments: Jointly Optimal Evidence Collection, Testing, and Estimation (Yu, Zhao & Zhu, arXiv:2610.07831, October 2026) | Jointly optimizing experimental allocation and evidence rule; block-orthogonal designs for multifactor A/B tests; universal MLE optimality from same allocation |
+| [let-them-peek-group-sequential-2026.md](papers/let-them-peek-group-sequential-2026.md) | Let Them Peek: Group Sequential Designs for A/B Testing (Perini et al., Amazon Science + Stanford, arXiv:2610.27899, October 2026) | Group sequential stopping via predictive probability of success; 43.1% reduction in expected experiment duration; 76% effective platform capacity gain; false positive guarantees maintained |
 
 ---
 
