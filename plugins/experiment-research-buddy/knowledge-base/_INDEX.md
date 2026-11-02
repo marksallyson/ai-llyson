@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-10-26 (1 new paper: arXiv:2610.27899 "Let Them Peek: Group Sequential Designs for A/B Testing" — 43.1% reduction in experiment duration, 76% capacity gain using predictive probability of success stopping rules; 1 Recent section added: Statsig Oct 21 "Running Faster Tests Part 3: Shift Your Targets" — user targeting as a lever for experiment velocity)
+Last updated: 2026-11-02 (1 Recent section added: Statsig Oct 28 "Sequential Testing Explained" — practitioner guide to when sequential testing is and isn't appropriate; SPRT/mSPRT tradeoffs; explicit anti-use-cases for multi-metric scorecards and low-traffic experiments)
 
 ---
 

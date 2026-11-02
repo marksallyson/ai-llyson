@@ -181,6 +181,27 @@ Cross-posted on the Microsoft Fabric Blog: https://blog.fabric.microsoft.com/en-
 
 ---
 
+## Recent: 2026-10-28 — Sequential Testing Explained: Benefits, Tradeoffs, and Practical Uses
+
+**Source:** Statsig Blog, October 28, 2026 · https://statsig.com/blog/sequential-testing-explained  
+**Author:** Elaine Li (Customer Data Scientist, Statsig + Amplitude)
+
+**What this covers:** A clear practitioner guide to sequential testing — the method that lets you peek at experiment results mid-run and stop early without inflating your Type I error rate. The post explains the problem sequential testing solves (stopping a fixed-horizon test early because results look good dramatically raises false positive rates — like reading your exam scores before all the questions are graded and declaring victory), covers how SPRT and mSPRT work, and is explicit about when sequential testing is *not* the right tool.
+
+Key guidance:
+- **When to use it:** Ship decisions on a single primary metric where stopping early has real commercial value (e.g., clear conversion lift detected early, or a regression spotted before it damages too many users). Also good for safety monitoring where early detection of a regression is worth the power cost.
+- **When not to use it:** Multi-metric scorecards (sequential testing with 10 metrics compounds false positives in ways Bonferroni alone doesn't fix); experiments where effect size estimation matters more than direction (sequential tests that stop early overstate effect magnitudes — like an early poll that only captures the most opinionated respondents); low-traffic experiments where the power penalty is prohibitive.
+- **Power cost:** The mSPRT approach has ~84% relative power compared to a fixed-horizon test at the same target duration — you need roughly 19% more samples to achieve the same power if the test runs to its planned end. The tradeoff is the option to stop early and the valid p-value at any point.
+- **Setup in Statsig:** Enable "Sequential Testing" on the Frequentist Analytics type; the platform outputs adjusted p-values and confidence intervals valid at any stopping point.
+
+**Why it matters:** Sequential testing is widely misunderstood. Teams either avoid it entirely ("peeking is always wrong") or adopt it carelessly ("we turned on sequential testing so now we can check every day"). This post provides the nuance that's missing in most vendor documentation: *sequential testing is a power-for-flexibility tradeoff*, and the flexibility is only worth paying for when early decisions matter commercially. The explicit list of when *not* to use it is the most valuable part — rare for a vendor's own documentation to say "this isn't always right for you."
+
+**Ibotta relevance:** Offer experiments at Ibotta likely have natural use cases for sequential testing — a new offer mechanic that is either clearly working or clearly not within 2–3 weeks, where waiting a full 4-week runtime is commercially expensive if the result is already visible. The caveat: if Ibotta monitors multiple metrics per experiment (redemption rate, session count, AOV, retention), running sequential tests on all of them simultaneously without correction will inflate false positives. Designate a single ship-decision metric and use sequential testing on that; treat secondary metrics as fixed-horizon monitored outcomes.
+
+**Tags added:** sequential-testing, always-valid-inference, peeking, msprt, type-i-error, sample-size, false-positive, platform
+
+---
+
 ## Recent: 2026-10-21 — Running Faster Tests: Shift Your Targets (Part 3)
 
 **Source:** Statsig Blog, October 21, 2026 · https://www.statsig.com/blog/running-faster-tests-part-3  
