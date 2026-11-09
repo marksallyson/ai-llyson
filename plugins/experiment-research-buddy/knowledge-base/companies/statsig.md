@@ -202,6 +202,23 @@ Key guidance:
 
 ---
 
+## Recent: 2026-11-05 — Amplitude Q3 2026 Earnings: Statsig Integration Scorecard
+
+**Source:** Amplitude Q3 2026 Earnings Call, November 5, 2026 · https://www.fool.com/earnings/call-transcripts/2026/11/05/amplitude-ampl-q3-2026-earnings-call-transcript/  
+**Also:** SEC 10-Q filing (period ending Sept 30, 2026) · https://www.sec.gov/Archives/edgar/data/0001866692/000119312526447817/ampl-20260930.htm
+
+**What the numbers say:** Amplitude reported Q3 2026 ARR of $431M (+24% YoY) and revenue of $110.6M (+25% YoY). Of the $21M sequential net new ARR, management attributed approximately $15M to Amplitude organically and $6M to the Statsig book of business. Pro-forma net dollar retention — combining both customer bases — came in at 105%. Management explicitly framed Statsig customers as a **renewals priority, not an upsell target** for now: the focus through end of 2026 is stabilizing the acquired base, not cross-selling Amplitude analytics on top of Statsig experimentation.
+
+**Why it matters for the platform landscape:** This is the first financial report to quantify Statsig's contribution to Amplitude post-acquisition, and the signal is mixed. The $6M from Statsig represents a healthy ARR base but also implies that aggressive integration-driven growth hasn't started yet. The "renewals before upsell" framing is strategically honest but also reveals that the combined Amplitude+Statsig product is not yet differentiated enough to drive net expansion in the acquired base. For teams evaluating experimentation platforms: the Statsig product is stable and being maintained, but the integration with Amplitude's analytics suite is still in Phase 1 (data connectors) with Phase 2 (workflow unification) on the roadmap for 2027.
+
+**The competitive subtext:** VWO, Eppo (now Datadog Experiments), GrowthBook, and Spotify Confidence are all watching this. Datadog Experiments (Eppo) benefits most: it offers a similarly warehouse-native architecture with Datadog's sales motion and no integration complexity. GrowthBook 5.2 (released Nov 3) also shipped interleaving experiments and human-in-the-loop agentic flows, targeting mid-market teams that want warehouse-native without enterprise pricing.
+
+**Ibotta relevance:** If Ibotta is on a renewal cycle with Statsig or evaluating platforms, the Q3 earnings context matters: the platform is funded, stable, and not being wound down — but the vision of a tightly integrated Amplitude+Statsig "instrument, analyze, experiment" workflow won't arrive until 2027 at the earliest. Set expectations accordingly in any vendor roadmap conversation.
+
+**Tags added:** platform-acquisition, amplitude, statsig, warehouse-native, platform-consolidation, platform-update
+
+---
+
 ## Recent: 2026-10-21 — Running Faster Tests: Shift Your Targets (Part 3)
 
 **Source:** Statsig Blog, October 21, 2026 · https://www.statsig.com/blog/running-faster-tests-part-3  

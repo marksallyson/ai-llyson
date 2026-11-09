@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-11-02 (1 Recent section added: Statsig Oct 28 "Sequential Testing Explained" — practitioner guide to when sequential testing is and isn't appropriate; SPRT/mSPRT tradeoffs; explicit anti-use-cases for multi-metric scorecards and low-traffic experiments)
+Last updated: 2026-11-09 (1 Recent section added to Statsig: Amplitude Q3 2026 earnings — Statsig contributing $6M ARR, 105% pro-forma NDR, renewals-first strategy; 1 new article: GrowthBook 5.2 — interleaving experiments and Human-in-the-Loop for agentic workflows)
 
 ---
 
@@ -99,6 +99,7 @@ Last updated: 2026-11-02 (1 Recent section added: Statsig Oct 28 "Sequential Tes
 | [etsy-winners-curse-mitigation.md](articles/etsy-winners-curse-mitigation.md) | Mitigating the Winner's Curse in Online Experiments (Etsy, 2022) | Bayesian shrinkage with empirical prior fitted on historical lifts; adaptive discounting per experiment precision |
 | [statsig-kaplan-meier-ab-retention.md](articles/statsig-kaplan-meier-ab-retention.md) | Kaplan-Meier: Visualizing A/B Test Retention (Statsig, 2025) | Survival analysis for retention experiments; handles censored data; 20–30% sensitivity gain over point-in-time retention metrics |
 | [abadie-value-of-evidence-2026.md](articles/abadie-value-of-evidence-2026.md) | Estimating the Value of Evidence-Based Decision Making (Abadie, Agarwal, Imbens et al., 2026) | p < 0.05 rules leave 27–30% of attainable value on the table; empirical Bayes decision rules recover most of it — validated on 4,800+ Upworthy A/B tests |
+| [growthbook-5-2-interleaving-hitl.md](articles/growthbook-5-2-interleaving-hitl.md) | GrowthBook 5.2: Interleaving Experiments and Human-in-the-Loop for Agents (GrowthBook, Nov 2026) | Open-source platform ships native interleaving (10–100× more efficient for ranking comparisons) and HITL governance layer for agentic experiment workflows |
 
 ---
 
