@@ -38,3 +38,18 @@ Xu's work sits at the intersection of rigorous statistics and production scale. 
 
 ## Tags
 causal-inference, cluster-randomization, interference, network-effects, platform, two-sided-markets, variance-reduction, xlnt
+
+---
+
+## Recent: 2026-11-16 — From More to Better: Causal Inference and Digital Experimentation in the Age of AI (CIDER Roundtable, arXiv:2611.16335)
+
+**Source:** arXiv:2611.16335, submitted November 12, 2026 · https://arxiv.org/abs/2611.16335  
+**Authors:** Winston Chou + 20 co-authors including Ronny Kohavi, Diane Tang, Ya Xu, Somit Gupta, David Holtz, Nathan Kallus, Mårten Schultzberg, Avi Feller
+
+**What they did:** Ya Xu is a co-author of the 2026 CIDER Roundtable perspective paper, the most significant experimentation-focused publication since her 2020 book. Given her work on network interference and variance reduction, her contribution likely covers the "triangulating evidence types" and "generalization" challenges in the paper's three-part framework.
+
+**Key results:** See full entry in papers/from-more-to-better-cider-2026.md. The paper's argument that AI makes the generalization problem harder is consistent with Xu's longstanding focus on when experiment results can be trusted to transfer — from her network interference work, she knows well that local experiment results don't always generalize to the full population.
+
+**Why it matters:** Xu's voice on AI-era experimentation carries particular weight because she has seen the full arc from academic statistics to LinkedIn-scale platform to Google DeepMind. Her endorsement of the "credibility auditor" framing signals it's the professional identity DS teams should be building toward.
+
+**Tags added:** industry-consensus, agentic-ai, generalization, scientific-methodology

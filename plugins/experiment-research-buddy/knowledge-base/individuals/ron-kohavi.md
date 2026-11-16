@@ -57,3 +57,20 @@ book, causal-inference, metric-design, oec, organizational-maturity, platform, s
 **Ibotta relevance:** For offer-level experiments with limited traffic (a new CPG brand, a low-penetration category), this is the most relevant finding in this week's literature: if your experiment was underpowered and you got a significant result, discount the observed effect size by ~28% (at 50% power) or ~57% (at 20% power) before projecting revenue impact.
 
 **Tags added:** winner's-curse, replication, statistical-power, underpowered-tests
+
+---
+
+## Recent: 2026-11-16 — From More to Better: Causal Inference and Digital Experimentation in the Age of AI (CIDER Roundtable, arXiv:2611.16335)
+
+**Source:** arXiv:2611.16335, submitted November 12, 2026 · https://arxiv.org/abs/2611.16335  
+**Authors:** Winston Chou + 20 co-authors including Ronny Kohavi, Diane Tang, Ya Xu, Somit Gupta, David Holtz, Nathan Kallus, Mårten Schultzberg, Avi Feller
+
+**What they did:** Convened as the 2026 CIDER Roundtable (Causal Inference and Digital Experimentation), a group of 21 academics and industry practitioners — including the full *Trustworthy Online Controlled Experiments* authorship — and published a perspective paper arguing that AI changes the nature of the DS job in experimentation more than it replaces it.
+
+**Key results:** Three shifts required: (1) extract learning from portfolios of experiments, not just individual tests; (2) triangulate experimental, observational, and synthetic evidence; (3) build evaluation frameworks for AI products before deploying them. The paper explicitly argues that AI makes three existing problems harder — generalization, post-launch monitoring of AI behavior, and metric misalignment.
+
+**Why it matters:** This is Kohavi's most explicit statement that the DS job is evolving from "runs tests" to "credibility auditor." For practitioners, it codifies something many instinctively feel — that more data doesn't automatically mean better decisions — and provides a framework for how to close the gap.
+
+**Ibotta relevance:** The push to combine experimental and observational evidence has direct application to offer-level testing, where some offer types can't be A/B tested (small CPG brands, limited catalog) but observational data is rich. The evaluation-frameworks-before-launch point is directly applicable to any AI-powered offer personalization features.
+
+**Tags added:** industry-consensus, agentic-ai, generalization, scientific-methodology

@@ -33,3 +33,18 @@ Tang's 2010 KDD paper solved a problem that every team running more than a handf
 
 ## Tags
 causal-inference, concurrent-experiments, infrastructure, layers, organizational-maturity, overlapping-experiments, platform
+
+---
+
+## Recent: 2026-11-16 — From More to Better: Causal Inference and Digital Experimentation in the Age of AI (CIDER Roundtable, arXiv:2611.16335)
+
+**Source:** arXiv:2611.16335, submitted November 12, 2026 · https://arxiv.org/abs/2611.16335  
+**Authors:** Winston Chou + 20 co-authors including Ronny Kohavi, Diane Tang, Ya Xu, Somit Gupta, David Holtz, Nathan Kallus, Mårten Schultzberg, Avi Feller
+
+**What they did:** Tang co-authored the 2026 CIDER Roundtable perspective paper alongside Kohavi and Ya Xu — the first time the full *Trustworthy Online Controlled Experiments* author group has published together since the 2020 book. The paper maps how AI changes the requirements for experimentation platforms and DS practice.
+
+**Key results:** See full entry in papers/from-more-to-better-cider-2026.md. Tang's contribution is likely heaviest in the infrastructure and evaluation-framework sections, consistent with her prior work on how concurrent experiment systems must evolve to handle AI-powered features whose behavior changes over time.
+
+**Why it matters:** Tang's presence on this paper signals that the infrastructure challenges of AI-era experimentation are taken seriously at the platform-design level, not just the stats level.
+
+**Tags added:** industry-consensus, agentic-ai, generalization, scientific-methodology

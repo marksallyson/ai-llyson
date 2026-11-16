@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-11-09 (1 Recent section added to Statsig: Amplitude Q3 2026 earnings — Statsig contributing $6M ARR, 105% pro-forma NDR, renewals-first strategy; 1 new article: GrowthBook 5.2 — interleaving experiments and Human-in-the-Loop for agentic workflows)
+Last updated: 2026-11-16 (1 new paper: "From More to Better: Causal Inference and Digital Experimentation in the Age of AI" — CIDER Roundtable, arXiv:2611.16335, November 12 2026, 21 co-authors including Kohavi/Tang/Ya Xu; Recent sections added to ron-kohavi.md, diane-tang.md, ya-xu.md)
 
 ---
 
@@ -76,6 +76,7 @@ Last updated: 2026-11-09 (1 Recent section added to Statsig: Amplitude Q3 2026 e
 | [testing-trends-online-experiments-google-2026.md](papers/testing-trends-online-experiments-google-2026.md) | Testing for Trends in Online Experiments (Haulk, Richardson & Soriano, Google, arXiv:2609.01973, September 2026) | Regression + jackknife method for detecting novelty/primacy time trends in A/B experiments; no cookie-cookie-day design required; practical slope test for every post-experiment analysis |
 | [design-driven-inference-online-experiments-2026.md](papers/design-driven-inference-online-experiments-2026.md) | Design-Driven Inference for Online Experiments: Jointly Optimal Evidence Collection, Testing, and Estimation (Yu, Zhao & Zhu, arXiv:2610.07831, October 2026) | Jointly optimizing experimental allocation and evidence rule; block-orthogonal designs for multifactor A/B tests; universal MLE optimality from same allocation |
 | [let-them-peek-group-sequential-2026.md](papers/let-them-peek-group-sequential-2026.md) | Let Them Peek: Group Sequential Designs for A/B Testing (Perini et al., Amazon Science + Stanford, arXiv:2610.27899, October 2026) | Group sequential stopping via predictive probability of success; 43.1% reduction in expected experiment duration; 76% effective platform capacity gain; false positive guarantees maintained |
+| [from-more-to-better-cider-2026.md](papers/from-more-to-better-cider-2026.md) | From More to Better: Causal Inference and Digital Experimentation in the Age of AI (CIDER Roundtable, arXiv:2611.16335, November 2026) | 21-author CIDER perspective — Kohavi, Tang, Ya Xu + 18 others; maps three shifts for DS teams in the AI era: portfolio learning, evidence triangulation, and AI-product evaluation frameworks |
 
 ---
 
