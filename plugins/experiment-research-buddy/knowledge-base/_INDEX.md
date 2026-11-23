@@ -1,6 +1,6 @@
 # Experiment Lab Knowledge Base — Master Index
 
-Last updated: 2026-11-16 (1 new paper: "From More to Better: Causal Inference and Digital Experimentation in the Age of AI" — CIDER Roundtable, arXiv:2611.16335, November 12 2026, 21 co-authors including Kohavi/Tang/Ya Xu; Recent sections added to ron-kohavi.md, diane-tang.md, ya-xu.md)
+Last updated: 2026-11-23 (1 new paper: "Making Experiment Results Comparable through Sitewide Impact Estimation" — Roblox, arXiv:2611.18411, November 13 2026; Recent sections added to statsig.md for "Introducing Agent Experimentation" Nov 17 and "Designing Statbot" Nov 19)
 
 ---
 
@@ -77,6 +77,7 @@ Last updated: 2026-11-16 (1 new paper: "From More to Better: Causal Inference an
 | [design-driven-inference-online-experiments-2026.md](papers/design-driven-inference-online-experiments-2026.md) | Design-Driven Inference for Online Experiments: Jointly Optimal Evidence Collection, Testing, and Estimation (Yu, Zhao & Zhu, arXiv:2610.07831, October 2026) | Jointly optimizing experimental allocation and evidence rule; block-orthogonal designs for multifactor A/B tests; universal MLE optimality from same allocation |
 | [let-them-peek-group-sequential-2026.md](papers/let-them-peek-group-sequential-2026.md) | Let Them Peek: Group Sequential Designs for A/B Testing (Perini et al., Amazon Science + Stanford, arXiv:2610.27899, October 2026) | Group sequential stopping via predictive probability of success; 43.1% reduction in expected experiment duration; 76% effective platform capacity gain; false positive guarantees maintained |
 | [from-more-to-better-cider-2026.md](papers/from-more-to-better-cider-2026.md) | From More to Better: Causal Inference and Digital Experimentation in the Age of AI (CIDER Roundtable, arXiv:2611.16335, November 2026) | 21-author CIDER perspective — Kohavi, Tang, Ya Xu + 18 others; maps three shifts for DS teams in the AI era: portfolio learning, evidence triangulation, and AI-product evaluation frameworks |
+| [sitewide-impact-estimation-roblox-2026.md](papers/sitewide-impact-estimation-roblox-2026.md) | Making Experiment Results Comparable through Sitewide Impact Estimation (Zhang et al., Roblox, arXiv:2611.18411, November 2026) | Surface-level lift has only 0.20 Spearman rank correlation with sitewide impact across 139 Roblox experiments; coverage-factor method converts lift to sitewide impact for cross-surface prioritization |
 
 ---
 

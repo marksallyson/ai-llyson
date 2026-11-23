@@ -234,3 +234,33 @@ The post covers techniques including: restricting the experiment to users with h
 **Ibotta relevance:** Offer experiments at Ibotta have natural targeting opportunities: users who have previously redeemed in the relevant category, users in a particular retailer's footprint, users with high session frequency, or users in a specific DMA. Targeting the experiment to the relevant sub-population — rather than all app users — could meaningfully shrink required sample sizes for niche offer tests, where eligible populations are already small. The generalizability caveat applies: results from heavy-redeemer experiments shouldn't be used to forecast incremental redemptions across the full user base.
 
 **Tags added:** sample-size, experiment-velocity, stratification, targeting, hte, metric-design
+
+---
+
+## Recent: 2026-11-17 — Introducing Agent Experimentation: From Better Evals to Better Products
+
+**Source:** Statsig Blog, November 17, 2026 · https://www.statsig.com/blog/introducing-agent-experimentation  
+**Author:** Chad Swenson (Statsig + Amplitude)
+
+**What's new:** Statsig launched a dedicated "Agent Experimentation" product category — tooling specifically designed for teams building agentic AI features (multi-step workflows, AI agents with tool access, conversational agents) that don't fit neatly into the classic A/B test model. The core argument: a single eval score (accuracy, task completion rate) is insufficient for measuring whether an agentic feature is actually better for users. The product connects offline evals, online LLM traces, and live A/B experiments into a single workflow so teams can progress through each validation layer without switching platforms.
+
+**Why it matters:** Most teams building AI agents treat evals as the final quality gate. Statsig's framing correctly identifies the gap: a great eval score on a held-out benchmark doesn't tell you whether users prefer the agent's behavior, whether the agent's actions drive business outcomes, or whether costs (latency, API spend) are acceptable at production scale. The right workflow is a funnel: eval confirms the model does what you intended; A/B experiment confirms that what you intended moves the metric. Without the experiment layer, teams are flying blind on impact.
+
+**Ibotta relevance:** Ibotta's AI-powered features — offer personalization models, smart notification timing, AI-generated offer copy — all face this exact evaluation gap. An LLM-generated headline might score perfectly on a relevance eval but underperform on actual offer saves or redemption rates. The agent experimentation workflow gives Ibotta a path to validate AI features end-to-end: eval → trace → experiment.
+
+**Tags added:** agentic-experimentation, agentic-ai, llm-evals, platform-update, amplitude
+
+---
+
+## Recent: 2026-11-19 — Designing Statbot, the Experimentation Agent
+
+**Source:** Statsig Perspectives, November 19, 2026 · https://www.statsig.com/perspectives/designing-statbot-experimentation-agent  
+**Author:** Maya Brennan (Statsig + Amplitude)
+
+**What's new:** A design retrospective on building Statbot — Statsig's AI experimentation agent — for a deeply technical product. The post covers the usability challenges of building an AI assistant for statisticians and experimentation engineers: users who have strong priors about what "correct" looks like, low tolerance for confident-but-wrong statistical guidance, and deep knowledge that makes prompt-based explanations feel condescending. The engineering post describes Statbot's internal classifier architecture (a router agent that categorizes incoming messages by product area and decides whether to respond, ignore, or escalate to a human), how Statsig builds and tests Statbot (using offline evals and live A/B experiments on Statsig itself), and design principles for agentic products where the user is the expert.
+
+**Why it matters:** This is a rare first-person account of what it's actually like to build and validate an AI agent for a technical user base. The "agentic product is tested on the same platform it's built for" loop is the right answer to the question of how you evaluate whether Statbot got better — and it models a methodology any DS team building internal AI tools should adopt.
+
+**Ibotta relevance:** If Ibotta builds internal AI assistants for analysts (experiment monitoring agents, metric anomaly detectors, query assistants), the design lessons here — build for experts, tolerate no confident errors, test with the same infrastructure you use for other products — apply directly. The technical user tolerance for AI error is near zero; the agent has to be right, not just fast.
+
+**Tags added:** agentic-experimentation, agentic-ai, platform-update, llm-evals
